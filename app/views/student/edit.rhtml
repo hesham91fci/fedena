@@ -1,0 +1,195 @@
+
+<div id="content-header">
+   <img src="/images/student_details/student_details_logo.jpg" />
+  <h1>Upravit údaje</h1>
+  <h3>Údaje hráče</h3>
+  <div id="app-back-button">
+      <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
+  </div>
+</div>
+
+<div id="page-yield">
+
+  <% unless flash[:notice].nil? %>
+    <p class="flash-msg"> <%= flash[:notice] %> </p>
+  <% end %>
+
+  <% form_for :student, :url => {:action => 'edit'}, :html => {:multipart => true} do |s| %>
+    <%= error_messages_for 'student' %>
+    <div id="admission1-form">
+      <div id="necessary-field-notification"> Pole označená <span class="necessary-field">*</span> musí být vyplněna.</div>
+
+      <div id="autofill_area">
+
+        <div class="label-field-pair-edit">
+          <label for="master_student_admission_no">Evidenční číslo <span class="necessary-field">*</span></label>
+          <div class="text-input-bg"><%= s.text_field :admission_no %></div>
+        </div>
+
+        <div class="label-field-pair-edit">
+          <label for="master_student_admission_date">Datum evidence <span class="necessary-field">*</span></label>
+          <div class="text-input-bg">
+            <%= calendar_date_select_tag 'student[admission_date]', @student.admission_date,
+              :year_range => 15.years.ago..5.years.from_now %>
+          </div>
+        </div>
+
+        <div class="extender"></div>
+
+      </div>
+
+      <span class="span-sub-heading">Osobní údaje</span>
+
+      <hr class="sub-heading"></hr>
+
+      <div class="label-field-pair">
+        <label for="master_student_first_name">Jméno<span class="necessary-field">*</span></label>
+        <div class="text-input-bg"><%= s.text_field :first_name %></div>
+      </div>
+
+      <hr class="label-underline"></hr>
+
+      <div class="label-field-pair">
+        <label for="master_student_first_name">Příjmení</label>
+        <div class="text-input-bg"><%= s.text_field :last_name %></div>
+      </div>
+      <hr class="label-underline"></hr>
+
+
+      <div id="admission1_form_vertical_block_left">
+
+        <div class="label-field-pair">
+          <label for="master_student_grade">Třída & Skupina <span class="necessary-field">*</span></label>
+          <div class="text-input-bg"><%= s.select :batch_id, @batches.map {|b| [b.full_name, b.id]} %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_date_of_birth">Datum narození <span class="necessary-field">*</span></label>
+          <div class="text-input-bg">
+            <%= calendar_date_select_tag 'student[date_of_birth]',
+              @student.date_of_birth, :year_range => 40.years.ago..0.years.ago %>
+          </div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair-gender">
+
+          <label class="label-gender-edit" for="master_student_gender">Gender</label>
+          <div class="edit_student_gender">
+            <label class="label_for_gender" for="master_student_gender_true">Muž</label>
+            <%= s.radio_button  "gender", "m" %>
+            <label class="label_for_gender" for="master_student_gender_false">Žena</label>
+            <%= s.radio_button  "gender", "f" %>
+          </div>
+
+          <div class="extender"></div>
+
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_birth_place">Místo narození</label>
+          <div class="text-input-bg"><%= s.text_field :birth_place, :value =>@student.birth_place %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_nationality">Národnost</label>
+          <div class="text-input-bg"><%= select :student, :nationality_id, Country.all.map {|c| [c.name, c.id]}, :selected => @student.nationality.id %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_category">Kategorie</label>
+          <div class="text-input-bg"><%= select :student, :student_category_id, @student_categories.map {|c| [c.name, c.id]}, { :prompt => 'Select category' } %></div>
+        </div>
+      </div>
+      <br/>
+
+      <span class="span-sub-heading">Kontaktní údaje</span>
+      <hr class="sub-heading"></hr>
+
+      <div id="admission1_form_vertical_block_right">
+
+        <div class="label-field-pair">
+          <label for="master_student_city">Ulice</label>
+          <div class="text-input-bg"><%= s.text_field :address_line1, :value => @student.address_line1 %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_city">Číslo popisné</label>
+          <div class="text-input-bg"><%= s.text_field :address_line2, :value => @student.address_line2 %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_city">Město</label>
+          <div class="text-input-bg"><%= s.text_field :city, :value => @student.city %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_state">Kraj</label>
+          <div class="text-input-bg"><%= s.text_field :state, :value =>@student.state %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_pin_code">PSČ</label>
+          <div class="text-input-bg"><%= s.text_field :pin_code, :value =>@student.pin_code %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_country">Stát</label>
+          <div class="text-input-bg"><%= select :student, :country_id, Country.all.map {|c| [c.name, c.id]}, :selected => @student.country.id %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_phone2">Mobil</label>
+          <div class="text-input-bg"><%= s.text_field :phone2, :value =>@student.phone2 %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_email">Email</label>
+          <div class="text-input-bg"><%= s.text_field :email, :value => @student.email %></div>
+        </div>
+        <% if @application_sms_enabled.is_enabled == true %>
+        <hr class="label-underline"></hr>
+        <div class="label-field-pair">
+          <label for="student_sms">Povolit SMS Funkci</label>
+          <div class="text-input-bg"><%= s.check_box :is_sms_enabled %></div>
+        </div>
+        <% end %>
+        <br/>
+
+        <span class="span-sub-heading">Nahrát foto hráče</span>
+        <hr class="sub-heading"></hr>
+
+        <div class="label-field-pair">
+          <label for="master_student_image_file">Nahrát fotku (250KB max)</label>
+          <div class="text-input-bg"><%= s.file_field :photo %></div>
+        </div>
+      </div>
+    </div>
+
+    <%= submit_tag "", :class => "submit_button", :value => '► Aktualizovat' %>
+  <% end %>
+
+</div>

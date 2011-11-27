@@ -1,0 +1,29 @@
+<table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
+        <% unless @students.blank? %>
+          <tr class="tr-head">
+            <td>
+              Sl no.
+            </td>
+            <td>
+              First Name
+            </td>
+            <td> Batch</td>
+            <td> Adm no</td>
+
+          </tr>
+          <tr class="tr-blank"></tr>
+          <% @students.each_with_index do |student, i| %>
+            <tr class="tr-<%= cycle('odd', 'even') %>">
+              <td class="col-1"><%= i+1 %></td>
+                <td class="col-2"><%=  link_to student.full_name, :controller => 'student', :action => 'profile', :id => student.id%></td>
+              <td class="col-2"><%= student.batch.full_name %></td>
+              <td class="col-2"><%= student.admission_no %></td>
+            </tr>
+          <% end %>
+        <% else %>
+
+          <tr class="tr-<%= cycle('odd', 'even') %>">
+            <td class="col-2">No students found</td>
+          </tr>
+        <% end %>
+      </table>

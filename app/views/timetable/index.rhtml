@@ -1,0 +1,64 @@
+<div id="content-header">
+  <img src="/images/show_timetable.png" />
+  <h1>Rozvrh</h1>
+  <h3>Správa rozvrhu</h3>
+  <div id="app-back-button">
+    <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
+  </div>
+</div>
+
+<div id="page-yield">
+
+  <% unless flash[:notice].nil? %>
+    <p class="flash-msg"> <%= flash[:notice] %> </p>
+  <% end %>
+
+  <div class="box">
+    <%if permitted_to? :edit,:timetable%>
+      <div class="link-box">
+        <% @config = Configuration.available_modules %>
+        <% if @config.include?('HR') %>
+          <div class="link-heading"><%= link_to "Vytvořit/Upravit Rozvrh", :action => "select_class2" %></div>
+        <% else %>
+          <div class="link-heading"><%= link_to "Vytvořit/Upravit Rozvrh", :action => "select_class" %></div>
+        <% end %>
+        <div class="link-descr">Vybrat skupinu a upravit její rozvrh </div>
+      </div>
+
+      <div class="link-box">
+        <div class="link-heading"><%= link_to "Přidat hodiny pro skupiny ", :controller => "class_timings", :action => "index"   %></div>
+        <div class="link-descr">Vybrat skupinu a upravit její rozvrh </div>
+      </div>
+    <%  end%>
+
+
+    <%  if permitted_to? :view,:timetable%>
+      <div class="link-box">
+        <div class="link-heading"><%= link_to "Přehled rozvrhů", :action => "view" %></div>
+        <div class="link-descr">Ukaž rozvrh vybrané skupiny</div>
+      </div>
+
+    <%  end%>
+    <%  if permitted_to? :edit,:timetable%>
+      <% @config = Configuration.get_config_value('StudentAttendanceType') %>
+      <% if @config == 'SubjectWise' %>
+        <div class="link-box">
+          <div class="link-heading"><%= link_to "Swap class", :action => "extra_class" %></div>
+          <div class="link-descr">Generate period entry for a given time</div>
+        </div>
+      <%  end %>
+    <%  end %>
+
+    <div class="link-box">
+      <div class="link-heading"><%= link_to "Institucionální Rozvrh", :action => "timetable" %></div>
+      <div class="link-descr">Ukaž denní rozvrh</div>
+    </div>
+    <%  if permitted_to? :edit,:timetable%>
+      <div class="link-box">
+        <div class="link-heading"><%= link_to "Vytvořit dny", :controller => "weekday", :action => "index" %></div>
+        <div class="link-descr">Vytvořit dny v rozvrhu</div>
+      </div>
+    <% end %>
+    <div class="extender"></div>
+  </div>
+</div>

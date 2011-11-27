@@ -1,0 +1,18 @@
+<div class="dept-select">
+<% unless @department_event.empty? %>
+  <span class="title">Vybrané oddělení:</span>
+  <ul id="category-list">
+    <% @department_event.each do |d| %>
+      <li class="list<%= cycle('odd','even') %>">
+        <div class="category-name"> <%=  EmployeeDepartment.find(d.employee_department_id).name %></div>
+        <div class="category-edit"> <%= link_to "Remove", :controller=>"event",:action=>"remove_department", :id=>d %></div>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to_remote "Vybrat více Oddělení", :url=>{:controller=>"event", :action=>"select_employee_department", :id=>params[:id]} %>
+<% else %>
+  <span class="title">Žádné oddělení nebylo dosud vybráno :</span>
+  <%= link_to_remote "Vybrat Oddělení zaměstnanců", :url=>{:controller=>"event", :action=>"select_employee_department", :id=>params[:id]} %>
+<% end %>
+  </div>
+
