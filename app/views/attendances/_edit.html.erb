@@ -18,13 +18,13 @@
 #under the License. -%>
 
 <div id="form-errors"></div>
-<label class="head_label">Edit attendance for <span><%= @student.first_name %></span></label>
+<label class="head_label">Upravit docházku pro <span><%= @student.first_name %></span></label>
 
 <div id="ajax-edit">
   <br/>
   <% form_remote_for @absentee do |f| %>
   <div class="label-field-pair">
-      <label for="reason"> Reason for absence</label>
+      <label for="reason"> Důvod absence</label>
       <div class="text-input-bg"><%= f.text_field :reason %></div>
     </div>
     <% if @config.config_value == 'Daily' %>
@@ -36,11 +36,11 @@
     </div>
     <% end %>
   <div class="extender"></div>
-    <%= f.submit '► Update', :class => 'submit-button' %>
+    <%= f.submit '► Potvrdit', :class => 'submit-button' %>
   <% end %>
-    <div id="delete-button"><%= link_to_remote('► Delete',
+    <div id="delete-button"><%= link_to_remote('► Smazat',
           :url => attendance_path(@absentee),
           :method =>'delete',
-          :confirm => 'Are you sure?') %></div>
+          :confirm => 'Jste si jistí?') %></div>
 
 </div>

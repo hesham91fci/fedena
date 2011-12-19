@@ -25,5 +25,5 @@
     </div>
 <% end %>
 <% else %>
-  <p class="flash-msg">Nejsou zadány žádné payroll údaje pro <%= @employee.first_name%>. <%= link_to "Přidat", :controller => "payroll", :action => "manage_payroll", :id => @employee.id %></p>
+  <p class="flash-msg">Nejsou zadány žádné údaje o mzdách pro <%= @employee.first_name%>. <%= link_to "Přidat", :controller => "payroll", :action => "manage_payroll", :id => @employee.id %></p>
 <% end %>

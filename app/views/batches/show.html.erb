@@ -19,8 +19,8 @@
 
 <div id="content-header">
   <img src="/images/show_settings.png" />
-  <h1>Courses</h1>
-  <h3>Batches</h3>
+  <h1>Skupiny</h1>
+  <h3>Třídy</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -29,19 +29,19 @@
 <div id="inner-tab-menu">
   <ul>
     <%  if permitted_to? :index,:exam_groups %>
-      <li><%= link_to 'Exams', batch_exam_groups_path(@batch) %> </li>
+      <li><%= link_to 'Hodnocení', batch_exam_groups_path(@batch) %> </li>
     <% end %>
 
-    <li><%= link_to 'Edit', edit_course_batch_path(@course, @batch) %></li>
-    <li><%= link_to('Delete', [@course, @batch], :method => 'delete', :confirm => 'Are you sure?') %></li>
+    <li><%= link_to 'Upravit', edit_course_batch_path(@course, @batch) %></li>
+    <li><%= link_to('Smazat', [@course, @batch], :method => 'delete', :confirm => 'Jste si jistí?') %></li>
 
 
     <li>
-      <a href="#" class="drops" id="link_one">Manage &#9660;</a>
+      <a href="#" class="drops" id="link_one">Správa &#9660;</a>
       <ul id="box_one" class="scriptaculously" style="display:none;">
         <li><%= link_to 'Subjects', :controller=>"batch_transfers", :action=>'subject_transfer', :id=>@batch %></li>
         <li><%= link_to 'Electives', batch_elective_groups_path(@batch) %></li>
-        <li><%= link_to 'Assign Tutor',:action=>'assign_tutor', :id=>@batch %></li>
+        <li><%= link_to 'Přidat Trenéra',:action=>'assign_tutor', :id=>@batch %></li>
       </ul>
     </li>
   </ul>
@@ -75,8 +75,8 @@
     <table id="listing" width="100%">
       <tr class="tr-head">
         <td>Sl.no</td>
-        <td>Name</td>
-        <td>Admission Number</td>
+        <td>Jméno</td>
+        <td>Číslo evidence</td>
       </tr>
       <% @slno = 0 %>
       <% @students.each do |student| %>

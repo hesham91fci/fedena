@@ -133,10 +133,17 @@
         </div>
 
         <hr class="label-underline"></hr>
+		
+		<div class="label-field-pair">
+          <label for="student_birth_place">Zdravotní pojišťovna</label>
+          <div class="text-input-bg"><%= s.text_field :language %></div>
+        </div>
+
+        <hr class="label-underline"></hr>
 
         <div class="label-field-pair">
           <label for="student_category">Kategorie</label>
-          <div class="text-input-bg"><%= s.select :student_category_id, StudentCategory.active.map {|c| [c.name, c.id]}, { :prompt => 'Select category' } %></div>
+          <div class="text-input-bg"><%= s.select :student_category_id, StudentCategory.active.map {|c| [c.name, c.id]}, { :prompt => 'Vybrat kategorii' } %></div>
         </div>
 		
 		<hr class="label-underline"></hr>

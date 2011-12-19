@@ -20,7 +20,7 @@
 <div id="content-header">
   <img src="/images/admission/admission_page_logo.jpg" />
   <h1>Evidence</h1>
-  <h3>Krok 2 - Detaily příbuzného</h3>
+  <h3>Krok 2 - Detaily kontaktní osoby</h3>
 </div>
 
 <div id="page-yield">
@@ -32,12 +32,12 @@
     <% unless @student.guardians.empty? %>
 
       <ul id="parents-list">
-        <p>Následující příbuzný byl uložen pro hráče <%= @student.full_name %> </p>
+        <p>Následující kontaktní osoba byla uložen pro hráče <%= @student.full_name %> </p>
         <%- @student.guardians.each do |p| -%>
           <li class="list<%=cycle('odd', 'even')%>"><%= p.full_name %> - <%= p.relation %> </li>
         <%  end %>
         <div id="add-more-parent">
-          <%= link_to_function '► Přidat dalšího rodiče/poručníka' do |page|
+          <%= link_to_function '► Přidat další kontaktní osobu' do |page|
             page.visual_effect :toggle_slide, "admission1_form"
             page.hide "parents"
           end %>
@@ -69,7 +69,7 @@
         </div>
 
         <br/>
-        <span class="span-sub-heading">Příbuzný - Osobní údaje</span>
+        <span class="span-sub-heading">Kontaktní osoba - Osobní údaje</span>
         <hr class="sub-heading"></hr>
 
         <div class="label-field-pair">
@@ -87,21 +87,34 @@
 		<hr class="label-underline"></hr>
 
         <div class="label-field-pair">
-          <label for="parent_detail_relation">Příbuzenský vztah<span class="necessary-field">*</span></label>
+          <label for="parent_detail_relation">Vztah k hráči<span class="necessary-field">*</span></label>
           <div class="text-input-bg"><%= f.text_field :relation %></div>
         </div>
 
         <hr class="label-underline"></hr>
 
         <div class="label-field-pair">
-          <label for="parent_detail_occupation">Zaměstnání</label>
+          <label for="parent_detail_occupation">Zaměstnání/Škola</label>
           <div class="text-input-bg"><%= f.text_field :occupation %></div>
         </div>
+		
+		<hr class="label-underline"></hr>
+		
+		<div class="label-field-pair">
+          <label for="parent_detail_education">Pozice/Třída</label>
+          <div class="text-input-bg"><%= f.text_field :education %></div>
+        </div>
 
+        <hr class="label-underline"></hr>
+
+        <div class="label-field-pair">
+          <label for="parent_detail_income">Výška</label>
+          <div class="text-input-bg"><%= f.text_field :income %></div>
+        </div>
 
         <br/>
 
-        <span class="span-sub-heading">Příbuzný - Kontaktní Údaje</span>
+        <span class="span-sub-heading">Kontaktní osoba - Kontaktní Údaje</span>
 
         <hr class="sub-heading"></hr>
 

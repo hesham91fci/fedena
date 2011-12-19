@@ -1,7 +1,7 @@
 <div id="content-header">
   <img src="/images/student_details/student_details_logo.jpg" />
-  <h1>Student</h1>
-  <h3>Fee Status</h3>
+  <h1>ráč</h1>
+  <h3>Poplatky</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -9,7 +9,7 @@
 
 <div id="inner-tab-menu">
   <ul>
-    <li><%= link_to "Student profile", :controller => 'student', :action => 'profile', :id => @student.id %></li>
+    <li><%= link_to "Profil hráče", :controller => 'student', :action => 'profile', :id => @student.id %></li>
   </ul>
 </div>
 
@@ -35,11 +35,11 @@
     <% if permitted_to? :fees_received, :finance %>
       <% form_for :fee do |f|%>
         <% if @student.has_paid_fees == 1 %>
-          <%= check_box :fee, :has_paid_fees,:checked=>true  %> Has paid fees all fees for the batch.
+          <%= check_box :fee, :has_paid_fees,:checked=>true  %> Veškeré poplatky jsou zaplaceny.
         <% else %>
-          <%= check_box :fee, :has_paid_fees,:checked=>false %> Has paid fees all fees for the batch.
+          <%= check_box :fee, :has_paid_fees,:checked=>false %> Veškeré poplatky jsou zaplaceny.
         <% end %>
-        <%= submit_tag "► Update",:class=>'user_button' %>
+        <%= submit_tag "► Aktualizovat",:class=>'user_button' %>
       <% end %>
     <% end %>
   </div>

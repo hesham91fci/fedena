@@ -21,7 +21,7 @@
         <li><%= link_to_remote "Adresa", :url => {:action => "profile_address", :id => @employee.id}, :update => "profile-infos" %></li>
         <li><%= link_to_remote "Kontakt", :url => {:action => "profile_contact", :id => @employee.id}, :update => "profile-infos" %></li>
         <li><%= link_to_remote "Info banka", :url => {:action => "profile_bank_details", :id => @employee.id}, :update => "profile-infos" %></li>
-        <li><%= link_to_remote "Další info", :url => {:action => "profile_additional_details", :id => @employee.id}, :update => "profile-infos" %></li>
+        <li><%= link_to_remote "Další údaje", :url => {:action => "profile_additional_details", :id => @employee.id}, :update => "profile-infos" %></li>
       </ul>
     </li>
 
@@ -36,10 +36,10 @@
     <%else%>
       <% if permitted_to? :payslip, :employee %>
         <li>
-          <a href="#" class="drops" id="link_two">Salary &#9660;</a>
+          <a href="#" class="drops" id="link_two">Plat &#9660;</a>
           <ul id="box_two" class="scriptaculously" style="display:none;">
-            <li><%= link_to_remote "Payroll", :url => {:action => "profile_payroll_details", :id => @employee.id}, :update => "profile-infos" %></li>
-            <li><%= link_to_remote "Payslip", :url => {:action => "view_payslip", :id => @employee.id}, :update => "profile-infos" %></li>
+            <li><%= link_to_remote "Mzdy", :url => {:action => "profile_payroll_details", :id => @employee.id}, :update => "profile-infos" %></li>
+            <li><%= link_to_remote "Výplatní páska", :url => {:action => "view_payslip", :id => @employee.id}, :update => "profile-infos" %></li>
           </ul>
         </li>
       <%end%>
@@ -57,9 +57,9 @@
     <% else %>
       <% if permitted_to? :employee_attendance, :employee %>
         <li>
-          <a href="#" class="drops" id="link_three">Leaves &#9660;</a>
+          <a href="#" class="drops" id="link_three">Dovolená &#9660;</a>
           <ul id="box_three" class="scriptaculously" style="display:none;">
-            <li><%= link_to_remote "Attendance", :url => {:action => "view_attendance", :id => @employee.id}, :update => "profile-infos" %></li>
+            <li><%= link_to_remote "Docházka", :url => {:action => "view_attendance", :id => @employee.id}, :update => "profile-infos" %></li>
           </ul>
         </li>
 
@@ -81,7 +81,7 @@
     <%end%>
       <% if @current_user.admin? %>
     <li>
-      <%= link_to "Delete" ,:action=>'remove',:id=>@employee.id %>
+      <%= link_to "Smazat" ,:action=>'remove',:id=>@employee.id %>
     </li>
       <% end %>
   </ul>

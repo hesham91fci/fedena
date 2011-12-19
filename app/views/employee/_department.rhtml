@@ -1,24 +1,24 @@
 <ul id="department-list">
   <% unless @departments.empty? %>
-    <li class="listheading"><div class="department-name"> Active Departments</div></li>
+    <li class="listheading"><div class="department-name"> Aktivní oddělení</div></li>
     <% @departments.each do |d| %>
       <li class="list<%=cycle('odd', 'even')%>">
         <div class="department-name"><%= d.name %>(<%= d.code %>)</div>
-        <div class="department-edit"><%= link_to "Edit", :action => "edit_department", :id=>d.id %></div>
-        <div class="department-edit"><%= link_to "Delete", {:action => "delete_department", :id=>d.id}, :confirm => "Are you sure?" %></div>
+        <div class="department-edit"><%= link_to "Upravit", :action => "edit_department", :id=>d.id %></div>
+        <div class="department-edit"><%= link_to "Smazat", {:action => "delete_department", :id=>d.id}, :confirm => "Jste si jistí?" %></div>
       </li>
     <% end %>
       <% unless @inactive_departments.empty? %>
-      <li class="listheading"><div class="department-name"> Inactive Departments</div></li>
+      <li class="listheading"><div class="department-name"> Neaktivní Oddělení</div></li>
     <%- @inactive_departments.each do |c| -%>
       <li class="list<%=cycle('odd', 'even')%>">
         <div class="department-name"><%= c.name %> (<%= c.code %>)</div>
-        <div class="department-edit"><%= link_to "Edit", {:action => "edit_department", :id=>c.id} %></div>
-        <div class="department-edit"><%= link_to "Delete", {:action => "delete_department", :id=>c.id},:confirm=>"Are you sure?" %></div>
+        <div class="department-edit"><%= link_to "Upravit", {:action => "edit_department", :id=>c.id} %></div>
+        <div class="department-edit"><%= link_to "Smazat", {:action => "delete_department", :id=>c.id},:confirm=>"Jste si jistí?" %></div>
       </li>
      <% end %>
      <% end %>
     <% else %>
-    <p class="flash-msg"> No employee departments found</p>
+    <p class="flash-msg"> Žádné oddělení zaměstnanců nenalezeno</p>
   <% end %>
 </ul>

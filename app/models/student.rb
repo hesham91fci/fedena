@@ -114,8 +114,8 @@ class Student < ActiveRecord::Base
   end
 
   def gender_as_text
-    return 'Male' if gender.downcase == 'm'
-    return 'Female' if gender.downcase == 'f'
+    return 'Muž' if gender.downcase == 'm'
+    return 'Žena' if gender.downcase == 'f'
     nil
   end
 

@@ -21,8 +21,8 @@
   </div>
 <% else %>
   <% if permitted_to? :edit3_1,:employee %>
-    <p class="flash-msg">Nejsou zadány další údaje pro <%= @employee.first_name%>. <%= link_to "ADD", :controller => "employee", :action => "edit3_1", :id => @employee.id %></p>
+    <p class="flash-msg">Nejsou zadány další údaje pro <%= @employee.first_name%>. <%= link_to "Přidat", :controller => "employee", :action => "edit3_1", :id => @employee.id %></p>
   <% else %>
-     <p class="flash-msg">Nejsou zadány další údaje pro <%= @employee.first_name%>. <%#= link_to "ADD", :controller => "employee", :action => "edit3_1", :id => @employee.id %></p>
+     <p class="flash-msg">Nejsou zadány další údaje pro <%= @employee.first_name%>. <%#= link_to "Přidat", :controller => "employee", :action => "edit3_1", :id => @employee.id %></p>
   <% end %>
 <% end %>

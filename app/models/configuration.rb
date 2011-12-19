@@ -18,7 +18,7 @@
 
 class Configuration < ActiveRecord::Base
 
-  STUDENT_ATTENDANCE_TYPE_OPTIONS = ['Daily', 'SubjectWise']
+  STUDENT_ATTENDANCE_TYPE_OPTIONS = ['Denně', 'Dle předmětu']
   NETWORK_STATES                   = ['Online','Offline']
 
   def validate

@@ -1,20 +1,20 @@
 <ul id="category-list">
 <% unless @additional_details.empty? %>
-  <li class="heading"> Field name </li>
+  <li class="heading"> Název pole </li>
     <%- @additional_details.each do |c| -%>
       <li class="list<%=cycle('odd', 'even')%>">
         <div class="category-name"><%= c.name %></div>
          <% if(c.status == true) %>
-        <div class="category-status"> Active </div>
+        <div class="category-status"> Aktivní </div>
         <% else %>
-        <div class="category-status"> Inactive </div>
+        <div class="category-status"> Neaktivní </div>
         <% end %>
-        <div class="category-edit"><%= link_to "Edit", {:action => "edit_additional_details", :id=>c.id} %></div>
-        <div class="category-edit"><%= link_to "Delete", {:action => "delete_additional_details", :id=>c.id}, :confirm => "Are you sure?" %></div>
+        <div class="category-edit"><%= link_to "Upravit", {:action => "edit_additional_details", :id=>c.id} %></div>
+        <div class="category-edit"><%= link_to "Smazat", {:action => "delete_additional_details", :id=>c.id}, :confirm => "Jste si jistí?" %></div>
       </li>
      <% end %>
 
   <% else %>
-<p class="flash-msg">No additional details record found</p>
+<p class="flash-msg">Žádné další údaje nenalezeny.</p>
   <% end %>
 </ul>

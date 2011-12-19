@@ -281,7 +281,7 @@ class EmployeeController < ApplicationController
         @leave_type.each do |e|
           EmployeeLeave.create( :employee_id => @employee.id, :employee_leave_type_id => e.id, :leave_count => e.max_leave_count)
         end
-        flash[:notice] = "Employee #{@employee.first_name} record saved"
+        flash[:notice] = "Údaje zaměstnance #{@employee.first_name} uloženy"
         redirect_to :controller =>"employee" ,:action => "admission2", :id => @employee.id
       end
       @positions = EmployeePosition.find_all_by_employee_category_id(params[:employee][:employee_category_id])
@@ -470,7 +470,7 @@ class EmployeeController < ApplicationController
     if request.post?
       @employee = Employee.find(params[:id])
       Employee.update(@employee, :reporting_manager_id => params[:employee][:reporting_manager_id])
-      flash[:notice]="manažer zaměstnance uložen"
+      flash[:notice]="Vedoucí zaměstnance uložen"
       redirect_to :controller => "payroll", :action => "manage_payroll", :id=>@employee.id
     end
   
@@ -1600,7 +1600,7 @@ class EmployeeController < ApplicationController
     user = User.destroy_all(:username => employee.employee_number) #unless user.nil?
     employee_subject=EmployeesSubject.destroy_all(:employee_id=>employee.id)
     Employee.destroy(params[:id])
-    flash[:notice] = "Všechny záznamy byly vymazány u zaměstnance s evid. číslem #{employee.employee_number}."
+    flash[:notice] = "Všechny záznamy byly vymazány u zaměstnance s ID. #{employee.employee_number}."
     redirect_to :controller => 'user', :action => 'dashboard'
   end
 

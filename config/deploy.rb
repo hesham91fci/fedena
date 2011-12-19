@@ -10,7 +10,7 @@ set :deploy_to, "/home/deployer/app/"
 set :user, "deployer"
 set :use_sudo, false
 
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 
 ssh_options[:port] = 5019
 

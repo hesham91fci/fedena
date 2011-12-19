@@ -1,7 +1,7 @@
 <div id="content-header">
   <img src="/images/student_details/student_details_logo.jpg" />
-  <h1>Student info</h1>
-  <h3>Previous Details</h3>
+  <h1>Info hráče</h1>
+  <h3>Předchozí Údaje</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -23,8 +23,8 @@
 
     <div id ="student_main_info">
       <h3> <%= @student.full_name %>  </h3>
-      <h4> Course & Batch : <%= @student.batch.course_name %> </h4>
-      <h4> Adm no. : <%= @student.admission_no %> </h4>
+      <h4> Skupina & Třída : <%= @student.batch.course_name %> </h4>
+      <h4> Ev. č. : <%= @student.admission_no %> </h4>
     </div>
 
     <div class="extender"> </div>
@@ -36,23 +36,23 @@
 
     <% unless @previous_data.nil? %>
       <div class="new_profile_info_area1">
-        <div class="profile_info_label_top">Institution Name</div>
+        <div class="profile_info_label_top">Název klubu</div>
         <div class="profile_info_text_top"><%=@previous_data.institution %></div>
       </div>
       <div class="new_profile_info_area1">
-        <div class="profile_info_label_top2">Course</div>
+        <div class="profile_info_label_top2">Skupina</div>
         <div class="profile_info_text_top2"><%=@previous_data.course %></div>
 
-        <div class="profile_info_label_top">Year </div>
+        <div class="profile_info_label_top">Roky působení </div>
         <div class="profile_info_text_top"><%=@previous_data.year %></div>
       </div>
       <div class="new_profile_info_area1">
-        <div class="profile_info_label_top2">Total Mark</div>
+        <div class="profile_info_label_top2">Důvod přestupu</div>
         <div class="profile_info_text_top2"><%=@previous_data.total_mark %></div>
       </div>
       <div class="new_profile_info_area1">
         <div class="profile_info_label_top"></div>
-        <div class="profile_info_text_top"><u>Subjects</u></div>
+        <div class="profile_info_text_top"><u>Hodnocení</u></div>
       </div>
       <% unless @previous_subjects.blank? %>
         <div class="prev_subject_box">
@@ -74,7 +74,7 @@
 
 
     <div class="buttons">
-      <%= link_to " ► Edit",
+      <%= link_to " ► Uoravit",
         { :controller => "student", :action => "previous_data_edit", :id => @student.id },:class => "user_button"%>
     </div>
     <div class="extender"></div>

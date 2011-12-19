@@ -1,8 +1,8 @@
 
 <div id="content-header">
   <img src="/images/admission/admission_page_logo.jpg" />
-  <h1>Udaje příbuzného</h1>
-  <h3>Upravit údaje příbuzného</h3>
+  <h1>Udaje kontaktní osoby</h1>
+  <h3>Upravit údaje kontaktní osoby</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -24,7 +24,7 @@
         <%= s.hidden_field :ward_id, :value => @student.id %>
       </div>
       <br/>
-      <span class="span-sub-heading">Příbuzný - Osobní Údaje</span>
+      <span class="span-sub-heading">Kontaktní osoba - Osobní Údaje</span>
       <hr class="sub-heading"></hr>
 
       <div class="label-field-pair">
@@ -38,13 +38,23 @@
       </div>
 
       <div class="label-field-pair">
-        <label for="parent_detail_relation">Přibuzenský vztah</label>
+        <label for="parent_detail_relation">Vztah k hráči</label>
         <div class="text-input-bg"><%= s.text_field :relation, :value => @parent.relation %></div>
       </div>
 
       <div class="label-field-pair">
-        <label for="parent_detail_occupation">Zaměstání</label>
+        <label for="parent_detail_occupation">Zaměstání/Škola</label>
         <div class="text-input-bg"><%= s.text_field :occupation, :value => @parent.occupation %></div>
+      </div>
+	  
+	  <div class="label-field-pair">
+        <label for="parent_detail_education">Pozice/Třída</label>
+        <div class="text-input-bg"><%= s.text_field :education, :value => @parent.education %></div>
+      </div>
+	  
+	  <div class="label-field-pair">
+        <label for="parent_detail_income">Výška</label>
+        <div class="text-input-bg"><%= s.text_field :income, :value => @parent.income %></div>
       </div>
 
       <div class="label-field-pair">
@@ -52,7 +62,7 @@
         <div class="text-input-bg"><%= s.text_field :email, :value => @parent.email %></div>
       </div>
       <br/>
-      <span class="span-sub-heading">Příbuzný - Kontaktní Údaje</span>
+      <span class="span-sub-heading">Kontaktní osoba - Kontaktní Údaje</span>
       <hr class="sub-heading"></hr>
       <div class="label-field-pair">
         <label for="master_student_city">Ulice</label>

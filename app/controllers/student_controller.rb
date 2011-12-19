@@ -70,7 +70,7 @@ class StudentController < ApplicationController
             sms.send_sms
           end
         end
-        flash[:notice] = "Údaje hráče úspěšně uloženy. Prosím vyplňte údaje o opatrovnících."
+        flash[:notice] = "Údaje hráče úspěšně uloženy. Prosím vyplňte údaje o kontaktních osobách."
         redirect_to :controller => "student", :action => "admission2", :id => @student.id
       end
     end
@@ -223,7 +223,7 @@ class StudentController < ApplicationController
     @additional_details = StudentAdditionalField.find(:all)
     @additional_field = StudentAdditionalField.new(params[:additional_field])
     if request.post? and @additional_field.save
-      flash[:notice] = "Additional field created"
+      flash[:notice] = "Další údaj vytvořen"
       redirect_to :controller => "student", :action => "add_additional_details"
     end
   end
@@ -231,7 +231,7 @@ class StudentController < ApplicationController
   def edit_additional_details
     @additional_details = StudentAdditionalField.find(params[:id])
     if request.post? and @additional_details.update_attributes(params[:additional_details])
-      flash[:notice] = "Ostatní údaje aktualizovány"
+      flash[:notice] = "Další údaj aktualizován"
       redirect_to :action => "add_additional_details"
     end
   end
@@ -241,7 +241,7 @@ class StudentController < ApplicationController
     if students.blank?
       StudentAdditionalField.find(params[:id]).destroy
       @additional_details = StudentAdditionalField.find(:all)
-      flash[:notice]="Successfully deleted!"
+      flash[:notice]="Úspěšně vymazáno!"
       redirect_to :action => "add_additional_details"
     else
       flash[:notice]="Omlouváme se! Není možno odebrat, když existují údaje pro vybranou položku"

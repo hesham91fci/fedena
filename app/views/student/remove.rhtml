@@ -1,7 +1,7 @@
 <div id="content-header">
   <img src="/images/student_details/student_details_logo.jpg" />
-  <h1>Students</h1>
-  <h3>Remove student</h3>
+  <h1>Hráči</h1>
+  <h3>Odstranit hráče</h3>
   <div id="app-back-button">
      <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -18,8 +18,8 @@
   <div class="extender"> </div>
   <% if @student.is_active == true %>
   <div class="link-box">
-    <div class="link-heading"> <%= link_to "Student leaving Institution", :controller => "student", :action => "change_to_former", :id => @student.id %> </div>
-    <div class="link-descr">For students leaving the Institution, use this option to remove them from the list of active students and place them in the former students list.</div>
+    <div class="link-heading"> <%= link_to "Hráč opouští klub", :controller => "student", :action => "change_to_former", :id => @student.id %> </div>
+    <div class="link-descr">Pro hráče, při odchodu z klubu, použijte tuto volbu pro jejich odstranění ze seznamu aktivních hráčů, a umístí je na seznam bývalých hráčů.</div>
   </div>
   <% else %>
     <div class="link-box">
@@ -28,8 +28,8 @@
   </div>
     <% end %>
   <div class="link-box">
-    <div class="link-heading"> <%= link_to "Remove student records", :controller => "student", :action => "delete", :id => @student.id %> </div>
-    <div class="link-descr">Completely delete student's records from the Institution's databases. Use this option only if you created the student record by accident and want to remove it completely.</div>
+    <div class="link-heading"> <%= link_to "Odstranit záznamy o hráčích", :controller => "student", :action => "delete", :id => @student.id %> </div>
+    <div class="link-descr">Úplně odstranit záznamy hráče z databáze. Tuto možnost použijte pouze, pokud chcete úplně odstranit záznamy o hráči.</div>
   </div>
 
     <!--

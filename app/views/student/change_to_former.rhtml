@@ -1,7 +1,7 @@
 <div id="content-header">
   <img src="/images/admission/admission_page_logo.jpg" />
-  <h1>Students</h1>
-  <h3>Leaving school</h3>
+  <h1>Hráči</h1>
+  <h3>Opouští klub</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -19,16 +19,16 @@
 
   <div id="remove-student">
     <% unless flash[:notice].nil? %> <p class="flash-msg"> <%= flash[:notice] %> </p> <% end %>
-    <p>For students leaving the school, use this option to remove them from the list of active students and place them in the former students list.</p>
+    <p>Pro hráče, při odchodu z klubu, použijte tuto volbu pro jejich odstranění ze seznamu aktivních hráčů, a umístí je na seznam bývalých hráčů.</p>
 
     <% remote_form_for :remove do |f| %>
       <div class="label-field-pair">
-        <label for="remove_descr">Reason for leaving</label>
+        <label for="remove_descr">Důvod odchodu</label>
         <div class="text-input-bg"><%= f.text_field :status_description %></div>
       </div>
 
       <div id="submit-button">
-        <%= submit_tag '► Remove' %>
+        <%= submit_tag '► Odstranit' %>
       </div>
 
     <% end %>

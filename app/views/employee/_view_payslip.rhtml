@@ -1,8 +1,8 @@
 <ul class="item-list">
-  <li class="heading">Payslip generated on <%= @salary_date %></li>
+  <li class="heading">Vyplatní páska generována <%= @salary_date %></li>
 </ul>
 <ul class="item-list">
-  <li class="heading1">Salary</li>
+  <li class="heading1">Mzda</li>
   <% @monthly_payslips.each do |mp| %>
     <% category = PayrollCategory.find(mp.payroll_category_id) %>
     <% @emp = Employee.find(mp.employee_id) %>
@@ -25,7 +25,7 @@
     <% end %>
   <% end %>
   <li class="list<%=cycle('odd', 'even')%>">
-    <div class="item-name"><b>Total Salary </b></div>
+    <div class="item-name"><b>Celkem </b></div>
     <div class="item-edit"><b><span class="currency-type"><%= @currency_type %></span> <%=@net_non_deductionable_amount  %></b></div>
   </li>
 </ul>

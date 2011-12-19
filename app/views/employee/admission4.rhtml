@@ -1,7 +1,7 @@
 <div id="content-header">
    <img src="/images/HR/show_hr.png" alt="" />
-  <h1>Select reporting manager</h1>
-  <h3>Step 4</h3>
+  <h1>Nastavit vedoucího </h1>
+  <h3>Krok 4</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -16,9 +16,9 @@
 
 
         <div id="changed-manager-outer">
-          <div id="changed-manager">Selected  Manager&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
-          <div id="changed-manager-name"><span class="not-selected">(not selected)</span></div>
-          <div id="update-button"><%=  submit_tag("► Save & Proceed") %></div>
+          <div id="changed-manager">Vybraný vedoucí&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
+          <div id="changed-manager-name"><span class="not-selected">(není vybrán)</span></div>
+          <div id="update-button"><%=  submit_tag("► Uložit & Pokračovat") %></div>
           <div class="extender"></div>
         </div>
       </div>
@@ -29,7 +29,7 @@
 
     <div id="search-options">
       <div id="search-outer">
-        <div id="search-label">Search by name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
+        <div id="search-label">Hledat dle jména&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</div>
         <div id="search-text-box"><%= text_field_tag("query", params['query'], :autocomplete => 'off') %></div>
 
         <%= image_tag("loader.gif",
@@ -47,10 +47,10 @@
       :url=> {:action=>'update_reporting_manager_name'} %>
 
       <div id="advanced-options">
-        <div class="employee-search-options"><%= select :employee, :department_id, @departments.map {|s| [s.name, s.id]}, :prompt => "Select department" %></div>
-        <div class="employee-search-options"><%= select :employee, :category_id,   @categories.map {|s| [s.name, s.id]},  :prompt => "Select category" %></div>
-        <div class="employee-search-options"><%= select :employee, :position_id,   @positions.map {|s| [s.name, s.id]},   :prompt => "Select position" %></div>
-        <div class="employee-search-options"><%= select :employee, :grade_id,      @grades.map {|s| [s.name, s.id]},      :prompt => "Select grade" %></div>
+        <div class="employee-search-options"><%= select :employee, :department_id, @departments.map {|s| [s.name, s.id]}, :prompt => "Vybrat oddělení" %></div>
+        <div class="employee-search-options"><%= select :employee, :category_id,   @categories.map {|s| [s.name, s.id]},  :prompt => "Vybrat kategorii" %></div>
+        <div class="employee-search-options"><%= select :employee, :position_id,   @positions.map {|s| [s.name, s.id]},   :prompt => "Vybrat pozici" %></div>
+        <div class="employee-search-options"><%= select :employee, :grade_id,      @grades.map {|s| [s.name, s.id]},      :prompt => "Vybrat stupeň" %></div>
         <div class="extender"></div>
       </div>
     </div>
