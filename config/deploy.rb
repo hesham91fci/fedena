@@ -14,6 +14,8 @@ set :deploy_via, :remote_cache
 
 ssh_options[:port] = 5019
 
+require 'bundler/capistrano'
+
 task :after_update_code, :roles => [:app, :db] do
   # link database configuration
   run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"

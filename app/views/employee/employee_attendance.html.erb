@@ -19,8 +19,8 @@
 
 <div id="content-header">
    <img src="/images/attendence/attendence.png" alt="" />
-  <h1>Manage Attendance</h1>
-  <h3>Leave and Attendance</h3>
+  <h1>Správa Docházky</h1>
+  <h3>Dovolené a Docházka</h3>
   <div id="app-back-button">
    <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -33,23 +33,23 @@
   <% end %>
   <div id="box">
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Add Leave types", :controller=>"employee_attendance", :action=>"add_leave_types"%></div>
-      <div class="link-descr">Add and edit employee attendance types.</div>
+      <div class="link-heading"><%= link_to "Přidat typy Dovolené", :controller=>"employee_attendance", :action=>"add_leave_types"%></div>
+      <div class="link-descr">Přidat nebo upravit typy dovolené pro zaměstnance.</div>
     </div>
 
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Attendance register", :controller=>"employee_attendances", :action=>"index"%></div>
-      <div class="link-descr">Register attendance.</div>
+      <div class="link-heading"><%= link_to "Prezenční listina", :controller=>"employee_attendances", :action=>"index"%></div>
+      <div class="link-descr">Zapsat docházku.</div>
     </div>
 
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Attendance report", :controller=>"employee_attendance", :action=>"report" %></div>
-      <div class="link-descr">Attendance reports.</div>
+      <div class="link-heading"><%= link_to "Report docházky", :controller=>"employee_attendance", :action=>"report" %></div>
+      <div class="link-descr">Reporty docházky.</div>
     </div>
 
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Reset Leave", :controller=>"employee_attendance", :action=>"manual_reset" %></div>
-      <div class="link-descr">Reset employee leaves.</div>
+      <div class="link-heading"><%= link_to "Resetovat Dovolené", :controller=>"employee_attendance", :action=>"manual_reset" %></div>
+      <div class="link-descr">Resetovat dovolené zaměstnanců.</div>
     </div>
 
 

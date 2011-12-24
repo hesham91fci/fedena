@@ -72,7 +72,7 @@ class BatchTransfersController < ApplicationController
 #          flash[:notice]="Vybraní hráči dokončili úspěšně působení v klubu."
 #          redirect_to :controller=>'batch_transfers' and return
         end
-        flash[:notice]=""Vybraní hráči dokončili úspěšně působení v klubu."
+        flash[:notice]="Vybraní hráči dokončili úspěšně působení v klubu."
         redirect_to :action=>"graduation", :id=>params[:id], :ids => @admission_list
       end
     end

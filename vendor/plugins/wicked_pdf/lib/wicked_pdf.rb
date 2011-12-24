@@ -13,6 +13,8 @@ class WickedPdf
    include Win32PdfRenderer
   elsif Platform.is_linux?
    include NixPdfRenderer
+  elsif Platform.is_FreeBSD?
+   include NixPdfRenderer
   else
    raise "Unable to find Platform"
   end
