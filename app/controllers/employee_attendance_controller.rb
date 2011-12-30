@@ -35,7 +35,7 @@ class EmployeeAttendanceController < ApplicationController
             @employee.each do |e|
                 EmployeeLeave.create( :employee_id => e.id, :employee_leave_type_id => @leave_type.id, :leave_count => @leave_type.max_leave_count)
             end
-            flash[:notice] = "Employee leave type saved"
+            flash[:notice] = "Druh dovolené uložen"
             redirect_to :action => "add_leave_types"
         end
     end
@@ -43,7 +43,7 @@ class EmployeeAttendanceController < ApplicationController
     def edit_leave_types
         @leave_type = EmployeeLeaveType.find(params[:id])
         if request.post? and @leave_type.update_attributes(params[:leave_type])
-            flash[:notice] = "Leave type updated"
+            flash[:notice] = "Druh dovolené aktualizován"
             redirect_to :action => "add_leave_types"
         end
     end
@@ -57,7 +57,7 @@ class EmployeeAttendanceController < ApplicationController
             @leave_count.each do |e|
                 e.delete
             end
-            flash[:notice] = "Druh Dovolené úspěšně vymazáno"
+            flash[:notice] = "Druh Dovolené úspěšně vymazán"
         else
             flash[:notice] = "Omlouváme se! Nemůžeme vymazat tuto položku"
         end

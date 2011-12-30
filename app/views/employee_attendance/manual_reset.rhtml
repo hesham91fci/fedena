@@ -1,7 +1,7 @@
 <div id="content-header">
   <img src="/images/HR/leave-new.png" alt="" />
-  <h1>Manual Leave Reset</h1>
-  <h3>Reset Employee Leave Manually</h3>
+  <h1>Reset Dovolených</h1>
+  <h3>Ruční resetování dovolených</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -16,22 +16,22 @@
   <div id="box">
 
       <div class="link-box">
-        <div class="link-heading"><%= link_to "Leave Reset Settings ", :action => "leave_reset_settings" %></div>
-        <div class="link-descr">Configure automatic leave reset settings </div>
+        <div class="link-heading"><%= link_to "Nastavení Resetu Dovolených ", :action => "leave_reset_settings" %></div>
+        <div class="link-descr">Nastavení automatického resetu dovolených </div>
       </div>
       <div class="link-box">
-        <div class="link-heading"><%= link_to "Reset All ", :action => "employee_leave_reset_all" %></div>
-        <div class="link-descr">Reset leave count for all employees.</div>
+        <div class="link-heading"><%= link_to "Resetovat Vše ", :action => "employee_leave_reset_all" %></div>
+        <div class="link-descr">Resetovat dovolené pro všechny zaměstnance.</div>
       </div>
   
       <div class="link-box">
-        <div class="link-heading"><%= link_to "Department Reset", :action => "employee_leave_reset_by_department" %></div>
-        <div class="link-descr">Reset employee leave count by department.</div>
+        <div class="link-heading"><%= link_to "Reset dle Oddělení", :action => "employee_leave_reset_by_department" %></div>
+        <div class="link-descr">Resetovat dovolené zaměstnanců podle vybraného oddělení.</div>
       </div>
    
       <div class="link-box">
-        <div class="link-heading"><%= link_to "Indvidual Reset", :action => "employee_leave_reset_by_employee" %></div>
-        <div class="link-descr">Reset employee leave count individually.</div>
+        <div class="link-heading"><%= link_to "Samostatný Reset", :action => "employee_leave_reset_by_employee" %></div>
+        <div class="link-descr">Samostatný reset dovolených u zaměstnanců.</div>
       </div>
    
 

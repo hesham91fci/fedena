@@ -11,7 +11,7 @@
   <% form_for :events do |f| %>
     <%= error_messages_for 'events' %>
     <div class="label-field-pair">
-      <label for="start-date">Žačátek:</label>
+      <label for="start-date">Začátek:</label>
       <div class="text-input-bg"><%= calendar_date_select_tag 'events[start_date]', @date, :time => true  %></div>
     </div>
     <div class="label-field-pair">

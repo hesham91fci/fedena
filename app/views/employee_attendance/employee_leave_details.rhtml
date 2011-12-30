@@ -1,7 +1,7 @@
 <div id="content-header">
   <img src="/images/HR/leave-new.png" alt="" />
-  <h1>Reset Employee Leave</h1>
-  <h3>Reset Employee Leave for <%= @employee.full_name %></h3>
+  <h1>Reset Dovolené Zaměstnanci</h1>
+  <h3>Resetovat Dovolené pro <%= @employee.full_name %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -11,10 +11,10 @@
   <div id="list">
     <table id="listing" width="100%">
       <tr class="tr-head">
-        <td>Leave type</td>
-        <td>Available Leave</td>
-        <td>Leave taken</td>
-        <td>Last reset date </td>
+        <td>Druh dovolené</td>
+        <td>Zbývá dovolené</td>
+        <td>Vybraná dovolená</td>
+        <td>Datum posledního resetu </td>
       </tr>
       <% @leave_count.each do |e| %>
         <%  leave_type =EmployeeLeaveType.find_by_id(e.employee_leave_type_id)%>
@@ -33,7 +33,7 @@
       <% end %>
       <td class="col-6">
         <p>
-          <%= link_to_remote "► Reset Leave",:class=>'submit_button3' ,:url=>{:action=>'employee_wise_leave_reset', :id => @employee.id } %>
+          <%= link_to_remote "► Reset",:class=>'submit_button3' ,:url=>{:action=>'employee_wise_leave_reset', :id => @employee.id } %>
         </p>
       </td>
     </table>
