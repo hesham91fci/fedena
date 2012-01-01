@@ -11,6 +11,7 @@ set :user, "deployer"
 set :use_sudo, false
 
 set :deploy_via, :remote_cache
+set :bundle_flags, "--no-deployment"
 
 ssh_options[:port] = 5019
 
