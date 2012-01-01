@@ -1,7 +1,7 @@
 
 <ul id="grade-list">
   <% unless @grades.empty? %>
-    <li class="listheading"><div class="grade-name"> Aktivní Stupně</div></li>
+    <li class="listheading"><div class="grade-name"> Aktivní Pojišťovny</div></li>
     <% @grades.each do |g| %>
       <li class="list<%=cycle('odd', 'even')%>">
         <div class="grade-name"><%= g.name %>(<%= g.priority %>)</div>
@@ -10,7 +10,7 @@
       </li>
     <% end %>
     <% unless @inactive_grades.empty? %>
-      <li class="listheading"><div class="grade-name"> Neaktivní Stupně</div></li>
+      <li class="listheading"><div class="grade-name"> Neaktivní Pojišťovny</div></li>
       <%- @inactive_grades.each do |c| -%>
         <li class="list<%=cycle('odd', 'even')%>">
           <div class="grade-name"><%= c.name %> (<%= c.priority %>)</div>

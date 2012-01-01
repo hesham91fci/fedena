@@ -1,6 +1,6 @@
 <div id="content-header">
   <img src="/images/student_details/student_details_logo.jpg" />
-  <h1>Hráč</h1>
+  <h1>Hráči</h1>
   <h3>Rozšířené vyhledávaní</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
@@ -150,14 +150,14 @@
 
         <%= link_to "► Hledat znovu", {:action=>"advanced_search"}%>
         <% unless @students.empty? %>
-          <%= link_to "► Ukaž PDF report",   {:action => "advanced_search_pdf",:for =>searched_for, :result=>@students,:search=> params[:search],:status=>params[:search][:is_active_equals], :format => 'pdf'}, :target => '_blank' , :class=> 'submit_button' %>
+          <%= link_to "► PDF report",   {:action => "advanced_search_pdf",:for =>searched_for, :result=>@students,:search=> params[:search],:status=>params[:search][:is_active_equals], :format => 'pdf'}, :target => '_blank' , :class=> 'submit_button' %>
         <% end %>
       </div>
       <div class="extender"></div>
       <div class="searched_for">
 
         <% unless params[:search][:first_name_or_middle_name_or_last_name_like].empty? %>
-          <span>Name:</span> <%= params[:search][:first_name_or_middle_name_or_last_name_like] %>
+          <span>Jméno:</span> <%= params[:search][:first_name_or_middle_name_or_last_name_like] %>
         <% end %>
         <% unless  params[:search][:admission_no_equals].empty? %>
           <span>Admission no:</span><%= params[:search][:admission_no_equals] %>
@@ -203,13 +203,13 @@
         <% unless @students.empty? %>
           <tr class="tr-head">
             <td>
-              Sl no.
+              Č. sl
             </td>
             <td>
-              First Name
+              Jméno a příjmení
             </td>
-            <td> Batch</td>
-            <td> Adm no</td>
+            <td> Třída</td>
+            <td> Ev. č.</td>
 
           </tr>
           <tr class="tr-blank"></tr>

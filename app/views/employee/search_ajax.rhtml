@@ -2,16 +2,16 @@
         <% unless @employee.blank? %>
         <tr class="tr-head">
           <td>
-            Sl no.
+            Č. sl
           </td>
           <td>
-            Employee Name
+            Jméno a příjmení
           </td>
           <td>
-            Employee ID
+            ID. Zaměstn.
           </td>
           <td>
-            Employee dept
+            Oddělení zaměstnance
           </td>
         </tr>
         <tr class="tr-blank"></tr>
@@ -26,7 +26,7 @@
           <% end %>
           <% else %>
         <tr class="tr-<%= cycle('odd', 'even') %>">
-          <td class="col-2">No employee found</td>
+          <td class="col-2">Žádný zaměstnanec nenalezen</td>
         </tr>
       <% end %>
     </table>

@@ -34,7 +34,7 @@
       <hr class="label-underline"></hr>
 
       <div class="label-field-pair">
-        <label for="employee_joining_date">Datum příchodu </label>
+        <label for="employee_joining_date">Datum nástupu </label>
         <div class="text-input-bg"><%= calendar_date_select_tag 'employee[joining_date]', Date.today,
             :year_range => 25.years.ago..0.years.from_now %></div>
       </div>
@@ -80,23 +80,18 @@
       </div>
       <hr class="label-underline"></hr>
       <div class="label-field-pair">
-        <label for="employee_position">Pozice <span class="necessary-field">*</span></label>
+        <label for="employee_position">Kvalifikace <span class="necessary-field">*</span></label>
         <div class="text-input-bg"><div id="positions1"> <%= render :partial => 'positions', :object => @positions %></div></div>
       </div>
       <hr class="label-underline"></hr>
       <div class="label-field-pair">
-        <label for="employee_grade">Stupeň</label>
+        <label for="employee_grade">Zdravotní pojišťovna</label>
         <div class="text-input-bg"><%= select :employee, :employee_grade_id, @grades.map {|s| [s.name, s.id]},:prompt => "Vybrat" %></div>
       </div>
-      <hr class="label-underline"></hr>
+	  <hr class="label-underline"></hr>
       <div class="label-field-pair">
-        <label for="employee_job_title">Volné</label>
+        <label for="employee_job_title">Zaměstnání</label>
         <div class="text-input-bg"><%= a.text_field :job_title %></div>
-      </div>
-      <hr class="label-underline"></hr>
-      <div class="label-field-pair">
-        <label for="employee_qualification">Kvalifikace</label>
-        <div class="text-input-bg"><%= a.text_field :qualification %></div>
       </div>
       <hr class="label-underline"></hr>
       <div class="label-field-pair-text-area">
@@ -121,25 +116,6 @@
 
         <label class="label_for_status" for="employee_status_false">Neaktivní</label>
         <%= a.radio_button  "status", "false" %>
-      </div>
-
-
-      <br/>
-      <span class="span-sub-heading">Osobní údaje</span>
-      <hr class="sub-heading"></hr>
-      <div class="label-field-pair">
-        <label for="employee_martial_status">Rodinný stav</label>
-        <div class="text-input-bg"><%= select :employee, :marital_status, ["Svobodný/á", "Ženatý/Vdaná","Rozvedený/á"] %></div>
-      </div>
-      <hr class="label-underline"></hr>
-      <div class="label-field-pair">
-        <label for="children_count">Počet dětí</label>
-        <div class="text-input-bg"><%= a.text_field :children_count %></div>
-      </div>
-      <hr class="label-underline"></hr>
-      <div class="label-field-pair">
-        <label for="employee_nationality">Národnost</label>
-        <div class="text-input-bg"><%= select :employee, :nationality_id, @nationalities.map {|c| [c.name, c.id]}, :selected => 45 %></div>
       </div>
       <hr class="label-underline"></hr>
       <script>

@@ -19,8 +19,8 @@
 
 <div id="content-header">
   <img src="/images/HR/show_hr.png" alt="" />
-  <h1>Employee</h1>
-  <h3>Advanced search</h3>
+  <h1>Zaměstnanci</h1>
+  <h3>Rozšířené vyhledávaní</h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -30,74 +30,56 @@
   <div id="search-form">
     <% form_for @search do |f| %>
       <div class="label-field-pair">
-        <label for="name">Name</label>
+        <label for="name">Jméno</label>
         <div class="text-input-bg">
           <%= f.text_field :first_name_or_middle_name_or_last_name_like %>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="student_admission_no">Employee no</label>
+        <label for="student_admission_no">ID. Zaměstnance</label>
         <div class="text-input-bg">
           <%= f.text_field :employee_number_equals %>
         </div>
       </div>
       <div class="label_field_pair">
-        <label class="label_for_student" >Gender</label>
+        <label class="label_for_student" >Pohlaví</label>
         <div class="student_gender_value">
-          <label class="label_for_gender" >All</label>
+          <label class="label_for_gender" >Vše</label>
           <%= f.radio_button  :gender_equals, "" %>
-          <label class="label_for_gender" >Male</label>
+          <label class="label_for_gender" >Muž</label>
           <%= f.radio_button  :gender_equals, "m"%>
-          <label class="label_for_gender" >Female</label>
+          <label class="label_for_gender" >Žena</label>
           <%= f.radio_button  :gender_equals, "f" %>
         </div>
       </div>
+
       <div class="label-field-pair">
-        <label for="student_admission_no">Blood group</label>
+        <label for="student_admission_no">Kategorie</label>
         <div class="text-input-bg">
-          <%= select :search, :blood_group_like, ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],{:prompt=>"Select"}%>
+          <%= f.collection_select :employee_category_id_equals, EmployeeCategory.all, :id, :name, {:prompt=>"Vybrat"} %>
+        </div>
+      </div>
+      <div class="label-field-pair">
+        <label for="student_admission_no">Oddělení</label>
+        <div class="text-input-bg">
+          <%= f.collection_select :employee_department_id_equals, EmployeeDepartment.all, :id, :name, {:prompt=>"Vybrat"} %>
+        </div>
+      </div>
+      <div class="label-field-pair">
+        <label for="student_admission_no">Kvalifikace</label>
+        <div class="text-input-bg">
+          <%= f.collection_select :employee_position_id_equals, EmployeePosition.all, :id, :name, {:prompt=>"Vybrat"}%>
+        </div>
+      </div>
+      <div class="label-field-pair">
+        <label for="student_admission_no">Zdravotní pojišťovna</label>
+        <div class="text-input-bg">
+          <%= f.collection_select :employee_grade_id_equals, EmployeeGrade.all, :id, :name,{:prompt=>"Vybrat"} %>
         </div>
       </div>
 
       <div class="label-field-pair">
-        <label for="student_admission_no">Marital status</label>
-        <div class="text-input-bg">
-          <%= select :search, :marital_status_like, ["Single", "Married", "Divorced"],{:prompt=>"Select"}%>
-        </div>
-      </div>
-      <div class="label-field-pair">
-        <label for="student_admission_no">Country</label>
-        <div class="text-input-bg">
-          <%= f.collection_select :nationality_id_equals, Country.all,:id,:name,{:prompt=>"Select"}%>
-        </div>
-      </div>
-      <div class="label-field-pair">
-        <label for="student_admission_no">Category</label>
-        <div class="text-input-bg">
-          <%= f.collection_select :employee_category_id_equals, EmployeeCategory.all, :id, :name, {:prompt=>"Select"} %>
-        </div>
-      </div>
-      <div class="label-field-pair">
-        <label for="student_admission_no">Department</label>
-        <div class="text-input-bg">
-          <%= f.collection_select :employee_department_id_equals, EmployeeDepartment.all, :id, :name, {:prompt=>"Select"} %>
-        </div>
-      </div>
-      <div class="label-field-pair">
-        <label for="student_admission_no">Position</label>
-        <div class="text-input-bg">
-          <%= f.collection_select :employee_position_id_equals, EmployeePosition.all, :id, :name, {:prompt=>"Select"}%>
-        </div>
-      </div>
-      <div class="label-field-pair">
-        <label for="student_admission_no">Grade</label>
-        <div class="text-input-bg">
-          <%= f.collection_select :employee_grade_id_equals, EmployeeGrade.all, :id, :name,{:prompt=>"Select"} %>
-        </div>
-      </div>
-
-      <div class="label-field-pair">
-        <label for="student_admission_no">Date of joining
+        <label for="student_admission_no">Datum nástupu
           <%= image_tag("loader.gif",
             :align => "absmiddle",
             :border => 0,
@@ -105,7 +87,7 @@
             :style =>"display: none;" ) %>
         </label>
         <div class="text-input-bg">
-          <%= select :adv_search,:doj_option,["equal to","less than","greater than"],{:prompt=>"choose your option"},
+          <%= select :adv_search,:doj_option,["rovno","méně než","více než"],{:prompt=>"Možnosti"},
             {:onChange => "#{remote_function(:url => {:action => "list_doj_year"},
             :with=>"'doj_option='+value",
             :before => "Element.show('loader')",
@@ -113,13 +95,13 @@
             )}"}
         %>
           <div id="doj_year">
-            <%= select :adv_search,:doj_year,[],{:prompt=>"Select"} %>
+            <%= select :adv_search,:doj_year,[],{:prompt=>"Vybrat"} %>
           </div>
           <div id="doj_year_hidden"></div>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="student_admission_no">Birth date
+        <label for="student_admission_no">Datum narození
           <%= image_tag("loader.gif",
             :align => "absmiddle",
             :border => 0,
@@ -127,7 +109,7 @@
             :style =>"display: none;" ) %>
         </label>
         <div class="text-input-bg">
-          <%= select :adv_search,:dob_option,["equal to","less than","greater than"],{:prompt=>"choose your option"},
+          <%= select :adv_search,:dob_option,["rovno","méně než","více než"],{:prompt=>"Možnosti"},
             {:onChange => "#{remote_function(:url => {:action => "list_dob_year"},
             :with=>"'dob_option='+value",
             :before => "Element.show('loader')",
@@ -135,7 +117,7 @@
             )}"}
         %>
           <div id="dob_year">
-            <%= select :adv_search,:dob_year,[],{:prompt=>"Select"} %>
+            <%= select :adv_search,:dob_year,[],{:prompt=>"Vybrat"} %>
           </div>
           <div id="dob_year_hidden"></div>
         </div>
@@ -143,17 +125,17 @@
       <div class="label_field_pair">
         <label class="label_for_student" for="student_gender">Status</label>
         <div class="student_gender_value">
-          <label class="label_for_gender" for="student_gender_true">Present</label>
+          <label class="label_for_gender" for="student_gender_true">Současní</label>
           <%= f.radio_button  :status_equals, "true", {:checked => false } %>
-          <label class="label_for_gender" for="student_gender_false">Former</label>
+          <label class="label_for_gender" for="student_gender_false">Odchozí</label>
           <%= f.radio_button  :status_equals, "false" %>
-          <label class="label_for_gender" for="student_gender_false">All</label>
+          <label class="label_for_gender" for="student_gender_false">Vše</label>
           <%= f.radio_button  :status_equals, "", {:checked => 'checked'} %>
         </div>
       </div>
 
 
-      <%= f.submit "Search", :class=>'submit' %>
+      <%= f.submit "Hledat", :class=>'submit' %>
     <% end %>
   </div>
 
@@ -166,7 +148,7 @@
     </script>
     <div id="search-result">
 
-      <p>You have searched for:</p>
+      <p>Hledali jste:</p>
       <div class="search-again">
   <%#= link_to_function '► Search again' do |page|
   page.visual_effect :toggle_slide, "search-form"
@@ -182,16 +164,13 @@
         <% searched_for += ' Employee grade: ' + EmployeeGrade.find(params[:search][:employee_grade_id_equals]).name.to_s unless params[:search][:employee_grade_id_equals].empty? %>
         <% unless  params[:search][:gender_equals].empty? %>
           <% if  params[:search][:gender_equals] == 'm' %>
-            <% searched_for += " Gender: male" %>
+            <% searched_for += " Gender: men" %>
           <% elsif  params[:search][:gender_equals] == 'f' %>
-            <% searched_for += " Gender: female" %>
+            <% searched_for += " Gender: women" %>
           <% else %>
             <% searched_for += " Gender: all" %>
           <% end %>
         <% end %>
-        <% searched_for += ' Blood group: ' + params[:search][:blood_group_like].to_s unless params[:search][:blood_group_like].empty? %>
-        <% searched_for += ' Marital status: ' + params[:search][:marital_status_like].to_s unless params[:search][:marital_status_like].empty? %>
-        <% searched_for += ' Nationality: ' + Country.find(params[:search][:nationality_id_equals]).name.to_s unless params[:search][:nationality_id_equals].empty? %>
         <% searched_for += ' Year of join: ' +  params[:adv_search][:doj_option].to_s + params[:adv_search][:joining_date_year].to_s unless  params[:adv_search][:doj_option].empty? %>
         <% searched_for += ' Year of birth: ' +  params[:adv_search][:dob_option].to_s + params[:adv_search][:birth_date_year].to_s unless  params[:adv_search][:dob_option].empty? %>
         <% if params[:search][:status_equals]=="true" %>
@@ -203,9 +182,9 @@
         <% end %>
 
 
-        <%= link_to "► Search again", {:action=>"advanced_search"}%>
+        <%= link_to "► Hledat znovu", {:action=>"advanced_search"}%>
         <% unless @employees1.empty? %>
-          <%= link_to "► View PDF report",   {:action => "advanced_search_pdf",:for =>searched_for, :result2=>@employees2 , :result =>@employees1,:status=>params[:search][:status_equals], :format => 'pdf'}, :target => '_blank' , :class=> 'submit_button' %>
+          <%= link_to "► PDF report",   {:action => "advanced_search_pdf",:for =>searched_for, :result2=>@employees2 , :result =>@employees1,:status=>params[:search][:status_equals], :format => 'pdf'}, :target => '_blank' , :class=> 'submit_button' %>
         <% end %>
       </div>
       <div class="extender"></div>
@@ -213,62 +192,52 @@
       <div class="searched_for">
         <% unless params[:search][:first_name_or_middle_name_or_last_name_like].empty? %>
           <% searched_for = params[:search][:first_name_or_middle_name_or_last_name_like] %>
-          <span>Name:</span> <%= params[:search][:first_name_or_middle_name_or_last_name_like] %>
+          <span>Jméno:</span> <%= params[:search][:first_name_or_middle_name_or_last_name_like] %>
         <% end %>
         <% unless  params[:search][:employee_number_equals].empty? %>
-          <span>Employee no:</span> <%= params[:search][:employee_number_equals] %>
+          <span>ID.Zaměstnance:</span> <%= params[:search][:employee_number_equals] %>
         <% end %>
         <% unless params[:search][:employee_department_id_equals].empty? %>
           <% dept = EmployeeDepartment.find(params[:search][:employee_department_id_equals]) %>
-          <span>Department:</span> <%= dept.name %>
+          <span>Oddělení:</span> <%= dept.name %>
         <% end %>
         <% unless  params[:search][:employee_category_id_equals].empty? %>
           <% category = EmployeeCategory.find(params[:search][:employee_category_id_equals]) %>
-          <span> Category: </span> <%= category.name %>
+          <span> Kategorie: </span> <%= category.name %>
         <% end %>
         <% unless  params[:search][:employee_position_id_equals].empty? %>
           <% position = EmployeePosition.find(params[:search][:employee_position_id_equals]) %>
-          <span> Employee position: </span> <%= position.name %>
+          <span> Kvalifikace: </span> <%= position.name %>
         <% end %>
         <% unless  params[:search][:employee_grade_id_equals].empty? %>
           <% grade = EmployeeGrade.find(params[:search][:employee_grade_id_equals]) %>
-          <span> Employee grade: </span> <%= grade.name %>
+          <span> Zdravotní pojišťovna: </span> <%= grade.name %>
         <% end %>
         <% unless  params[:search][:gender_equals].empty? %>
           <% if  params[:search][:gender_equals] == 'm' %>
-            <span> Gender: </span> male
+            <span> Pohlaví: </span> Muž
           <% elsif  params[:search][:gender_equals] == 'f' %>
-            <span> Gender: </span> female
+            <span> Pohlaví: </span> Žena
           <% else %>
-            <span> Gender: </span> All
+            <span> Pohlaví: </span> Vše
           <% end %>
         <% end %>
-        <% unless  params[:search][:blood_group_like].empty? %>
-          <span> Blood group:</span> <%= params[:search][:blood_group_like] %>
-        <% end %>
-        <% unless  params[:search][:marital_status_like].empty? %>
-          <span> Marital status:</span> <%= params[:search][:marital_status_like] %>
-        <% end %>
-        <% unless  params[:search][:nationality_id_equals].empty? %>
-          <% nationality = Country.find(params[:search][:nationality_id_equals]) %>
-          <span> Nationality: </span> <%= nationality.name %>
-        <% end %>
         <% unless  params[:adv_search][:doj_option].empty? %>
-          <span> Year of joining: </span> <%= params[:adv_search][:doj_option] %>
+          <span> Datum nástupu: </span> <%= params[:adv_search][:doj_option] %>
 
           <%= params[:adv_search][:joining_date_year] %>
         <% end %>
         <% unless  params[:adv_search][:dob_option].empty? %>
-          <span>Year of birth: </span> <%= params[:adv_search][:dob_option] %>
+          <span>Datum narození: </span> <%= params[:adv_search][:dob_option] %>
 
           <%= params[:adv_search][:birth_date_year] %>
         <% end %>
         <% if params[:search][:status_equals]=="true" %>
-          <span> Present employees </span>
+          <span> Současní zaměstnanci </span>
         <% elsif params[:search][:status_equals]=="false" %>
-          <span> Former employees </span>
+          <span> Odchozí zaměstnanci </span>
         <% else %>
-          <span> All </span>
+          <span> Vše </span>
         <% end %>
 
       </div>
@@ -278,16 +247,16 @@
         <% unless @employees1.empty? %>
         <tr class="tr-head">
           <td>
-            Sl no.
+            Č. sl
           </td>
           <td>
-            <%= order @search, :by => :first_name %>
+            Jméno a příjmení
           </td>
           <td>
-            Employee ID
+            ID Zaměstnance
           </td>
           <td>
-            Employee dept
+            Oddělení Zaměstn.
           </td>
         </tr>
         <tr class="tr-blank"></tr>
@@ -317,7 +286,7 @@
         </tr>
       <% else %>
         <tr class="tr-<%= cycle('odd', 'even') %>">
-          <td class="col-2">No employee found</td>
+          <td class="col-2">Žádný zaměstnanec nenalezen</td>
         </tr>
       <% end %>
     </table>

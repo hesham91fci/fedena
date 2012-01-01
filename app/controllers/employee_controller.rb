@@ -76,7 +76,7 @@ class EmployeeController < ApplicationController
     @categories = EmployeeCategory.find(:all,:order => "name asc",:conditions=> 'status = 1')
     @position = EmployeePosition.new(params[:position])
     if request.post? and @position.save
-      flash[:notice] = "Pozice zaměstnance vytvořena"
+      flash[:notice] = "Kvalifikace zaměstnance vytvořena"
       redirect_to :controller => "employee", :action => "add_position"
     end
   end
@@ -153,7 +153,7 @@ class EmployeeController < ApplicationController
     @inactive_grades = EmployeeGrade.find(:all,:order => "name asc",:conditions=>'status = 0')
     @grade = EmployeeGrade.new(params[:grade])
     if request.post? and @grade.save
-      flash[:notice] = "Stupeň zaměstnance vytvořen"
+      flash[:notice] = "Zdravotní pojišťovna zaměstnance vytvořena"
       redirect_to :controller => "employee", :action => "add_grade"
     end
   end
@@ -316,7 +316,7 @@ class EmployeeController < ApplicationController
         Employee.update(@employee.id, :status => false)
       end
 
-      flash[:notice] = "Zaměstnanec #{@employee.first_name} hlavní údaj aktualizován"
+      flash[:notice] = "Zaměstnanec #{@employee.first_name} hlavní údaje aktualizovány"
       redirect_to :controller =>"employee" ,:action => "profile", :id => @employee.id
     end
   end
@@ -1475,11 +1475,11 @@ class EmployeeController < ApplicationController
 
   def list_doj_year
     doj_option = params[:doj_option]
-    if doj_option == "equal to"
+    if doj_option == "rovno"
       render :update do |page|
         page.replace_html 'doj_year', :partial=>"equal_to_select"
       end
-    elsif doj_option == "less than"
+    elsif doj_option == "méně než"
       render :update do |page|
         page.replace_html 'doj_year', :partial=>"less_than_select"
       end
@@ -1519,11 +1519,11 @@ class EmployeeController < ApplicationController
 
   def list_dob_year
     dob_option = params[:dob_option]
-    if dob_option == "equal to"
+    if dob_option == "rovno"
       render :update do |page|
         page.replace_html 'dob_year', :partial=>"equal_to_select_dob"
       end
-    elsif dob_option == "less than"
+    elsif dob_option == "méně než"
       render :update do |page|
         page.replace_html 'dob_year', :partial=>"less_than_select_dob"
       end

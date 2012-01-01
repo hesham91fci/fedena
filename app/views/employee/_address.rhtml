@@ -1,12 +1,9 @@
 <table width="700">
   <tr class="odd left"><td>Domácí adresa</td><td class="right"><%= @employee.home_address_line1 %>&nbsp;<%= @employee.home_address_line2 %></td></tr>
   <tr class="even left"><td>Město</td><td class="right"><%= @employee.home_city %></td></tr>
-  <tr class="odd left"><td>Kraj</td><td class="right"><%= @employee.home_state %></td></tr>
-  <tr class="even left"><td>Stát</td><td class="right"><%= @home_country %></td></tr>
   <tr class="odd left"><td>PSČ</td><td class="right"><%=  @employee.home_pin_code %></td></tr>
   <tr class="even left"><td>Adresa zaměstnání</td><td class="right"><%=  @employee.office_address_line1 %>&nbsp;<%= @employee.office_address_line2 %></td></tr>
   <tr class="odd left"><td>Město</td><td class="right"><%=  @employee.office_city %> </td></tr>
-  <tr class="even left"><td>Stát</td><td class="right"><%=  @office_country %></td></tr>
   <tr class="odd left"><td>PSČ</td><td class="right"><%= @employee.office_pin_code %></td></tr>
 </table>
 <div class="extender"></div>

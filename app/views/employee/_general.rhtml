@@ -5,9 +5,10 @@
   <tr class="odd left"><td>Datum příchodu</td><td class="right"><%= @employee.joining_date.strftime("%d %b,%Y")%></td></tr>
   <tr class="even left"><td>Oddělení</td><td class="right"><%= @employee.employee_department.name%></td></tr>
   <tr class="odd left"><td>Kategorie</td><td class="right"><%= @employee.employee_category.name %></td></tr>
-  <tr class="even left"><td>Pozice</td><td class="right"><%= @employee.employee_position.name %></td></tr>
+  <tr class="even left"><td>Kvalifkace</td><td class="right"><%= @employee.employee_position.name %></td></tr>
 
-  <tr class="odd left"><td>Stupeň</td><td class="right"><%= @employee.employee_grade.name unless @employee.employee_grade.nil? %></td></tr>
+  <tr class="odd left"><td>Zdravotní pojišťovna</td><td class="right"><%= @employee.employee_grade.name unless @employee.employee_grade.nil? %></td></tr>
+    <tr class="even left"><td>Zaměstnání</td><td class="right"><%= @employee.job_title %></td></tr>
 
   <tr class="odd left"><td>Vedoucí</td><td class="right">
       <% if @current_user.admin? %>
@@ -20,7 +21,6 @@
     <%end%></td></tr>
   <tr class="even left"><td>Pohlaví</td><td class="right"><%= @gender %></td></tr>
   <tr class="odd left"><td>Stav</td><td class="right"><%= @status %></td></tr>
-  <tr class="even left"><td>Kvalifikace</td><td class="right"><%= @employee.qualification %></td></tr>
   <tr class="odd left"><td>Celková Praxe</td><td class="right"><%= @total_years.to_s+"Roky "+@total_months.to_s+"Měsíce" %></td></tr>
   <tr class="even left"><td>Zkušenosti</td><td class="right"><%= @employee.experience_detail %></td></tr>
 </table>

@@ -19,7 +19,7 @@
   <% if @student.is_active == true %>
   <div class="link-box">
     <div class="link-heading"> <%= link_to "Hráč opouští klub", :controller => "student", :action => "change_to_former", :id => @student.id %> </div>
-    <div class="link-descr">Pro hráče, při odchodu z klubu, použijte tuto volbu pro jejich odstranění ze seznamu aktivních hráčů, a umístí je na seznam bývalých hráčů.</div>
+    <div class="link-descr">Pro hráče odcházejicí z klubu, použijte tuto volbu pro jejich odstranění ze seznamu aktivních hráčů, a umístí je na seznam bývalých hráčů.</div>
   </div>
   <% else %>
     <div class="link-box">
@@ -28,7 +28,7 @@
   </div>
     <% end %>
   <div class="link-box">
-    <div class="link-heading"> <%= link_to "Odstranit záznamy o hráčích", :controller => "student", :action => "delete", :id => @student.id %> </div>
+    <div class="link-heading"> <%= link_to "Odstranit záznamy o hráči", :controller => "student", :action => "delete", :id => @student.id %> </div>
     <div class="link-descr">Úplně odstranit záznamy hráče z databáze. Tuto možnost použijte pouze, pokud chcete úplně odstranit záznamy o hráči.</div>
   </div>
 
