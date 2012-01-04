@@ -31,7 +31,7 @@
 }
 .payslip-field-pair input:focus {
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 .payslip-field-pair-extra {
     float : left;
@@ -62,7 +62,7 @@
     font-family:arial;
     font-size:14px;
     font-weight:bold;
-    margin-left:170px;
+    margin-left:280px;
     margin-top:30px;
     padding:7px 10px;
     border:none;
@@ -144,7 +144,7 @@
 }
 .new-category-field-pair input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 .new-category-checkbox-pair{
@@ -188,7 +188,7 @@
 }
 
 .val {
-    color: #16a747;
+    color: #bb0000;
     font-weight: bold;
     font-size: 13px;
     float: left;
@@ -233,4 +233,34 @@ ul{
 
 .new_category{
     overflow: hidden;
+}
+
+#employee_profile_heading {
+    width:100%;
+    margin:0px auto;
+}
+#employee_main_info {
+    float:left;
+    width:400px;
+}
+#employee_main_info h3 {
+    margin:0;
+    padding:0;
+    margin-top:20px;
+}
+#employee_main_info h4 {
+    margin:0;
+    padding:0;
+    color:#b00;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.errorExplanation {
+    background: url("/images/_global/error.png") no-repeat scroll 10px 14px #FFDEDF;
+    border-radius: 10px 10px 10px 10px;
+    height: auto;
+    margin: 20px auto;
+    padding: 16px 0 20px 50px;
+    width: 510px;
 }

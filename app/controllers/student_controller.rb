@@ -44,6 +44,7 @@ class StudentController < ApplicationController
     @application_sms_enabled = SmsSetting.find_by_settings_key("ApplicationEnabled")
     @last_admitted_student = Student.find(:last)
     @config = Configuration.find_by_config_key('AdmissionNumberAutoIncrement')
+    @categories = StudentCategory.active
     if request.post?
       if @config.config_value.to_i == 1
         @exist = Student.find_by_admission_no(params[:student][:admission_no])
@@ -61,16 +62,16 @@ class StudentController < ApplicationController
         sms_setting = SmsSetting.new()
         if sms_setting.application_sms_active and @student.is_sms_enabled
           recipients = []
-          message = "Evidence hráče provedena. uživatelské jméno je #{@student.admission_no} a heslo je #{@student.admission_no}123"
+          message = "#{t('student_admission_done')} #{@student.admission_no} #{t('password_is')} #{@student.admission_no}123"
           if sms_setting.student_sms_active
-            recipients.push @student.phone2 unless @student.phone2.nil?
+            recipients.push @student.phone2 unless @student.phone2.blank?
           end
           unless recipients.empty?
             sms = SmsManager.new(message,recipients)
             sms.send_sms
           end
         end
-        flash[:notice] = "Údaje hráče úspěšně uloženy. Prosím vyplňte údaje o kontaktních osobách."
+        flash[:notice] = "#{t('flash8')}"
         redirect_to :controller => "student", :action => "admission2", :id => @student.id
       end
     end
@@ -96,7 +97,7 @@ class StudentController < ApplicationController
       @student = Student.update(@student.id, :immediate_contact_id => params[:immediate_contact][:contact])
       if sms_setting.application_sms_active and @student.is_sms_enabled
         recipients = []
-        message = "Evidence hráče provedena. uživatelské jméno je #{@student.admission_no} a heslo je #{@student.admission_no}123"
+        message = "#{t('student_admission_done')}  #{@student.admission_no} #{t('password_is')} #{@student.admission_no}123"
         if sms_setting.parent_sms_active
           guardian = Guardian.find(@student.immediate_contact_id)
           recipients.push guardian.mobile_phone unless guardian.mobile_phone.nil?
@@ -122,7 +123,7 @@ class StudentController < ApplicationController
       @student = Student.update(@student.id, :immediate_contact_id => params[:immediate_contact][:contact])
       if sms_setting.application_sms_active and @student.is_sms_enabled
         recipients = []
-        message = "Evidence hráče provedena. uživatelské jméno je #{@student.admission_no} a heslo je #{@student.admission_no}123"
+        message = "#{t('student_admission_done')}   #{@student.admission_no} #{t('password_is')}#{@student.admission_no}123"
         if sms_setting.parent_sms_active
           guardian = Guardian.find(@student.immediate_contact_id)
           recipients.push guardian.mobile_phone unless guardian.mobile_phone.nil?
@@ -191,7 +192,7 @@ class StudentController < ApplicationController
         StudentAdditionalDetails.create(:student_id => params[:id],
           :additional_field_id => k,:additional_info => v['additional_info'])
       end
-      flash[:notice] = "ˇUdaje hráče uloženy pro #{@student.first_name} #{@student.last_name}."
+      flash[:notice] = "#{t('flash9')} #{@student.first_name} #{@student.last_name}."
       redirect_to :controller => "student", :action => "profile", :id => @student.id
     end
   end
@@ -215,7 +216,7 @@ class StudentController < ApplicationController
           StudentAdditionalDetails.create(:student_id=>@student.id,:additional_field_id=>k,:additional_info=>v['additional_info'])
         end
       end
-      flash[:notice] = "Hráč #{@student.first_name} ostatní údaje doplněny"
+      flash[:notice] = "#{t('student_text')} #{@student.first_name} #{t('flash2')}"
       redirect_to :action => "profile", :id => @student.id
     end
   end
@@ -223,7 +224,7 @@ class StudentController < ApplicationController
     @additional_details = StudentAdditionalField.find(:all)
     @additional_field = StudentAdditionalField.new(params[:additional_field])
     if request.post? and @additional_field.save
-      flash[:notice] = "Další údaj vytvořen"
+      flash[:notice] = "#{t('flash1')}"
       redirect_to :controller => "student", :action => "add_additional_details"
     end
   end
@@ -231,7 +232,7 @@ class StudentController < ApplicationController
   def edit_additional_details
     @additional_details = StudentAdditionalField.find(params[:id])
     if request.post? and @additional_details.update_attributes(params[:additional_details])
-      flash[:notice] = "Další údaj aktualizován"
+      flash[:notice] = "#{t('flash2')}"
       redirect_to :action => "add_additional_details"
     end
   end
@@ -241,15 +242,26 @@ class StudentController < ApplicationController
     if students.blank?
       StudentAdditionalField.find(params[:id]).destroy
       @additional_details = StudentAdditionalField.find(:all)
-      flash[:notice]="Úspěšně vymazáno!"
+      flash[:notice]="#{t('flash13')}"
       redirect_to :action => "add_additional_details"
     else
-      flash[:notice]="Omlouváme se! Není možno odebrat, když existují údaje pro vybranou položku"
+      flash[:notice]="#{t('flash14')}"
       redirect_to :action => "add_additional_details"
     end
   end
 
   def change_to_former
+    @dependency = @student.former_dependency
+    @has_dependency = false
+    @dependency.each do |k,v|
+      if v.kind_of?(Array)
+        @has_dependency = true unless  v.blank?
+      else
+         v.each do |h,a|
+           @has_dependency = true unless  a.blank?
+         end
+      end
+    end
     if request.post?
       @student.archive_student(params[:remove][:status_description])
       render :update do |page|
@@ -274,10 +286,7 @@ class StudentController < ApplicationController
     @ids = params[:stud]
     @students = @ids.map { |st_id| ArchivedStudent.find(st_id) }
     
-    
-    respond_to do |format|
-      format.pdf { render :layout => false }
-    end
+    render :pdf=>'generate_all_tc_pdf'
   end
 
   def destroy
@@ -286,10 +295,10 @@ class StudentController < ApplicationController
     unless student.check_dependency
     student.user.destroy unless student.user.nil?
     Student.destroy(params[:id])
-    flash[:notice] = "Všechny údaje byly vymazány pro hráče se evidenčním číslem #{student.admission_no}."
+    flash[:notice] = "#{t('flash10')}. #{student.admission_no}."
     redirect_to :controller => 'user', :action => 'dashboard'
     else
-    flash[:warn_notice] = "Omlouvám se! Nemůžeme vymazat hráče, když existují navazující údaje."
+    flash[:warn_notice] = "#{t('flash15')}"
       redirect_to  :action => 'remove', :id=>student.id
     end
   end
@@ -310,11 +319,11 @@ class StudentController < ApplicationController
             else
               @student_user.update_attributes(:username=> @student.admission_no,:first_name=> @student.first_name , :last_name=> @student.last_name, :email=> @student.email, :role=>'Student')
             end
-            flash[:notice] = "ˇÚdaje hráče byly úspěšně aktualizovány!"
+            flash[:notice] = "#{t('flash3')}"
             redirect_to :controller => "student", :action => "profile", :id => @student.id
           end
         else
-          flash[:notice] = "Velikost obrázku je příliš velká. Prosím nahrajte obrázek s velikostí menší než 250KB."
+          flash[:notice] = "#{t('flash_msg11')}"
           redirect_to :controller => "student", :action => "edit", :id => @student.id
         end
       else
@@ -324,7 +333,7 @@ class StudentController < ApplicationController
           else
             @student_user.update_attributes(:username=> @student.admission_no,:first_name=> @student.first_name , :last_name=> @student.last_name, :email=> @student.email, :role=>'Student')
           end
-          flash[:notice] = "Údaje hráče byly úspěšně aktualizovány!"
+          flash[:notice] = "#{t('flash3')}"
           redirect_to :controller => "student", :action => "profile", :id => @student.id
         end
       end
@@ -337,7 +346,7 @@ class StudentController < ApplicationController
     @student = Student.find(@parent.ward_id)
     @countries = Country.all
     if request.post? and @parent.update_attributes(params[:parent_detail])
-      flash[:notice] = "Údaje opatrovníka aktualizovány!"
+      flash[:notice] = "#{t('student.flash4')}"
       redirect_to :controller => "student", :action => "guardians", :id => @student.id
     end
   end
@@ -357,7 +366,7 @@ class StudentController < ApplicationController
       end
       recipients = recipient_list.join(', ')
       FedenaMailer::deliver_email(sender,recipients, params['email']['subject'], params['email']['message'])
-      flash[:notice] = "Mail sent to #{recipients}"
+      flash[:notice] = "#{t('flash12')} #{recipients}"
       redirect_to :controller => 'student', :action => 'profile', :id => @student.id
     end
   end
@@ -421,32 +430,28 @@ class StudentController < ApplicationController
     if params[:option] == "active"
       if params[:query].length>= 3
         @students = Student.find(:all,
-          :conditions => "(first_name LIKE \"#{params[:query]}%\"
-                       OR middle_name LIKE \"#{params[:query]}%\"
-                       OR last_name LIKE \"#{params[:query]}%\"
-                       OR (concat(first_name, \" \", middle_name) LIKE \"#{params[:query]}%\")
-                       OR (concat(first_name, \" \", middle_name, \" \", last_name) LIKE \"#{params[:query]}%\")
-                       OR admission_no = '#{params[:query]}'
-                       OR (concat(first_name, \" \", last_name) LIKE \"#{params[:query]}%\"))",
+          :conditions => ["first_name LIKE ? OR middle_name LIKE ? OR last_name LIKE ?
+                            OR admission_no = ? OR (concat(first_name, \" \", last_name) LIKE ? ) ",
+                         "#{params[:query]}%","#{params[:query]}%","#{params[:query]}%",
+                         "#{params[:query]}", "#{params[:query]}" ],
           :order => "batch_id asc,first_name asc") unless params[:query] == ''
       else
         @students = Student.find(:all,
-          :conditions => "(admission_no = '#{params[:query]}')",
+         :conditions => ["admission_no = ? " , params[:query]],
           :order => "batch_id asc,first_name asc") unless params[:query] == ''
       end
       render :layout => false
     else
       if params[:query].length>= 3
         @archived_students = ArchivedStudent.find(:all,
-          :conditions => "(first_name LIKE \"#{params[:query]}%\"
-                       OR middle_name LIKE \"#{params[:query]}%\"
-                       OR last_name LIKE \"#{params[:query]}%\"
-                       OR admission_no = '#{params[:query]}'
-                       OR (concat(first_name, \" \", last_name) LIKE \"#{params[:query]}%\"))",
+          :conditions => ["first_name LIKE ? OR middle_name LIKE ? OR last_name LIKE ?
+                            OR admission_no = ? OR (concat(first_name, \" \", last_name) LIKE ? ) ",
+                         "#{params[:query]}%","#{params[:query]}%","#{params[:query]}%",
+                         "#{params[:query]}", "#{params[:query]}" ],
           :order => "batch_id asc,first_name asc") unless params[:query] == ''
       else
         @archived_students = ArchivedStudent.find(:all,
-          :conditions => "(admission_no = '#{params[:query]}')",
+          :conditions => ["admission_no = ? " , params[:query]],
           :order => "batch_id asc,first_name asc") unless params[:query] == ''
       end
       render :partial => "search_ajax"
@@ -468,7 +473,7 @@ class StudentController < ApplicationController
     @parent_info = Guardian.new(params[:parent_detail])
     @countries = Country.all
     if request.post? and @parent_info.save
-      flash[:notice] = "Parent details saved for #{@parent_info.ward_id}"
+      flash[:notice] = "#{t('flash5')} #{@parent_info.ward_id}"
       redirect_to :controller => "student" , :action => "admission3_1", :id => @parent_info.ward_id
     end
   end
@@ -525,12 +530,12 @@ class StudentController < ApplicationController
     @student = @guardian.ward
     if @guardian.is_immediate_contact?
       if @guardian.destroy
-        flash[:notice] = "Opatrovník byl vymazán"
+        flash[:notice] = "#{t('flash6')}"
         redirect_to :controller => 'student', :action => 'admission3', :id => @student.id
       end
     else
       if @guardian.destroy
-        flash[:notice] = "Opatrovník byl vymazán"
+        flash[:notice] = "#{t('flash6')}"
         redirect_to :controller => 'student', :action => 'profile', :id => @student.id
       end
     end
@@ -565,7 +570,7 @@ class StudentController < ApplicationController
     @student_categories = StudentCategory.active
     @student_category = StudentCategory.new(params[:student_category])
     if request.post? and @student_category.save
-      flash[:notice] = "Kategorie hráče byla uložena."
+      flash[:notice] = "#{t('flash7')}"
       redirect_to :action => 'categories'
     end
   end
@@ -579,6 +584,7 @@ class StudentController < ApplicationController
 
   def category_edit
     @student_category = StudentCategory.find(params[:id])
+    
   end
 
   def category_update
@@ -630,6 +636,36 @@ class StudentController < ApplicationController
           @search2 = ArchivedStudent.search(params[:search]).all
           @students = @search1+@search2
         end
+      end
+      @searched_for = ''
+      @searched_for += "<span>#{t('name')}: </span>" + params[:search][:first_name_or_middle_name_or_last_name_like].to_s unless params[:search][:first_name_or_middle_name_or_last_name_like].empty?
+      @searched_for += " <span>#{t('admission_no')}: </span>" + params[:search][:admission_no_equals].to_s unless params[:search][:admission_no_equals].empty?
+      unless params[:advv_search][:course_id].empty?
+        course = Course.find(params[:advv_search][:course_id])
+        batch = Batch.find(params[:search][:batch_id_equals]) unless (params[:search][:batch_id_equals]).blank?
+        @searched_for += "<span>#{t('course_text')}: </span>" + course.full_name
+        @searched_for += "<span>#{t('batch')}: </span>" + batch.full_name unless batch.nil?
+      end
+      @searched_for += "<span>#{t('category')}: </span>" + StudentCategory.find(params[:search][:student_category_id_equals]).name.to_s unless params[:search][:student_category_id_equals].empty?
+      unless  params[:search][:gender_equals].empty?
+        if  params[:search][:gender_equals] == 'm'
+          @searched_for += "<span>#{t('gender')}: </span>#{t('male')}"
+        elsif  params[:search][:gender_equals] == 'f'
+          @searched_for += " <span>#{t('gender')}: </span>#{t('female')}"
+        else
+          @searched_for += " <span>#{t('gender')}: </span>#{t('all')}"
+        end
+      end
+      @searched_for += "<span>#{t('blood_group')}: </span>" + params[:search][:blood_group_like].to_s unless params[:search][:blood_group_like].empty?
+      @searched_for += "<span>#{t('nationality')}: </span>" + Country.find(params[:search][:nationality_id_equals]).name.to_s unless params[:search][:nationality_id_equals].empty?
+      @searched_for += "<span>#{t('year_of_admission')}: </span>" +  params[:advv_search][:doa_option].to_s + ' '+ params[:adv_search][:admission_date_year].to_s unless  params[:advv_search][:doa_option].empty?
+      @searched_for += "<span>#{t('year_of_birth')}: </span>" +  params[:advv_search][:dob_option].to_s + ' ' + params[:adv_search][:birth_date_year].to_s unless  params[:advv_search][:dob_option].empty?
+      if params[:search][:is_active_equals]=="true"
+        @searched_for += "<span>#{t('present_student')}</span>"
+      elsif params[:search][:is_active_equals]=="false"
+        @searched_for += "<span>#{t('former_student')}</span>"
+      else
+        @searched_for += "<span>#{t('all_students')}</span>"
       end
     end
   end
@@ -753,20 +789,72 @@ class StudentController < ApplicationController
   end
 
   def advanced_search_pdf
-    @student_ids = params[:result]
-    @status = params[:status]
-    @searched_for = params[:for]
-    @students = []
-    if params[:status]=="true"
-      @search = Student.search(params[:search])
-      @students = @search.all
-    elsif params[:status]=="false"
-      @search = ArchivedStudent.search(params[:search])
-      @students = @search.all
+    @searched_for = ''
+    @searched_for += "<span>#{t('name')}</span>" + params[:search][:first_name_or_middle_name_or_last_name_like].to_s unless params[:search][:first_name_or_middle_name_or_last_name_like].empty?
+    @searched_for += "<span>#{t('admission_no')}</span>" + params[:search][:admission_no_equals].to_s unless params[:search][:admission_no_equals].empty?
+    unless params[:advv_search][:course_id].empty?
+      course = Course.find(params[:advv_search][:course_id])
+      batch = Batch.find(params[:search][:batch_id_equals]) unless (params[:search][:batch_id_equals]).blank?
+      @searched_for += "<span>#{t('course_text')}</span>" + course.full_name
+      @searched_for += "<span>#{t('batch')}</span>" + batch.full_name unless batch.nil?
+    end
+    @searched_for += "<span>#{t('category')}</span>" + StudentCategory.find(params[:search][:student_category_id_equals]).name.to_s unless params[:search][:student_category_id_equals].empty?
+    unless  params[:search][:gender_equals].empty?
+      if  params[:search][:gender_equals] == 'm'
+        @searched_for += "<span>#{t('gender')}</span>#{t('male')}"
+      elsif  params[:search][:gender_equals] == 'f'
+        @searched_for += "<span>#{t('gender')}</span>#{t('female')}"
+      else
+        @searched_for += "<span>#{t('gender')}</span>#{t('all')}"
+      end
+    end
+    @searched_for += "<span>#{t('blood_group')}</span>" + params[:search][:blood_group_like].to_s unless params[:search][:blood_group_like].empty?
+    @searched_for += "<span>#{t('nationality')}</span>" + Country.find(params[:search][:nationality_id_equals]).name.to_s unless params[:search][:nationality_id_equals].empty?
+    @searched_for += "<span>#{t('year_of_admission')}:</span>" +  params[:advv_search][:doa_option].to_s + ' '+ params[:adv_search][:admission_date_year].to_s unless  params[:advv_search][:doa_option].empty?
+    @searched_for += "<span>#{t('year_of_birth')}:</span>" +  params[:advv_search][:dob_option].to_s + ' ' + params[:adv_search][:birth_date_year].to_s unless  params[:advv_search][:dob_option].empty?
+    if params[:search][:is_active_equals]=="true"
+      @searched_for += "<span>#{t('present_student')}</span>"
+    elsif params[:search][:is_active_equals]=="false"
+      @searched_for += "<span>#{t('former_student')}</span>"
     else
-      @search1 = Student.search(params[:search]).all
-      @search2 = ArchivedStudent.search(params[:search]).all
-      @students = @search1+@search2
+      @searched_for += "<span>#{t('all_students')}</span>"
+    end
+
+    unless params[:advv_search][:course_id].empty?
+      if params[:search][:batch_id_equals].empty?
+        batches = Batch.find_all_by_course_id(params[:advv_search][:course_id]).collect{|b|b.id}
+      end
+    end
+    if batches.is_a?(Array)
+
+      @students = []
+      batches.each do |b|
+        params[:search][:batch_id_equals] = b
+        if params[:search][:is_active_equals]=="true"
+          @search = Student.search(params[:search])
+          @students+=@search.all
+        elsif params[:search][:is_active_equals]=="false"
+          @search = ArchivedStudent.search(params[:search])
+          @students+=@search.all
+        else
+          @search1 = Student.search(params[:search]).all
+          @search2 = ArchivedStudent.search(params[:search]).all
+          @students+=@search1+@search2
+        end
+      end
+      params[:search][:batch_id_equals] = nil
+    else
+      if params[:search][:is_active_equals]=="true"
+        @search = Student.search(params[:search])
+        @students = @search.all
+      elsif params[:search][:is_active_equals]=="false"
+        @search = ArchivedStudent.search(params[:search])
+        @students = @search.all
+      else
+        @search1 = Student.search(params[:search]).all
+        @search2 = ArchivedStudent.search(params[:search]).all
+        @students = @search1+@search2
+      end
     end
     render :pdf=>'generate_tc_pdf'
          
@@ -793,6 +881,7 @@ class StudentController < ApplicationController
     @elective_subject = Subject.find(params[:id2])
     render(:update) do |page|
       page.replace_html "stud_#{params[:id]}", :partial=> 'unassign_students'
+      page.replace_html 'flash_box', :text => "<p class='flash-msg'>#{t('flash_msg39')}</p>"
     end
   end
 
@@ -806,6 +895,7 @@ class StudentController < ApplicationController
     @elective_subject = Subject.find(params[:id2])
     render(:update) do |page|
       page.replace_html 'category-list', :partial=>"all_assign"
+      page.replace_html 'flash_box', :text => "<p class='flash-msg'>#{t('flash_msg40')}</p>"
     end
   end
 
@@ -815,6 +905,7 @@ class StudentController < ApplicationController
     @elective_subject = Subject.find(params[:id2])
     render(:update) do |page|
       page.replace_html "stud_#{params[:id]}", :partial=> 'assign_students'
+      page.replace_html 'flash_box', :text => "<p class='flash-msg'>#{t('flash_msg41')}</p>"
     end
   end
 
@@ -828,6 +919,7 @@ class StudentController < ApplicationController
     @elective_subject = Subject.find(params[:id2])
     render(:update) do |page|
       page.replace_html 'category-list', :partial=>"all_assign"
+      page.replace_html 'flash_box', :text => "<p class='flash-msg'>#{t('flash_msg42')}</p>"
     end
   end
 
@@ -835,7 +927,6 @@ class StudentController < ApplicationController
     @dates = FinanceFeeCollection.find_all_by_batch_id(@student.batch ,:joins=>'INNER JOIN finance_fees ON finance_fee_collections.id = finance_fees.fee_collection_id',:conditions=>"finance_fees.student_id = #{@student.id} and finance_fee_collections.is_deleted = 0")
     if request.post?
       @student.update_attributes(:has_paid_fees=>params[:fee][:has_paid_fees]) unless params[:fee].nil?
-      @student.has_paid_fees = params[:fee][:has_paid_fees]
     end
   end
 

@@ -19,16 +19,16 @@
 
 
 <div id="content-header">
-  <img src="/images/admission/admission_page_logo.jpg" />
-  <h1>Admission</h1>
-  <h3>Krok 3 - Nouzový Kontakt</h3>
+<%= image_tag("/images/admission/admission_page_logo.jpg") %>
+  <h1><%= t('admission') %></h1>
+  <h3><%= t('emergency_contact_step3') %></h3>
 </div>
 
 <div id="page-yield">
 
   <% unless flash[:notice].nil? %> <p class="flash-msg"> <%= flash[:notice] %> </p> <% end %>
 
-  <p class="flash-msg">Vyberte jednoho z opatrovníků jako nouzový kontakt.</p>
+  <p class="flash-msg"><%= t('select_one_of_the_guardians') %></p>
 
   <% form_for :immediate_contact do |f| %>
     <ul id="parents-list">
@@ -42,6 +42,6 @@
         </li>
       <% end %>
     </ul>
-    <div id="submit-button"><%= submit_tag "" , :value => "► Dokončit", :id => 'finish-button' %></div>
+    <div id="submit-button"><%= submit_tag "" , :value => "► #{t('finish')}", :id => 'finish-button' %></div>
   <% end %>
 </div>

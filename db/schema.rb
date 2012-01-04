@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110810052138) do
+ActiveRecord::Schema.define(:version => 20111105052819) do
 
   create_table "additional_exam_groups", :force => true do |t|
     t.string  "name"
@@ -456,6 +456,8 @@ ActiveRecord::Schema.define(:version => 20110810052138) do
     t.boolean  "is_due",      :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "origin_id"
+    t.string   "origin_type"
   end
 
   add_index "events", ["is_common", "is_holiday", "is_exam"], :name => "index_events_on_is_common_and_is_holiday_and_is_exam", :limit => {"is_exam"=>nil, "is_common"=>nil, "is_holiday"=>nil}
@@ -591,6 +593,7 @@ ActiveRecord::Schema.define(:version => 20110810052138) do
     t.integer "fee_collection_id"
     t.string  "transaction_id"
     t.integer "student_id"
+    t.boolean "is_paid",           :default => false
   end
 
   add_index "finance_fees", ["fee_collection_id", "student_id"], :name => "index_finance_fees_on_fee_collection_id_and_student_id", :limit => {"student_id"=>nil, "fee_collection_id"=>nil}
@@ -622,7 +625,12 @@ ActiveRecord::Schema.define(:version => 20110810052138) do
     t.date     "transaction_date"
     t.decimal  "fine_amount",           :precision => 10, :scale => 2, :default => 0.0
     t.integer  "master_transaction_id",                                :default => 0
-    t.integer  "user_id"
+    t.integer  "finance_id"
+    t.string   "finance_type"
+    t.integer  "payee_id"
+    t.string   "payee_type"
+    t.string   "receipt_no"
+    t.string   "voucher_no"
   end
 
   create_table "grading_levels", :force => true do |t|
@@ -673,6 +681,11 @@ ActiveRecord::Schema.define(:version => 20110810052138) do
     t.string  "amount"
     t.boolean "is_deduction"
     t.boolean "include_every_month"
+  end
+
+  create_table "languages", :force => true do |t|
+    t.string "name"
+    t.string "code"
   end
 
   create_table "liabilities", :force => true do |t|
@@ -735,6 +748,7 @@ ActiveRecord::Schema.define(:version => 20110810052138) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "privileges_users", :id => false, :force => true do |t|
@@ -868,6 +882,13 @@ ActiveRecord::Schema.define(:version => 20110810052138) do
 
   add_index "timetable_entries", ["weekday_id", "batch_id", "class_timing_id"], :name => "by_timetable", :limit => {"class_timing_id"=>nil, "batch_id"=>nil, "weekday_id"=>nil}
 
+  create_table "user_events", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "first_name"
@@ -892,12 +913,5 @@ ActiveRecord::Schema.define(:version => 20110810052138) do
   end
 
   add_index "weekdays", ["batch_id"], :name => "index_weekdays_on_batch_id", :limit => {"batch_id"=>nil}
-
-  create_table "xmls", :force => true do |t|
-    t.string   "finance_name"
-    t.string   "ledger_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end

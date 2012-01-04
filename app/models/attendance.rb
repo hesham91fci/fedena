@@ -24,6 +24,6 @@ class Attendance < ActiveRecord::Base
   validates_presence_of :reason
 
   def validate
-    errors.add("Docházka před datem evidence")  if self.period_entry.month_date < self.student.admission_date
+    errors.add("#{t('attendance_before_the_date_of_admission')}")  if self.period_entry.month_date < self.student.admission_date
   end
 end

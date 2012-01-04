@@ -43,7 +43,7 @@
 #search_textbox input:focus{
     background : #fff;
     
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 #information{
@@ -55,7 +55,7 @@
 
 #no_result{
     font-weight:bold;
-    color:#10b046
+    color:#b00
 }
 #ajax_result {
     padding:10px 0 10px 0;

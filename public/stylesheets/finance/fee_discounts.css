@@ -90,7 +90,7 @@
 }
 
 #inner-tab-menu ul li {
-    background-color: #10b046;
+    background-color: #9D0E00;
     color: #FFFFFF;
     float: left;
     font-size: 0.9em;
@@ -99,7 +99,7 @@
     margin: 0 0 0 10px;
     padding: 0;
     text-align: center;
-    width: 110px;
+    width: 131px;
 }
 
 .submit_button {
@@ -111,7 +111,7 @@
     font-family: arial;
     font-size: 14px;
     font-weight: bold;
-    margin-left: 180px;
+    margin-left: 210px;
     margin-top: 15px;
     padding: 7px 10px;
 }

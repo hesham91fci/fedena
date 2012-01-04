@@ -17,18 +17,20 @@
 #limitations under the License.
 
 class ExamsController < ApplicationController
+  before_filter :login_required
   before_filter :query_data
   before_filter :protect_other_student_data
-  before_filter :restrict_employees_from_exam
+  before_filter :restrict_employees_from_exam, :except=>[:edit, :destroy]
+  before_filter :restrict_employees_from_exam_edit, :only=>[:edit, :destroy]
   filter_access_to :all
 
   def new
     @exam = Exam.new
     @subjects = @batch.subjects
-    if @current_user.employee? and  !@current_user.privileges.map{|m| m.id}.include?(1)
+    if @current_user.employee? and  !@current_user.privileges.map{|m| m.name}.include?("ExaminationControl")
       @subjects= Subject.find(:all,:joins=>"INNER JOIN employees_subjects ON employees_subjects.subject_id = subjects.id AND employee_id = #{@current_user.employee_record.id} AND batch_id = #{@batch.id} ")
       if @subjects.blank?
-        flash[:notice] = "Omlouváme se, nemáte oprávnění pro přístup na tuto stránku."
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to [@batch, @exam_group]
       end
     end
@@ -38,11 +40,11 @@ class ExamsController < ApplicationController
     @exam = Exam.new(params[:exam])
     @exam.exam_group_id = @exam_group.id
     if @exam.save
-      flash[:notice] = "Nové hodnocení bylo úspěšně vytvořeno."
+      flash[:notice] = "#{t('flash_msg10')}"
       redirect_to [@batch, @exam_group]
     else
       @subjects = @batch.subjects
-      if @current_user.employee? and  !@current_user.privileges.map{|m| m.id}.include?(1)
+      if @current_user.employee? and  !@current_user.privileges.map{|m| m.name}.include?("ExaminationControl")
         @subjects= Subject.find(:all,:joins=>"INNER JOIN employees_subjects ON employees_subjects.subject_id = subjects.id AND employee_id = #{@current_user.employee_record.id} AND batch_id = #{@batch.id} ")
       end
       render 'new'
@@ -52,10 +54,10 @@ class ExamsController < ApplicationController
   def edit
     @exam = Exam.find params[:id], :include => :exam_group
     @subjects = @exam_group.batch.subjects
-    if @current_user.employee?  and !@current_user.privileges.map{|m| m.id}.include?(1)
+    if @current_user.employee?  and !@current_user.privileges.map{|m| m.name}.include?("ExaminationControl")
       @subjects= Subject.find(:all,:joins=>"INNER JOIN employees_subjects ON employees_subjects.subject_id = subjects.id AND employee_id = #{@current_user.employee_record.id} AND batch_id = #{@batch.id} ")
       unless @subjects.map{|m| m.id}.include?(@exam.subject_id)
-        flash[:notice] = "Sorry, you are not allowed to access that page."
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to [@batch, @exam_group]
       end
     end
@@ -65,11 +67,11 @@ class ExamsController < ApplicationController
     @exam = Exam.find params[:id], :include => :exam_group
 
     if @exam.update_attributes(params[:exam])
-      flash[:notice] = 'Detaily hodnocení úspěšně aktualizovány.'
+      flash[:notice] = "#{t('flash1')}"
       redirect_to [@exam_group, @exam]
     else
       @subjects = @batch.subjects
-      if @current_user.employee? and  !@current_user.privileges.map{|m| m.id}.include?(1)
+      if @current_user.employee? and  !@current_user.privileges.map{|m| m.name}.include?("ExaminationControl")
         @subjects= Subject.find(:all,:joins=>"INNER JOIN employees_subjects ON employees_subjects.subject_id = subjects.id AND employee_id = #{@current_user.employee_record.id} AND batch_id = #{@batch.id} ")
       end
       render 'edit'
@@ -78,10 +80,10 @@ class ExamsController < ApplicationController
 
   def show
     @employee_subjects=[]
-    @employee_subjects= @current_user.employee_record.subjects.map { |n| n.subject_id} if @current_user.employee?
+    @employee_subjects= @current_user.employee_record.subjects.map { |n| n.id} if @current_user.employee?
     @exam = Exam.find params[:id], :include => :exam_group
-    unless @employee_subjects.include?("#{@exam.subject_id}") or @current_user.admin? or @current_user.privileges.map{|p| p.id}.include?(1) or @current_user.privileges.map{|p| p.id}.include?(2)
-      flash[:notice] = 'Přístup Zamítnut.'
+    unless @employee_subjects.include?(@exam.subject_id) or @current_user.admin? or @current_user.privileges.map{|p| p.name}.include?('ExaminationControl') or @current_user.privileges.map{|p| p.name}.include?('EnterResults')
+      flash[:notice] = "#{t('flash_msg6')}"
       redirect_to :controller=>"user", :action=>"dashboard"
     end
     exam_subject = Subject.find(@exam.subject_id)
@@ -103,19 +105,20 @@ class ExamsController < ApplicationController
 
   def destroy
     @exam = Exam.find params[:id], :include => :exam_group
-    if @current_user.employee?  and !@current_user.privileges.map{|m| m.id}.include?(1)
+    if @current_user.employee?  and !@current_user.privileges.map{|m| m.name}.include?("ExaminationControl")
       @subjects= Subject.find(:all,:joins=>"INNER JOIN employees_subjects ON employees_subjects.subject_id = subjects.id AND employee_id = #{@current_user.employee_record.id} AND batch_id = #{@batch.id} ")
       unless @subjects.map{|m| m.id}.include?(@exam.subject_id)
-        flash[:notice] = "Omlouváme se, nemáte oprávnění pro přístup na tyto stránky."
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to [@batch, @exam_group] and return
       end
     end
     if @exam.destroy
       batch_id = @exam.exam_group.batch_id
       batch_event = BatchEvent.find_by_event_id_and_batch_id(@exam.event_id,batch_id)
-      event = Event.find(@exam.event_id)
+      event = Event.find_by_id(@exam.event_id)
       event.destroy
       batch_event.destroy
+      flash[:notice] = "#{t('flash5')}"
     end
     redirect_to [@batch, @exam_group]
   end
@@ -141,7 +144,7 @@ class ExamsController < ApplicationController
         if details[:marks].to_f <= @exam.maximum_marks.to_f
           if @exam_score.update_attributes(details)
           else
-            flash[:warn_notice] = 'Stupně Hodnocení nejsou nastaveny. Prosím nastavte Stupně Hodnocení'
+            flash[:warn_notice] = "#{t('flash4')}"
             @error = nil
           end
         else
@@ -149,8 +152,8 @@ class ExamsController < ApplicationController
         end
       end
     end
-    flash[:notice] = 'Výsledek hodnocení překročil Maximální Známku.' if @error == true
-    flash[:notice] = 'Výsledky hodnocení aktualizovány.' if @error == false
+    flash[:notice] = "#{t('flash2')}" if @error == true
+    flash[:notice] = "#{t('flash3')}" if @error == false
     redirect_to [@exam_group, @exam]
   end
 
@@ -161,4 +164,14 @@ class ExamsController < ApplicationController
     @course = @batch.course
   end
 
+  def restrict_employees_from_exam_edit
+    if @current_user.employee?
+      if !@current_user.privileges.map{|p| p.name}.include?("ExaminationControl")
+        flash[:notice] = "#{t('flash_msg4')}"
+        redirect_to :back
+      else
+        @allow_for_exams = true
+      end
+    end
+  end
 end

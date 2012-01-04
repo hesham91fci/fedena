@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/examination/index/page_logo.jpg" alt="" />
-  <h1>Asset-Liability Management</h1>
-  <h3>Liability Form</h3>
+  <%= image_tag("/images/show_finance.png") %>
+  <h1><%= t('asset_liability_Management') %></h1>
+  <h3><%= t('liability_form') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -28,9 +28,9 @@
 <div id="page-yield">
 
   <div class="link-heading">
-    <%= link_to_function("create") { |page|
+    <%= link_to_function("#{t('create_text')}") { |page|
       page.replace_html 'modal-box', :partial => 'create_liability_form'
-      page << "Modalbox.show($('modal-box'), {title: 'Create new Liability', width: 500});"
+      page << "Modalbox.show($('modal-box'), {title: '#{t('creates_new_liability')}', width: 500});"
     } %>
   </div>
   <div class="link-descr"></div>

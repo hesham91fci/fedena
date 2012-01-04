@@ -7,7 +7,7 @@
 }
 
 #bank-details-label{
-    color:#16a747;
+    color:#BB0000;
     font-weight:bold;
     margin-bottom:20px;
     text-decoration:underline;
@@ -60,7 +60,7 @@
     cursor:pointer;
 }
 .sub-heading{
-    background:#10b046;
+    background:#9E0F15;
     height: 1px;
     border: none;
     margin-bottom: 15px;
@@ -88,5 +88,5 @@
     height: auto;
     margin: 0 0 10px;
     padding-top: 10px;
-    width: 400px;
+    width: 244px;
 }

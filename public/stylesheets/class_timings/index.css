@@ -13,6 +13,7 @@
 .label-checkbox-pair {
     height : 50px;
     margin-left : 30px;
+    padding: 0 0 0 10px;
 }
 .submit-button{
     width:100px;
@@ -27,7 +28,7 @@
     float:left;
     font-size:14px;
     font-weight:bold;
-    margin:0 0 0 170px;
+    margin:0 0 0 211px;
     padding:5px;
 }
 
@@ -159,10 +160,13 @@ table#class-timings-list td.col-6{
 }
 
 .linker a:hover{
-    color:#16a747;
+    color:#bb0000;
     text-decoration: none;
 }
 
 .linker{
     margin-bottom: 5px;
+}
+.time-select-field select {
+    visibility: visible !important;
 }

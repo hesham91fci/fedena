@@ -23,16 +23,43 @@ class ApplicationController < ActionController::Base
   
   before_filter { |c| Authorization.current_user = c.current_user }
   before_filter :message_user
-  
-  #before_filter :set_user_language
+  before_filter :set_user_language
+  before_filter :set_variables
+
+  before_filter :dev_mode
+
+
+  def dev_mode
+    if Rails.env == "development"
+     
+    end
+  end
+
+  def set_variables
+    unless @current_user.nil?
+      @attendance_type = Configuration.get_config_value('StudentAttendanceType') unless @current_user.student?
+      @modules = Configuration.available_modules
+    end
+  end
+
+
+  def set_language
+    session[:language] = params[:language]
+    @current_user.clear_menu_cache
+    render :update do |page|
+      page.reload
+    end
+  end
+
+
   if Rails.env.production?
     rescue_from ActiveRecord::RecordNotFound do |exception|
-      flash[:notice] = "Olmouvám se , #{exception} ."
+      flash[:notice] = "#{t('flash_msg2')} , #{exception} ."
       redirect_to :controller=>:user ,:action=>:dashboard
     end
 
     rescue_from NoMethodError do |exception|
-      flash[:notice] = "Omlouváme se, chyba aplikace.Prosím kontaktuje Administratora."
+      flash[:notice] = "#{t('flash_msg3')}"
       logger.info "[FedenaRescue] No method error #{exception.to_s}"
       logger.info exception.backtrace
       redirect_to :controller=>:user ,:action=>:dashboard
@@ -41,12 +68,12 @@ class ApplicationController < ActionController::Base
 
  
   def only_assigned_employee_allowed
+    @privilege = @current_user.privileges.map{|p| p.name}
     if @current_user.employee?
-      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.subject_id}
-      privilege = @current_user.privileges.map{|p| p.id}
-      if @employee_subjects.empty? and !privilege.include?(8) and !privilege.include?(16)
-          flash[:notice] = "Omlouváme se, není umožněn vstup na tuto stránku."
-          redirect_to :controller => 'user', :action => 'dashboard'
+      @employee_subjects= @current_user.employee_record.subjects
+      if @employee_subjects.empty? and !@privilege.include?("StudentAttendanceView") and !@privilege.include?("StudentAttendanceRegister")
+        flash[:notice] = "#{t('flash_msg4')}"
+        redirect_to :controller => 'user', :action => 'dashboard'
       else
         @allow_access = true
       end
@@ -55,9 +82,9 @@ class ApplicationController < ActionController::Base
 
   def restrict_employees_from_exam
     if @current_user.employee?
-      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.subject_id}
-      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.id}.include?(1) and !@current_user.privileges.map{|p| p.id}.include?(2) and !@current_user.privileges.map{|p| p.id}.include?(3)
-        flash[:notice] = "Omlouváme se, není umožněn vstup na tuto stránku."
+      @employee_subjects= @current_user.employee_record.subjects
+      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.name}.include?("ExaminationControl") and !@current_user.privileges.map{|p| p.name}.include?("EnterResults") and !@current_user.privileges.map{|p| p.name}.include?("ViewResults")
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to :controller => 'user', :action => 'dashboard'
       else
         @allow_for_exams = true
@@ -67,9 +94,9 @@ class ApplicationController < ActionController::Base
 
   def block_unauthorised_entry
     if @current_user.employee?
-      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.subject_id}
-      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.id}.include?(1)
-        flash[:notice] = "Omlouváme se, není umožněn vstup na tuto stránku."
+      @employee_subjects= @current_user.employee_record.subjects
+      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.name}.include?("ExaminationControl")
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to :controller => 'user', :action => 'dashboard'
       else
         @allow_for_exams = true
@@ -78,7 +105,7 @@ class ApplicationController < ActionController::Base
   end
   
   def initialize
-    @title = 'Fedena'
+    @title = 'Fedena'  
   end
 
   def message_user
@@ -95,20 +122,29 @@ class ApplicationController < ActionController::Base
   end
 
   def permission_denied
-    flash[:notice] = "Omlouváme se, není umožněn vstup na tuto stránku."
+    flash[:notice] = "#{t('flash_msg4')}"
     redirect_to :controller => 'user', :action => 'dashboard'
   end
   
   protected
   def login_required
-    redirect_to '/' unless session[:user_id]
+    unless session[:user_id]
+      session[:back_url] = request.url
+      redirect_to '/'
+    end
+  end
+
+  def check_if_loggedin
+    if session[:user_id]
+      redirect_to :controller => 'user', :action => 'dashboard'
+    end
   end
 
   def configuration_settings_for_hr
     hr = Configuration.find_by_config_value("HR")
     if hr.nil?
       redirect_to :controller => 'user', :action => 'dashboard'
-      flash[:notice] = "Omlouváme se, není umožněn vstup na tuto stránku."
+      flash[:notice] = "#{t('flash_msg4')}"
     end
   end
 
@@ -118,7 +154,7 @@ class ApplicationController < ActionController::Base
     finance = Configuration.find_by_config_value("Finance")
     if finance.nil?
       redirect_to :controller => 'user', :action => 'dashboard'
-      flash[:notice] = "Omlouváme se, není umožněn vstup na tuto stránku."
+      flash[:notice] = "#{t('flash_msg4')}"
     end
   end
 
@@ -130,7 +166,7 @@ class ApplicationController < ActionController::Base
     if current_user.student?
       student = current_user.student_record
       unless params[:id].to_i == student.id or params[:student].to_i == student.id
-        flash[:notice] = "Nemáte oprávnění zobrazit tuto informaci."
+        flash[:notice] = "#{t('flash_msg5')}"
         redirect_to :controller=>"user", :action=>"dashboard"
       end
     end
@@ -139,10 +175,22 @@ class ApplicationController < ActionController::Base
   def protect_user_data
     unless current_user.admin?
       unless params[:id].to_s == current_user.username
-        flash[:notice] = "Nemáte oprávnění zobrazit tuto informaci."
+        flash[:notice] = "#{t('flash_msg5')}"
         redirect_to :controller=>"user", :action=>"dashboard"
       end
     end
+  end
+  
+  def limit_employee_profile_access
+      unless @current_user.employee
+      unless params[:id] == @current_user.employee_record.id
+      priv = @current_user.privileges.map{|p| p.name}
+      unless current_user.admin? or priv.include?("HrBasics") or priv.include?("EmployeeSearch")
+        flash[:notice] = "#{t('flash_msg5')}"
+        redirect_to :controller=>"user", :action=>"dashboard"
+      end
+      end
+      end
   end
 
   def protect_other_employee_data
@@ -155,7 +203,7 @@ class ApplicationController < ActionController::Base
       #    end
       #    unless privilege.include?('9') or privilege.include?('14') or privilege.include?('17') or privilege.include?('18') or privilege.include?('19')
       unless params[:id].to_i == employee.id
-        flash[:notice] = 'Nemáte oprávnění zobrazit tuto informaci.'
+        flash[:notice] = "#{t('flash_msg5')}"
         redirect_to :controller=>"user", :action=>"dashboard"
       end
     end
@@ -167,7 +215,7 @@ class ApplicationController < ActionController::Base
       employee_user = employee.user
       unless employee_user.id == current_user.id
         unless current_user.role_symbols.include?(:hr_basics) or current_user.role_symbols.include?(:employee_attendance)
-          flash[:notice] = "Přístup zamítnut"
+          flash[:notice] = "#{t('flash_msg6')}"
           redirect_to :controller=>"user", :action=>"dashboard"
         end
       end
@@ -179,7 +227,7 @@ class ApplicationController < ActionController::Base
   def protect_view_reminders
     reminder = Reminder.find(params[:id2])
     unless reminder.recipient == current_user.id
-      flash[:notice] = 'Nemáte oprávnění zobrazit tuto informaci.'
+      flash[:notice] = "#{t('flash_msg5')}"
       redirect_to :controller=>"reminder", :action=>"index"
     end
   end
@@ -187,7 +235,7 @@ class ApplicationController < ActionController::Base
   def protect_sent_reminders
     reminder = Reminder.find(params[:id2])
     unless reminder.sender == current_user.id
-      flash[:notice] = 'Nemáte oprávnění zobrazit tuto informaci.'
+      flash[:notice] = "#{t('flash_msg5')}"
       redirect_to :controller=>"reminder", :action=>"index"
     end
   end
@@ -198,7 +246,7 @@ class ApplicationController < ActionController::Base
     employee_user = employee.user
     #    unless permitted_to? :employee_attendance_pdf, :employee_attendance
     unless employee_user.id == current_user.id
-      flash[:notice] = "Přístup zamítnut"
+      flash[:notice] = "#{t('flash_msg6')}"
       redirect_to :controller=>"user", :action=>"dashboard"
       #    end
     end
@@ -209,7 +257,7 @@ class ApplicationController < ActionController::Base
     applied_employee = applied_leave.employee
     applied_employee_user = applied_employee.user
     unless applied_employee_user.id == current_user.id
-      flash[:notice]="Přístup zamítnut!"
+      flash[:notice]="#{t('flash_msg5')}"
       redirect_to :controller=>"user", :action=>"dashboard"
     end
   end
@@ -220,16 +268,21 @@ class ApplicationController < ActionController::Base
     applied_employees_manager = Employee.find(applied_employee.reporting_manager_id)
     applied_employees_manager_user = applied_employees_manager.user
     unless applied_employees_manager_user.id == current_user.id
-      flash[:notice]="Přístup zamítnut!"
+      flash[:notice]="#{t('flash_msg5')}"
       redirect_to :controller=>"user", :action=>"dashboard"
     end
   end
 
-  
- 
 
-  #   private
-  #    def set_user_language
-  #      #I18n.locale = 'es'
-  #    end
+  private
+  def set_user_language
+    lan = Configuration.find_by_config_key("Locale")
+    I18n.default_locale = lan.config_value
+    Translator.fallback(true)
+    if session[:language].nil?
+      I18n.locale = lan.config_value
+    else
+      I18n.locale = session[:language]
+    end
+  end
 end

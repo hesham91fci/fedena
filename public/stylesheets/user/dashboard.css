@@ -1,6 +1,6 @@
 #content_header {
     padding-left:20px;
-    height:137px;
+    height:150px;
     background:#fff url(../../images/fedena_user/dashboard/content_header_img.jpg) bottom no-repeat;
 }
 #content_header h1 {
@@ -10,9 +10,9 @@
     color:#999;
 }
 #content_header h3 {
-    margin:0px;
+    margin-top:0px;
     padding:0px;
-    color:#10b046;
+    color:#b00;
 }
 
 #user_options {
@@ -89,7 +89,7 @@
     position:absolute;
     top: 66px;
     left: 66px;
-    background:none repeat scroll 0 0 #10b046;
+    background:none repeat scroll 0 0 #9d0e00;
     -moz-border-radius:10px;
       -webkit-border-radius:10px;
     font-size: 11px;
@@ -124,11 +124,22 @@ div.nicetitle p { margin: 0; padding: 0 3px; }
 
 .button-label p {
  text-align: center;
- margin-left: -20px;
+ margin-left: -1px;
  text-decoration: none;
+ width: 173px;
 }
 
 .button-box a {
 
  text-decoration: none;
+}
+#outer-autosuggest-menu{
+float: right;
+margin-right: 94px;
+margin-top: 6px;
+width: 245px;
+}
+#autosuggest_menu_input{
+width: 300px;
+height: 14px;
 }

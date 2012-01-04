@@ -18,15 +18,22 @@
 
 class Configuration < ActiveRecord::Base
 
-  STUDENT_ATTENDANCE_TYPE_OPTIONS = ['Denně', 'Dle předmětu']
-  NETWORK_STATES                   = ['Online','Offline']
+  STUDENT_ATTENDANCE_TYPE_OPTIONS = [["#{t('daily_text')}", "Daily"], ["#{t('subject_wise_text')}", "SubjectWise"]]
+
+  NETWORK_STATES                   = [["#{t('online')}",'Online'],["#{t('offline')}",'Offline']]
+  LOCALES = []
+  Dir.glob("#{RAILS_ROOT}/config/locales/*.yml").each do |file|
+    file.gsub!("#{RAILS_ROOT}/config/locales/", '')
+    file.gsub!(".yml", '')
+    LOCALES << file
+  end
 
   def validate
     if self.config_key == "StudentAttendanceType"
-      errors.add_to_base("Student Attendance Type should be any one of #{STUDENT_ATTENDANCE_TYPE_OPTIONS}") unless STUDENT_ATTENDANCE_TYPE_OPTIONS.include?(self.config_value.to_s)
+      errors.add_to_base("#{t('student_attendance_type_should_be_one')} #{STUDENT_ATTENDANCE_TYPE_OPTIONS}") unless Configuration::STUDENT_ATTENDANCE_TYPE_OPTIONS.collect{|d| d[1] == self.config_value}.include?(true)
     end
     if self.config_key == "NetworkState"
-      errors.add_to_base("Network State should be any one of #{NETWORK_STATES}") unless NETWORK_STATES.include?(self.config_value)
+      errors.add_to_base("#{t('network_state_should_be_one')} #{NETWORK_STATES}") unless NETWORK_STATES.collect{|d| d[1] == self.config_value}.include?(true)
     end
   end
 

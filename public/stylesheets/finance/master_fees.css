@@ -1,4 +1,6 @@
-
+.options{
+    float:left;
+}
 .link-box {
     float: left;
     height: 80px;
@@ -38,13 +40,13 @@
 }
 
 #categories{
-    margin: 20px 56px 0 auto;
-    width: 874px;
+    margin: 20px 0 0 auto;
+    width: 100%;
 }
 
 .submit_button {
     margin-top:15px;
-    margin-left:180px;
+    margin-left:205px;
     padding: 7px 10px;
     color: #fff;
     background: #27292B;
@@ -81,7 +83,7 @@
     color : #444;
     display : block;
     font-size: 14px;
-    margin : 0 0 10px 0;
+    margin : 0 0 0px 0;
     float:left;
     width:205px;
     padding-top: 10px;
@@ -103,8 +105,17 @@
     background : #eee;
     border : 1px solid #c6c6c6;
     margin : 5px 0 0 10px;
+    width : auto;
+    height:auto;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    padding: 5px;
+}
+.opt input {
+    background : #eee;
+    border : 1px solid #c6c6c6;
+    margin : 5px 0 0 10px;
     width : 50px;
-    height:17px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     padding: 5px;
@@ -135,20 +146,30 @@
 
 .opt{
     margin-left:200px;
-    width:199px;
+    width:226px;
 }
-
 .each_batch{
     font-size: 12px;
-    /*overflow:auto;
-    width:205px; */
+    overflow:auto;
+    width:auto;
 
 }
+.each_batch input{
+    float:left;
+    width:auto;
+}
+.each_batch label {
+    float: left;
+    margin-left: 10px;
+    margin-top: -6px;
+    width: 205px;
+}
+
 
 .batches {
     height: 183px;
     overflow: auto;
-    width: 233px;
+    width: 250px;
     float: left;
 }
 .label-field-pair {
@@ -188,4 +209,7 @@
 input#particulars_select_category{
     margin-left: 15px;
     margin-right: 3px;
+}
+table#listing td.col-4 {
+    width: 26%;
 }

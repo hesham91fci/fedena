@@ -1,6 +1,6 @@
 .text-input-bg input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 .text-input-bg input {
@@ -16,7 +16,7 @@
 }
 
 .submit_button {
-    margin-left: 160px;
+    margin-left: 210px;
     margin-top:20px;
     padding: 7px 10px;
     color: #fff;

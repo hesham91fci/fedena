@@ -20,8 +20,12 @@
     margin:0px auto;
 }
 .box{
-    width:750px;
+    width:100%;
     margin:0px auto;
+}
+.exam-basic-details{
+    margin: 0 auto;
+    width: 550px;
 }
 .submit_button {
     margin-top: 25px;
@@ -71,7 +75,7 @@
 }
 .label-field-pair input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 .label-field-pair2 input {
@@ -86,7 +90,7 @@
 }
 .label-field-pair2 input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 .text-input-bg2 {
@@ -108,7 +112,7 @@
 }
 .label-field-pair3 input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 .text-input-bg3 {
@@ -129,4 +133,7 @@
 .type_link:hover{
     color:#990a10;
     text-decoration:none;
+}
+.fieldWithErrors{
+    display: inline-block;
 }

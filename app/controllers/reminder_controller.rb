@@ -44,10 +44,10 @@ class ReminderController < ApplicationController
           Reminder.create(:sender => @user.id, :recipient => user.id, :subject=>params[:reminder][:subject],
             :body=>params[:reminder][:body], :is_read=>false, :is_deleted_by_sender=>false,:is_deleted_by_recipient=>false)
         end
-        flash[:notice] = "Zpráva úspěšně odeslána"
+        flash[:notice] = "#{t('flash1')}"
         redirect_to :controller=>"reminder", :action=>"create_reminder"
       else
-        flash[:notice]="<b>ERROR:</b>Prosím vyplňte všechny požadované údaje pro vytvoření této zprávy"
+        flash[:notice]="<b>ERROR:</b>#{t('flash6')}"
         redirect_to :controller=>"reminder", :action=>"create_reminder"
       end
     end
@@ -106,10 +106,14 @@ class ReminderController < ApplicationController
   end
 
   def update_recipient_list
+    if params[:recipients]
     recipients_array = params[:recipients].split(",").collect{ |s| s.to_i }
     @recipients = User.find(recipients_array)
     render :update do |page|
       page.replace_html 'recipient-list', :partial => 'recipient_list'
+    end
+    else
+    redirect_to :controller=>:user,:action=>:dashboard
     end
   end
 
@@ -126,7 +130,7 @@ class ReminderController < ApplicationController
   def delete_reminder_by_sender
     @sent_reminder = Reminder.find(params[:id2])
     Reminder.update(@sent_reminder.id, :is_deleted_by_sender => true)
-    flash[:notice] = "Zpráva klubu vymazána."
+    flash[:notice] = "#{t('flash2')}"
     redirect_to :action =>"sent_reminder"
   end
 
@@ -135,7 +139,7 @@ class ReminderController < ApplicationController
     employee = user.employee_record
     @reminder = Reminder.find(params[:id2])
     Reminder.update(@reminder.id, :is_deleted_by_recipient => true)
-    flash[:notice] = "Zpráva klubu vymazána."
+    flash[:notice] = "#{t('flash2')}"
     redirect_to :action =>"index"
   end
 
@@ -143,16 +147,16 @@ class ReminderController < ApplicationController
     user = current_user
     @new_reminder = Reminder.find(params[:id2])
     Reminder.update(@new_reminder.id, :is_read => true)
-    @sender = User.find(@new_reminder.sender)
+    @sender = @new_reminder.user
 
     if request.post?
       unless params[:reminder][:body] == "" or params[:recipients] == ""
         Reminder.create(:sender=>user.id, :recipient=>@sender.id, :subject=>params[:reminder][:subject],
           :body=>params[:reminder][:body], :is_read=>false, :is_deleted_by_sender=>false,:is_deleted_by_recipient=>false)
-        flash[:notice]="Your reply has been sent"
+        flash[:notice]="#{t('flash3')}"
         redirect_to :controller=>"reminder", :action=>"view_reminder", :id2=>params[:id2]
       else
-        flash[:notice]="<b>ERROR:</b>Prosím vyplňte obojí předmět a obsah"
+        flash[:notice]="<b>ERROR:</b>#{t('flash4')}"
         redirect_to :controller=>"reminder", :action=>"view_reminder",:id2=>params[:id2]
       end
     end
@@ -161,7 +165,7 @@ class ReminderController < ApplicationController
   def mark_unread
     @reminder = Reminder.find(params[:id2])
     Reminder.update(@reminder.id, :is_read => false)
-    flash[:notice] = "Reminder marked unread."
+    flash[:notice] = "#{t('flash5')}"
     redirect_to :controller=>"reminder", :action=>"index"
   end
 
@@ -172,16 +176,20 @@ class ReminderController < ApplicationController
   end
 
   def send_reminder
+    if params[:create_reminder]
     unless params[:create_reminder][:message] == "" or params[:create_reminder][:to] == ""
       Reminder.create(:sender=>params[:create_reminder][:from], :recipient=>params[:create_reminder][:to], :subject=>params[:create_reminder][:subject],
         :body=>params[:create_reminder][:message] , :is_read=>false, :is_deleted_by_sender=>false,:is_deleted_by_recipient=>false)
       render(:update) do |page|
-        page.replace_html 'error-msg', :text=> '<p class="flash-msg">Your message has been sent</p>'
+        page.replace_html 'error-msg', :text=> "<p class='flash-msg'>#{t('your_message_sent')}</p>"
       end
     else
       render(:update) do |page|
-        page.replace_html 'error-msg', :text=> '<p class="flash-msg">Prosím uveďte zprávu a předmět.</p>'
+        page.replace_html 'error-msg', :text=> "<p class='flash-msg'>#{t('enter_subject')}</p>"
       end
+    end
+    else
+      redirect_to :controller=>:reminder
     end
   end
 end

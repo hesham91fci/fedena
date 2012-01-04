@@ -22,6 +22,7 @@ class ArchivedStudentController < ApplicationController
     def profile
         @current_user = current_user
         @archived_student = ArchivedStudent.find(params[:id])
+        @additional_fields = StudentAdditionalField.all(:conditions=>"status = true")
     end
 
     def show
@@ -41,7 +42,7 @@ class ArchivedStudentController < ApplicationController
     def destroy
         archived_student = ArchivedStudent.find(params[:id])
 #        ArchivedStudent.destroy(params[:id])
-#        flash[:notice] = "Všechny záznamy byly vymazány pro hráče s evidenčním číslem #{archived_student.admission_no}."
+#        flash[:notice] = "All records have been deleted for student with admission no. #{archived_student.admission_no}."
         redirect_to :controller => 'user', :action => 'dashboard'
     end
 

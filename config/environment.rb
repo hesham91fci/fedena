@@ -19,4 +19,6 @@ Rails::Initializer.run do |config|
 
   config.load_once_paths += %W( #{RAILS_ROOT}/lib )
   config.load_paths += Dir["#{RAILS_ROOT}/app/models/*"].find_all { |f| File.stat(f).directory? }
+
+  config.plugins = [:paperclip,:all]
 end

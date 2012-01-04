@@ -74,7 +74,7 @@ a.user_button{
     border:none;
     text-align:center;
     text-decoration: none;
-    width:70px;
+    width:auto;
     cursor:pointer;
 }
 a.user_button:hover{
@@ -82,7 +82,7 @@ a.user_button:hover{
 }
 
 #inner-tab-menu ul li {
-    background-color:#10b046;
+    background-color:#9D0E00;
     color:#FFFFFF;
     float:left;
     font-size:0.9em;
@@ -90,5 +90,15 @@ a.user_button:hover{
     list-style-type:none;
     margin:0 0 0 10px;
     text-align:center;
-    width:130px;
+    width:168px;
+}
+.profile_info_text select{
+    background-color : #eee;
+    border : 1px solid #c6c6c6;
+    margin : -3px 0 0 0;
+    width : 215px;
+    height:27px;
+    padding:3px 6px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
 }

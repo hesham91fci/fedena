@@ -10,7 +10,7 @@ body {
 }
 #header_bg {
     height : 60px;
-    background : #10b046 url(../../images/application/app_layout_header_bg.jpg) repeat;
+    background : #b00 url(../../images/application/app_layout_header_bg.jpg) repeat;
 }
 #header {
     width : 980px; height : 60px;
@@ -18,10 +18,18 @@ body {
 }
 #header_link {
     color : #fff;
-    height : 40px;
+    height : 22px;
     float: right;
     font-size : 0.9em;
     padding : 10px 0 0 0;
+}
+#outer-main-menu {
+    float: left;
+}
+#outer-header-link{
+    height: 32px;
+    width: 100%;
+    float: right;
 }
 #header a {
     text-decoration:none;
@@ -33,22 +41,120 @@ body {
 
 #main-menu {
     float : left;
-    height : 60px; width : 500px;
+    height : 27px; width : 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
-#main-menu a {
+#main-menu li.a{
+    float: left;
+}
+#main-menu li a {
     background : #fff;
-    color : #10b046;
+    color : #b00;
     display : block;
     font-size : 0.8em;
     float : left;
-    height : 17px; width : 75px;
-    margin : 38px 5px 0 0;
-    padding : 5px 0 0 0;
+    height : 17px; width : auto;
+    margin : 6px 5px 0 0;
+    padding : 5px 10px 0 10px;
     text-align : center;
     text-decoration : none;
 }
-#main-menu a:hover {
+#main-menu li a:hover {
     text-decoration : underline;
+}
+#main-menu li ul.level-1{
+    margin: 0;
+    padding: 0;
+    width : 160px;
+    list-style-type: none;
+    position: absolute;
+    top: 60px;
+    z-index: 999;
+    visibility : hidden;
+    border : 1px solid black;
+    border-bottom-width : 0;
+    font: normal 0.9em Arial;
+    line-height: 18px;
+    background: #b00 url(../../images/application/app_layout_header_bg.jpg) repeat;
+}
+#main-menu li:hover ul.level-1{
+    visibility: visible;
+}
+#main-menu li ul.level-1 li{
+    width: 100%;
+    overflow: hidden;
+}
+#main-menu li ul.level-1 li a{
+    width: 100%;
+    display: block;
+    text-indent: 3px;
+    border-bottom: 1px solid black;
+    padding: 2px 3px 2px 2px;
+    text-decoration: none;
+    text-indent: 0;
+    background: none;
+    color: #ffffff;
+    width: 155px;
+    font-size: 13px;
+    text-align: left;
+    margin: 0;
+    float: left;
+    height: auto;
+}
+#main-menu li ul.level-1 li a:hover{
+    background: #000000;
+    text-decoration: none;
+}
+#main-menu li ul.level-1 li ul.level-2{
+    margin: -1px 0 0 0;
+    padding: 0;
+    position: absolute;
+    left: 160px;
+    top: auto;
+    visibility: hidden;
+    width: 160px;
+    list-style-type: none;
+    z-index: 999;
+    border : 1px solid black;
+    border-bottom-width : 0;
+    font: normal 0.9em Arial;
+    line-height: 18px;
+    background: #b00 url(../../images/application/app_layout_header_bg.jpg) repeat;
+}
+#main-menu li ul.level-1 li:hover ul.level-2{
+    visibility: visible;
+}
+#main-menu li ul.level-1 li ul.level-2 li{
+    width: 100%;
+    overflow: hidden;
+}
+#main-menu li ul.level-1 li ul.level-2 li a{
+    width: 100%;
+    display: block;
+    text-indent: 3px;
+    border-bottom: 1px solid black;
+    padding: 2px 3px 2px 2px;
+    text-decoration: none;
+    text-indent: 0;
+    background: none;
+    color: #ffffff;
+    width: 155px;
+    font-size: 13px;
+    text-align: left;
+    margin: 0;
+    float: left;
+    height: auto;
+}
+#main-menu li ul.level-1 li ul.level-2 li a:hover{
+    background: #000000;
+    text-decoration: none;
+}
+#main-menu li ul li span.right-arrow{
+    float:right;
+    font-size: 12px;
+    padding-right: 2px;
 }
 
 p.flash-msg {
@@ -82,7 +188,7 @@ p.flash-msg {
 
 #footer {
     height:33px;
-    background:#10b046 url(../../images/application/app_layout_footer_bg.jpg) repeat;
+    background:#b00 url(../../images/application/app_layout_footer_bg.jpg) repeat;
 }
 #footer #footer_links {
     height:33px;width:614px;
@@ -122,7 +228,7 @@ p.flash-msg {
 #content-header h3 {
     margin:0px;
     padding:0 0 0 150px;
-    color:#10b046;
+    color:#b00;
 }
 #app-back-button {
     float:right
@@ -152,15 +258,50 @@ p.flash-msg {
 }
 #news_feed small {
     padding-top:0px;
-    color:#10b046;
+    color:#b00;
 }
 #news_feed_top_img {
-    margin:0 auto;
-    margin-top:25px;
-    height:36px;width:157px;
-    background:#fff url(../../images/fedena_user/dashboard/dash_news_top.jpg) no-repeat;
+    background: url("../../images/fedena_user/dashboard/dash_news_top.jpg") no-repeat scroll 0 0 #FFFFFF;
+    color: #000000;
     display: block;
+    font-weight: bold;
+    height: 34px;
+    margin: 25px auto 0;
+    padding-left: 52px;
+    padding-top: 2px;
+    text-decoration: none;
+    width: 105px;
 }
+
+#bottom_read_more {
+    background: url("../../images/fedena_user/dashboard/news_feed_more_link.jpg") no-repeat scroll 0 0 #FFFFFF;
+    color: #FFFFFF;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 36px;
+    margin: 0;
+    padding-left: 40px;
+    padding-top: 8px;
+    text-decoration: none;
+    width: 117px;
+}
+
+.language {
+    float: right;
+    width: 110px;
+}
+.language select {
+    background-color : #eee;
+    border : 1px solid #c6c6c6;
+    margin : 5px 0 0 0px;
+    width : 100px;
+    height:27px;
+    padding:3px 6px;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+}
+
 #news_feed_bottom_img a {
     display:block;
     height:28px;width:157px;
@@ -233,7 +374,7 @@ body > #content_wrapper {
     font: normal 0.9em Arial;
     line-height: 18px;
     z-index: 100; /* zIndex should be greater than that of shadow's below */
-    background: #10b046 url(../../images/application/app_layout_header_bg.jpg) repeat;
+    background: #b00 url(../../images/application/app_layout_header_bg.jpg) repeat;
     width: 125px; /* default width for menu */
 }
 
@@ -339,12 +480,12 @@ body > #content_wrapper {
 /* Validation error messages */
 
 .fieldWithErrors{
-    border : 2px solid #10b046;
+    border : 2px solid #b00;
     height : 25px; width : 225px;
 }
 .errorExplanation {
     background-color : #ffb1b1;
-    border : 1px solid #10b046;
+    border : 1px solid #b00;
     height : auto; width : 510px;
     margin : 20px 0 40px 50px;
     padding : 10px 0 20px 20px;
@@ -372,7 +513,7 @@ body > #content_wrapper {
     padding : 0;
 }
 #inner-tab-menu ul li {
-    background-color : #10b046;
+    background-color : #9d0e00;
     color : #fff;
     float : left;
     font-size : 0.9em;
@@ -390,8 +531,8 @@ body > #content_wrapper {
 
 
 #footer {
-    /* position : relative;
-    margin-top : -33px; */
+    /* position : relative;*/
+    margin-top :15px;
     height : 66px;
     clear : both;
     background: url(/images/foot.png) repeat-x;

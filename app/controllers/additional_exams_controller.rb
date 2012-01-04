@@ -17,6 +17,7 @@
 #limitations under the License.
 
 class AdditionalExamsController < ApplicationController
+  before_filter :login_required
   before_filter :query_data
   filter_access_to :all
 
@@ -65,14 +66,14 @@ class AdditionalExamsController < ApplicationController
         @additional_exam_score.update_attributes(details)
       end
     end
-    flash[:notice] = 'Výsledky dalšího hodnocení aktualizovány.'
+    flash[:notice] = "#{t('flash1')}"
     redirect_to [@additional_exam_group, @additional_exam]
   end
 
   def create
     @additional_exam = @additional_exam_group.additional_exams.build(params[:additional_exam])
     if @additional_exam.save
-      flash[:notice] = "Nové hodnocení bylo úspěšně vytvořeno."
+      flash[:notice] = "#{t('flash_msg10')}"
       redirect_to [@batch, @additional_exam_group]
     else
       @subjects = @batch.subjects
@@ -86,7 +87,7 @@ class AdditionalExamsController < ApplicationController
     @subjects = @additional_exam_group.batch.subjects
 
     if @additional_exam.update_attributes(params[:additional_exam])
-      flash[:notice] = 'Další hodnocení bylo úspěšně aktualizováno.'
+      flash[:notice] = "#{t('flash3')}"
       redirect_to [@additional_exam_group, @additional_exam]
     else
       render 'edit'
@@ -101,6 +102,7 @@ class AdditionalExamsController < ApplicationController
     if @additional_exam.destroy
       event.destroy
       batch_event.destroy
+      flash[:notice] = "#{t('flash2')}"
     end
     redirect_to [@batch, @additional_exam_group]
   end

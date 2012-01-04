@@ -18,11 +18,11 @@
 #under the License. -%>
 
 <div id="content-header">
-   <img src="/images/attendence/attendence.png" alt="" />
-  <h1>Správa Docházky</h1>
-  <h3>Dovolené a Docházka</h3>
+  <%= image_tag("/images/attendence/attendence.png") %>
+  <h1><%= t('manage_attendance') %></h1>
+  <h3><%= t('leave_attendance') %></h3>
   <div id="app-back-button">
-   <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
+    <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
 </div>
 
@@ -33,23 +33,23 @@
   <% end %>
   <div id="box">
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Přidat druh Dovolené", :controller=>"employee_attendance", :action=>"add_leave_types"%></div>
-      <div class="link-descr">Přidat nebo upravit druh dovolené pro zaměstnance.</div>
+      <div class="link-heading"><%= link_to "#{t('add_type')}", :controller=>"employee_attendance", :action=>"add_leave_types"%></div>
+      <div class="link-descr"><%= t('link_dec1') %></div>
     </div>
 
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Prezenční listina", :controller=>"employee_attendances", :action=>"index"%></div>
-      <div class="link-descr">Zapsat docházku.</div>
+      <div class="link-heading"><%= link_to "#{t('attendance_register')}", :controller=>"employee_attendances", :action=>"index"%></div>
+      <div class="link-descr"><%= t('register_attendance') %></div>
     </div>
 
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Report docházky", :controller=>"employee_attendance", :action=>"report" %></div>
-      <div class="link-descr">Reporty docházky.</div>
+      <div class="link-heading"><%= link_to "#{t('attendance_report')}", :controller=>"employee_attendance", :action=>"report" %></div>
+      <div class="link-descr"><%= t('attendance_report') %>.</div>
     </div>
 
     <div class="link-box">
-      <div class="link-heading"><%= link_to "Reset Dovolených", :controller=>"employee_attendance", :action=>"manual_reset" %></div>
-      <div class="link-descr">Resetovat dovolené zaměstnanců.</div>
+      <div class="link-heading"><%= link_to "#{t('reset_leave')}", :controller=>"employee_attendance", :action=>"manual_reset" %></div>
+      <div class="link-descr"><%= t('reset_employee_leaves') %></div>
     </div>
 
 

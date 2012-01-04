@@ -30,7 +30,6 @@
 
 #search_textbox input{
     background : #eee;
-    float:left;
     border : 1px solid #c6c6c6;
     margin : -5px 0 0 10px;
     width : 180px;
@@ -38,24 +37,23 @@
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     padding: 4px 0 0 5px;
+    float: left;
 }
 
 #search_textbox input:focus{
     background : #fff;
 
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 #information{
-    height:100px;
-    width:614px;
+    min-height:100px;
     margin-left:0px;
-    padding-left:50px
 }
 
 #no_result{
     font-weight:bold;
-    color:#10b046
+    color:#b00
 }
 #ajax_result {
     padding:10px 0 10px 0;
@@ -70,10 +68,10 @@
 }
 
 .advanced_options{
-    margin-left:3px;
+    margin-left:0;
     margin-top:5px;
     width:600px;
-    float:left;
+    float: left;
 }
 
 
@@ -88,11 +86,11 @@
 
 .advanced-options-select {
     background : #fff url(../../images/form_bg/smalltextbox.jpg) no-repeat;
-    height : 28px;
+    height : 43px;
     width : 150px;
-    float:left;
+    float: left;
 }
 #form-content{
     width:300px;
-    float:left;
+    float: left;
 }

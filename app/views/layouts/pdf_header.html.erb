@@ -20,11 +20,11 @@
 <div id="pdf-header">
       <div class="logo">
         <% if FileTest.exists?("#{RAILS_ROOT}/public/uploads/image/institute_logo.jpg") %>
-            <%= image_tag  "#{RAILS_ROOT}/public/uploads/image/institute_logo.jpg" ,:width => "90",  :height=>"85" %>
+            <%= image_tag  "#{request.protocol}#{request.host_with_port}/uploads/image/institute_logo.jpg" ,:width => "90",  :height=>"85" %>
           <% else %>
 
           <div class="fed_logo">
-            <%= image_tag  "#{RAILS_ROOT}/public/images/application/app_fedena_logo.jpg" ,:width => "90",  :height=>"85" %>
+            <%= image_tag  "#{request.protocol}#{request.host_with_port}/images/application/app_fedena_logo.jpg" ,:width => "90",  :height=>"85" %>
     </div>
           <% end %>
       </div>

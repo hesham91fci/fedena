@@ -18,12 +18,12 @@
 #under the License. -%>
 
 <div class="label-field-pair">
-  <label>Vybrat období: </label>
+  <label><%= t('select_mode') %>: </label>
  
 <div class="text-input-bg">
 <%= select :mode, :id,
-  ["Měsíc", "Celkem"],
-  {:prompt => 'Vybrat období'},
+  [["#{t('monthly')}","Monthly"], ["#{t('overall')}","Overall"]],
+  {:prompt => "#{t('select_mode')}"},
   {:onchange => "#{remote_function(
   :url => { :action => 'show' },
   :with => "'mode='+value+'&batch_id='+#{@batch.id}+'&subject_id='+#{@subject}",

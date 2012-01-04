@@ -68,7 +68,7 @@ select#adv_search_doj_year, select#adv_search_dob_year, select#adv_search_joinin
     border:medium none;
     color:#FFFFFF;
     cursor:pointer;
-    margin-left:170px;
+    margin-left:210px;
     margin-top:30px;
     font-family:arial;
     font-size:14px;
@@ -106,7 +106,7 @@ select#adv_search_doj_year, select#adv_search_dob_year, select#adv_search_joinin
     padding-top:10px;
 }
 .sub-heading{
-    background:#10b046;
+    background:#9E0F15;
     height: 1px;
     border: none;
     margin-bottom: 15px;

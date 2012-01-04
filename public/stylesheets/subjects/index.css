@@ -31,7 +31,7 @@
 
 .submit_button {
     margin-top:15px;
-    margin-left:180px;
+    margin-left:210px;
     padding: 7px 10px;
     color: #fff;
     background: #27292B;
@@ -98,12 +98,12 @@
 #category-list li div.category-edit,
 #category-list li div.category-delete {
     font-size : 0.9em;
-    width : 50px;
+    width : 75px;
 
 }
 #category-list li div.category-assign{
     font-size : 0.9em;
-    width : 110px;
+    width : 189px;
 }
 #category-list li div a {
     color : #000;
@@ -127,7 +127,7 @@
 }
 
 .add_sub a:hover{
-    color:#16a747;
+    color:#bb0000;
     text-decoration: none;
 }
 

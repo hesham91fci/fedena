@@ -17,9 +17,11 @@
 #limitations under the License.
 
 class ExamGroupsController < ApplicationController
+  before_filter :login_required
   before_filter :initial_queries
   before_filter :protect_other_student_data
   before_filter :restrict_employees_from_exam
+  before_filter :protect_other_batch_exams, :only => [:show, :index]
   in_place_edit_for :exam_group, :name
   filter_access_to :all
   in_place_edit_for :exam, :maximum_marks
@@ -29,23 +31,29 @@ class ExamGroupsController < ApplicationController
   def index
     @exam_groups = @batch.exam_groups
     if @current_user.employee?
-      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.subject_id}
-      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.id}.include?(1) and !@current_user.privileges.map{|p| p.id}.include?(2)
-        flash[:notice] = "Sorry, you are not allowed to access that page."
+      @user_privileges = @current_user.privileges
+      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.id}
+      if @employee_subjects.empty? and !@user_privileges.map{|p| p.name}.include?('ExaminationControl') and !@user_privileges.map{|p| p.name}.include?('EnterResults')
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to :controller => 'user', :action => 'dashboard'
       end
     end
   end
 
   def new
-
+    @user_privileges = @current_user.privileges
+    if !@current_user.admin? and !@user_privileges.map{|p| p.name}.include?('ExaminationControl') and !@user_privileges.map{|p| p.name}.include?('EnterResults')
+      flash[:notice] = "#{t('flash_msg4')}"
+      redirect_to :controller => 'user', :action => 'dashboard'
+    end
   end
 
   def create
     @exam_group = ExamGroup.new(params[:exam_group])
     @exam_group.batch_id = @batch.id
+    @type = @exam_group.exam_type
     if @exam_group.save
-      flash[:notice] = 'Skupina Hodnocení byla úspěšně vytvořena.'
+      flash[:notice] =  "#{t('flash1')}"
       redirect_to batch_exam_groups_path(@batch)
     else
       render 'new'
@@ -59,7 +67,7 @@ class ExamGroupsController < ApplicationController
   def update
     @exam_group = ExamGroup.find params[:id]
     if @exam_group.update_attributes(params[:exam_group])
-      flash[:notice] = 'Skupina hodnocení byla úspěšně aktualizována.'
+      flash[:notice] = "#{t('flash2')}"
       redirect_to [@batch, @exam_group]
     else
       render 'edit'
@@ -69,22 +77,23 @@ class ExamGroupsController < ApplicationController
   def destroy
     @exam_group = ExamGroup.find(params[:id], :include => :exams)
     if @current_user.employee?
-      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.subject_id}
-      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.id}.include?(1) and !@current_user.privileges.map{|p| p.id}.include?(2)
-        flash[:notice] = "Omlouváme se, nemáte oprávnění pro přístup na tyto stránky."
+      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.id}
+      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.name}.include?("ExaminationControl") and !@current_user.privileges.map{|p| p.name}.include?("EnterResults")
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to :controller => 'user', :action => 'dashboard'
       end
-    end
-    @exam_group.destroy
+    end 
+    flash[:notice] = "#{t('flash3')}" if @exam_group.destroy
     redirect_to batch_exam_groups_path(@batch)
   end
 
   def show
     @exam_group = ExamGroup.find(params[:id], :include => :exams)
     if @current_user.employee?
-      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.subject_id}
-      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.id}.include?(1) and !@current_user.privileges.map{|p| p.id}.include?(2)
-        flash[:notice] = "Omlouváme se, nemáte oprávnění pro přístup na tyto stránky."
+      @user_privileges = @current_user.privileges
+      @employee_subjects= @current_user.employee_record.subjects.map { |n| n.id}
+      if @employee_subjects.empty? and !@current_user.privileges.map{|p| p.name}.include?("ExaminationControl") and !@current_user.privileges.map{|p| p.name}.include?("EnterResults")
+        flash[:notice] = "#{t('flash_msg4')}"
         redirect_to :controller => 'user', :action => 'dashboard'
       end
     end
@@ -96,4 +105,16 @@ class ExamGroupsController < ApplicationController
     @course = @batch.course unless @batch.nil?
   end
 
+  def protect_other_batch_exams
+    @user_privileges = @current_user.privileges
+    if !@current_user.admin? and !@user_privileges.map{|p| p.name}.include?('ExaminationControl') and !@user_privileges.map{|p| p.name}.include?('EnterResults')
+      @user_subjects = @current_user.employee_record.subjects.all(:group => 'batch_id')
+      @user_batches = @user_subjects.map{|x|x.batch_id} unless @current_user.employee_record.blank? or @user_subjects.nil?
+
+      unless @user_batches.include?(params[:batch_id].to_i)
+        flash[:notice] = "#{t('flash_msg4')}"
+        redirect_to :controller => 'user', :action => 'dashboard'
+      end
+    end
+  end
 end

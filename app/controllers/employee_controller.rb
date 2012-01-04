@@ -20,15 +20,15 @@ class EmployeeController < ApplicationController
   before_filter :login_required,:configuration_settings_for_hr
   filter_access_to :all
   before_filter :protect_other_employee_data, :only => [:individual_payslip_pdf,:timetable,:timetable_pdf,:profile_payroll_details,\
-      :view_attendance,:view_payslip ]
-  #    prawnto :prawn => {:left_margin => 25, :right_margin => 25}
- 
+      :view_payslip ]
+  before_filter :limit_employee_profile_access , :only => [:profile,:profile_pdf]
+
   def add_category
     @categories = EmployeeCategory.find(:all,:order => "name asc",:conditions=>'status = 1')
     @inactive_categories = EmployeeCategory.find(:all,:conditions=>'status = 0')
     @category = EmployeeCategory.new(params[:category])
     if request.post? and @category.save
-      flash[:notice] = "Kategorie zaměstnanců vytvořena"
+      flash[:notice] = t('flash1')
       redirect_to :controller => "employee", :action => "add_category"
     end
   end
@@ -46,11 +46,11 @@ class EmployeeController < ApplicationController
               p.update_attributes(:status=> '0')
             end
           end
-          flash[:notice] = "Kategorie zaměstnanců aktualizována"
+          flash[:notice] = t('flash2')
           redirect_to :action => "add_category"
         end
       else
-        flash[:warn_notice] = "<p>Kategorie zaměstnanců nemůže být aktualizována</p>"
+        flash[:warn_notice] = "<p>#{t('flash2')}</p>"
       end
            
     end
@@ -62,10 +62,10 @@ class EmployeeController < ApplicationController
     if employees.empty? and category_position.empty?
       EmployeeCategory.find(params[:id]).destroy
       @categories = EmployeeCategory.find :all
-      flash[:notice]="Úspěšně vymazáno!"
+      flash[:notice]=t('flash3')
       redirect_to :action => "add_category"
     else
-      flash[:notice]="Není možno vymazat!"
+      flash[:notice]=t('flash4')
       redirect_to :action => "add_category"
     end
   end
@@ -76,7 +76,7 @@ class EmployeeController < ApplicationController
     @categories = EmployeeCategory.find(:all,:order => "name asc",:conditions=> 'status = 1')
     @position = EmployeePosition.new(params[:position])
     if request.post? and @position.save
-      flash[:notice] = "Kvalifikace zaměstnance vytvořena"
+      flash[:notice] = t('flash5')
       redirect_to :controller => "employee", :action => "add_position"
     end
   end
@@ -88,11 +88,11 @@ class EmployeeController < ApplicationController
     if request.post?
       if (params[:position][:status] == 'false' and employees.blank?) or params[:position][:status] == 'true'
         if @position.update_attributes(params[:position])
-          flash[:notice] = "Pozice zaměstnance aktualizována"
+          flash[:notice] = t('flash6')
           redirect_to :action => "add_position"
         end
       end
-      flash[:warn_notice] = "<p>Pozice zaměstnance nemůže být aktualizována</p>"
+      flash[:warn_notice] = "<p>#{t('flash38')}</p>"
     end
 
   end
@@ -103,10 +103,10 @@ class EmployeeController < ApplicationController
     if employees.empty?
       EmployeePosition.find(params[:id]).destroy
       @positions = EmployeePosition.find :all
-      flash[:notice]="Úspěšně vymazáno!"
+      flash[:notice]=t('flash3')
       redirect_to :action => "add_position"
     else
-      flash[:notice]="Není možno vymazat!"
+      flash[:notice]=t('flash4')
       redirect_to :action => "add_position"
     end
   end
@@ -116,7 +116,7 @@ class EmployeeController < ApplicationController
     @inactive_departments = EmployeeDepartment.find(:all,:order => "name asc",:conditions=>'status = 0')
     @department = EmployeeDepartment.new(params[:department])
     if request.post? and @department.save
-      flash[:notice] = "Oddělení zaměstnanců vytvořeno"
+      flash[:notice] =  t('flash7')
       redirect_to :controller => "employee", :action => "add_department"
     end
   end
@@ -127,11 +127,11 @@ class EmployeeController < ApplicationController
     if request.post?
       if (params[:department][:status] == 'false' and employees.blank?) or params[:department][:status] == 'true'
         if @department.update_attributes(params[:department])
-          flash[:notice] = "Oddělení zaměstnanců aktualizováno"
+          flash[:notice] = t('flash8')
           redirect_to :action => "add_department"
         end
       end
-      flash[:warn_notice] = "<p>Oddělení zaměstnanců nemůže být aktualizováno</p>"
+      flash[:warn_notice] = "<p>#{t('flash39')}</p>"
     end
   end
 
@@ -140,10 +140,10 @@ class EmployeeController < ApplicationController
     if employees.empty?
       EmployeeDepartment.find(params[:id]).destroy
       @departments = EmployeeDepartment.find :all
-      flash[:notice]="ˇUspěšně vymazáno!"
+      flash[:notice]=t('flash3')
       redirect_to :action => "add_department"
     else
-      flash[:notice]="Není možno vymazat!"
+      flash[:notice]=t('flash4')
       redirect_to :action => "add_department"
     end
   end
@@ -153,7 +153,7 @@ class EmployeeController < ApplicationController
     @inactive_grades = EmployeeGrade.find(:all,:order => "name asc",:conditions=>'status = 0')
     @grade = EmployeeGrade.new(params[:grade])
     if request.post? and @grade.save
-      flash[:notice] = "Zdravotní pojišťovna zaměstnance vytvořena"
+      flash[:notice] =  t('flash9')
       redirect_to :controller => "employee", :action => "add_grade"
     end
   end
@@ -164,11 +164,11 @@ class EmployeeController < ApplicationController
     if request.post?
       if (params[:grade][:status] == 'false' and employees.blank?) or params[:grade][:status] == 'true'
         if @grade.update_attributes(params[:grade])
-          flash[:notice] = "Stupeň zaměstnance aktualizován"
+          flash[:notice] = t('flash10')
           redirect_to :action => "add_grade"
         end
       end
-      flash[:warn_notice] = "<p>Stupeň zaměstnance nemůže být aktualizován</p>"
+      flash[:warn_notice] = "<p>#{t('flash40')}</p>"
     end
   end
 
@@ -177,10 +177,10 @@ class EmployeeController < ApplicationController
     if employees.empty?
       EmployeeGrade.find(params[:id]).destroy
       @grades = EmployeeGrade.find :all
-      flash[:notice]="Úspěšně vymazáno!"
+      flash[:notice]=t('flash3')
       redirect_to :action => "add_grade"
     else
-      flash[:notice]="Není možno vymazat!"
+      flash[:notice]=t('flash11')
       redirect_to :action => "add_grade"
     end
   end
@@ -190,7 +190,7 @@ class EmployeeController < ApplicationController
     @inactive_bank_details = BankField.find(:all,:order => "name asc",:conditions=>'status = 0')
     @bank_field = BankField.new(params[:bank_field])
     if request.post? and @bank_field.save
-      flash[:notice] = "Bankovní údaj vytvořen"
+      flash[:notice] =t('flash11')
       redirect_to :controller => "employee", :action => "add_bank_details"
     end
   end
@@ -198,7 +198,7 @@ class EmployeeController < ApplicationController
   def edit_bank_details
     @bank_details = BankField.find(params[:id])
     if request.post? and @bank_details.update_attributes(params[:bank_details])
-      flash[:notice] = "Bankovní údaj aktualizován"
+      flash[:notice] = t('flash12')
       redirect_to :action => "add_bank_details"
     end
   end
@@ -207,10 +207,10 @@ class EmployeeController < ApplicationController
     if employees.empty?
       BankField.find(params[:id]).destroy
       @bank_details = BankField.find(:all)
-      flash[:notice]="Úspěšně vymazáno!"
+      flash[:notice]=t('flash3')
       redirect_to :action => "add_bank_details"
     else
-      flash[:notice]="Není možno vymazat!"
+      flash[:notice]=t('flash4')
       redirect_to :action => "add_bank_details"
     end
   end
@@ -220,7 +220,7 @@ class EmployeeController < ApplicationController
     @inactive_additional_details = AdditionalField.find(:all,:order => "name asc",:conditions=>'status = 0')
     @additional_field = AdditionalField.new(params[:additional_field])
     if request.post? and @additional_field.save
-      flash[:notice] = "Další údaj vytvořen"
+      flash[:notice] = t('flash13')
       redirect_to :controller => "employee", :action => "add_additional_details"
     end
   end
@@ -228,19 +228,23 @@ class EmployeeController < ApplicationController
   def edit_additional_details
     @additional_details = AdditionalField.find(params[:id])
     if request.post? and @additional_details.update_attributes(params[:additional_details])
-      flash[:notice] = "Další údaj aktualizován"
+      flash[:notice] = t('flash14')
       redirect_to :action => "add_additional_details"
     end
   end
   def delete_additional_details
-    employees = EmployeeAdditionalDetail.find(:all ,:conditions=>"additional_field_id = #{params[:id]}")
-    if employees.empty?
-      AdditionalField.find(params[:id]).destroy
-      @additional_details = AdditionalField.find(:all)
-      flash[:notice]="Úspěšně vymazáno!"
-      redirect_to :action => "add_additional_details"
+    if params[:id]
+      employees = EmployeeAdditionalDetail.find(:all ,:conditions=>"additional_field_id = #{params[:id]}")
+      if employees.empty?
+        AdditionalField.find(params[:id]).destroy
+        @additional_details = AdditionalField.find(:all)
+        flash[:notice]=t('flash3')
+        redirect_to :action => "add_additional_details"
+      else
+        flash[:notice]=t('flash4')
+        redirect_to :action => "add_additional_details"
+      end
     else
-      flash[:notice]="Není možno vymazat!"
       redirect_to :action => "add_additional_details"
     end
   end
@@ -281,7 +285,7 @@ class EmployeeController < ApplicationController
         @leave_type.each do |e|
           EmployeeLeave.create( :employee_id => @employee.id, :employee_leave_type_id => e.id, :leave_count => e.max_leave_count)
         end
-        flash[:notice] = "Údaje zaměstnance #{@employee.first_name} uloženy"
+        flash[:notice] = "#{t('flash15')} #{@employee.first_name} #{t('flash16')}"
         redirect_to :controller =>"employee" ,:action => "admission2", :id => @employee.id
       end
       @positions = EmployeePosition.find_all_by_employee_category_id(params[:employee][:employee_category_id])
@@ -316,7 +320,7 @@ class EmployeeController < ApplicationController
         Employee.update(@employee.id, :status => false)
       end
 
-      flash[:notice] = "Zaměstnanec #{@employee.first_name} hlavní údaje aktualizovány"
+      flash[:notice] = "#{t('flash15')}  #{@employee.first_name} #{t('flash17')}"
       redirect_to :controller =>"employee" ,:action => "profile", :id => @employee.id
     end
   end
@@ -329,11 +333,11 @@ class EmployeeController < ApplicationController
       size =  params[:employee][:image_file].size.to_f unless  params[:employee][:image_file].nil?
       if size < 280000
         if @employee.update_attributes(params[:employee])
-          flash[:notice] = "Zaměstnanec #{@employee.first_name} osobní údaj aktualizován"
+          flash[:notice] = "#{t('flash15')}  #{@employee.first_name} #{t('flash18')}"
           redirect_to :controller =>"employee" ,:action => "profile", :id => @employee.id
         end
       else
-        flash[:notice] = "Velikost souboru obrázku je příliš velká. Prosím nahrajte obrázek s velikostí menší než 250KB."
+        flash[:notice] = t('flash19')
         redirect_to :controller => "employee", :action => "edit_personal", :id => @employee.id
       end
     end
@@ -346,11 +350,11 @@ class EmployeeController < ApplicationController
       sms_setting = SmsSetting.new()
       if sms_setting.application_sms_active and sms_setting.employee_sms_active
         recipient = ["#{@employee.mobile_phone}"]
-        message = "Připojují info pro #{@employee.first_name}. Username: #{@employee.employee_number}, Password: #{@employee.employee_number}123. Prosím změnte si své heslo po přihlášení."
+        message = "#{t('joinning_info')} #{@employee.first_name}. #{t('username')}: #{@employee.employee_number}, #{t('password')}: #{@employee.employee_number}123. #{t('change_password_after_login')}"
         sms = SmsManager.new(message,recipient)
         sms.send_sms
       end
-      flash[:notice] = "kontaktní údaje byly uloženy pro #{ @employee.first_name}"
+      flash[:notice] = "#{t('flash20')} #{ @employee.first_name}"
       redirect_to :action => "admission3", :id => @employee.id
     end
   end
@@ -359,7 +363,7 @@ class EmployeeController < ApplicationController
     @employee = Employee.find(params[:id])
     @countries = Country.find(:all)
     if request.post? and @employee.update_attributes(params[:employee])
-      flash[:notice] = "Kontaktní údaje zaměstnance byly uloženy pro #{ @employee.first_name}"
+      flash[:notice] = "#{t('flash21')} #{ @employee.first_name}"
       redirect_to :action => "profile", :id => @employee.id
     end
   end
@@ -368,7 +372,7 @@ class EmployeeController < ApplicationController
     @employee = Employee.find(params[:id])
     if request.post? and @employee.update_attributes(params[:employee])
       User.update(@employee.user.id, :email=> @employee.email, :role=>@employee.user.role_name)
-      flash[:notice] = "Kontaktní údaje zaměstnance byly uloženy pro #{ @employee.first_name}"
+      flash[:notice] = "#{t('flash22')} #{ @employee.first_name}"
       redirect_to :action => "profile", :id => @employee.id
     end
   end
@@ -385,7 +389,7 @@ class EmployeeController < ApplicationController
         EmployeeBankDetail.create(:employee_id => params[:id],
           :bank_field_id => k,:bank_info => v['bank_info'])
       end
-      flash[:notice] = "Bankovní údaje byly uloženy pro #{@employee.first_name}"
+      flash[:notice] = "#{t('flash23')} #{@employee.first_name}"
       redirect_to :action => "admission3_1", :id => @employee.id
     end
   end
@@ -394,7 +398,7 @@ class EmployeeController < ApplicationController
     @employee = Employee.find(params[:id])
     @bank_fields = BankField.find(:all, :conditions=>"status = true")
     if @bank_fields.empty?
-      flash[:notice] = "Bankovní hodnoty nejsou k dispozici"
+      flash[:notice] = "#{t('flash36')}"
       redirect_to :action => "profile", :id => @employee.id
     end
     if request.post?
@@ -407,7 +411,7 @@ class EmployeeController < ApplicationController
           EmployeeBankDetail.create(:employee_id=>@employee.id,:bank_field_id=>k,:bank_info=>v['bank_info'])
         end
       end
-      flash[:notice] = "Zaměstnanec #{@employee.first_name} bankovní údaj aktualizován"
+      flash[:notice] = "#{t('flash15')}#{@employee.first_name} #{t('flash12')}"
       redirect_to :action => "profile", :id => @employee.id
     end
   end
@@ -423,7 +427,7 @@ class EmployeeController < ApplicationController
         EmployeeAdditionalDetail.create(:employee_id => params[:id],
           :additional_field_id => k,:additional_info => v['additional_info'])
       end
-      flash[:notice] = "Bankovní údaje uloženy pro #{@employee.first_name}"
+      flash[:notice] = "#{t('flash25')}#{@employee.first_name}"
       redirect_to :action => "edit_privilege", :id => @employee.employee_number
     end
   end
@@ -444,7 +448,7 @@ class EmployeeController < ApplicationController
     @employee = Employee.find(params[:id])
     @additional_fields = AdditionalField.find(:all, :conditions=>"status = true")
     if @additional_fields.empty?
-      flash[:notice] = "Další údaje nejsou k dispozici"
+      flash[:notice] = "#{t('flash37')}"
       redirect_to :action => "profile", :id => @employee.id
     end
     if request.post?
@@ -457,7 +461,7 @@ class EmployeeController < ApplicationController
           EmployeeAdditionalDetail.create(:employee_id=>@employee.id,:additional_field_id=>k,:additional_info=>v['additional_info'])
         end
       end
-      flash[:notice] = "Zaměstnanec #{@employee.first_name} další údaj aktualizován"
+      flash[:notice] = "#{t('flash15')}#{@employee.first_name} #{t('flash14')}"
       redirect_to :action => "profile", :id => @employee.id
     end
   end
@@ -470,7 +474,7 @@ class EmployeeController < ApplicationController
     if request.post?
       @employee = Employee.find(params[:id])
       Employee.update(@employee, :reporting_manager_id => params[:employee][:reporting_manager_id])
-      flash[:notice]="Vedoucí zaměstnance uložen"
+      flash[:notice]=t('flash25')
       redirect_to :controller => "payroll", :action => "manage_payroll", :id=>@employee.id
     end
   
@@ -492,7 +496,7 @@ class EmployeeController < ApplicationController
     if request.post?
       @employee = Employee.find(params[:id])
       Employee.update(@employee, :reporting_manager_id => params[:employee][:reporting_manager_id])
-      flash[:notice]="Manažer zaměstnance úspěšně nahrazen"
+      flash[:notice]=t('flash26')
       redirect_to :action => "profile", :id=>@employee.id
     end
   end
@@ -517,15 +521,14 @@ class EmployeeController < ApplicationController
     other_conditions += " AND employee_grade_id = '#{params[:employee_grade_id]}'" unless params[:employee_grade_id] == ""
     if params[:query].length>= 3
       @employee = Employee.find(:all,
-        :conditions => "(first_name LIKE \"#{params[:query]}%\"
-                       OR middle_name LIKE \"#{params[:query]}%\"
-                       OR last_name LIKE \"#{params[:query]}%\"
-                       OR employee_number = '#{params[:query]}'
-                       OR (concat(first_name, \" \", last_name) LIKE \"#{params[:query]}%\"))" + other_conditions,
+        :conditions => ["(first_name LIKE ? OR middle_name LIKE ? OR last_name LIKE ?
+                       OR employee_number = ? OR (concat(first_name, \" \", last_name) LIKE ? ))"+ other_conditions,
+          "#{params[:query]}%","#{params[:query]}%","#{params[:query]}%",
+          "#{params[:query]}", "#{params[:query]}" ],
         :order => "employee_department_id asc,first_name asc") unless params[:query] == ''
     else
       @employee = Employee.find(:all,
-        :conditions => "(employee_number LIKE \"#{params[:query]}%\" )" + other_conditions,
+        :conditions => ["(employee_number = ? )"+ other_conditions, "#{params[:query]}"],
         :order => "employee_department_id asc,first_name asc") unless params[:query] == ''
     end
     render :layout => false
@@ -537,24 +540,31 @@ class EmployeeController < ApplicationController
     other_conditions += " AND employee_category_id = '#{params[:employee_category_id]}'" unless params[:employee_category_id] == ""
     other_conditions += " AND employee_position_id = '#{params[:employee_position_id]}'" unless params[:employee_position_id] == ""
     other_conditions += " AND employee_grade_id = '#{params[:employee_grade_id]}'" unless params[:employee_grade_id] == ""
-    @employee = Employee.find(:all,
-      :conditions => "(first_name LIKE \"#{params[:query]}%\"
-                       OR middle_name LIKE \"#{params[:query]}%\"
-                       OR last_name LIKE \"#{params[:query]}%\"
-                       OR (concat(first_name, \" \", last_name) LIKE \"#{params[:query]}%\"))" + other_conditions,
-      :order => "first_name asc") unless params[:query] == ''
+    if params[:query].length>= 3
+      @employee = Employee.find(:all,
+        :conditions => ["(first_name LIKE ? OR middle_name LIKE ? OR last_name LIKE ?
+                       OR employee_number = ? OR (concat(first_name, \" \", last_name) LIKE ? ))"+ other_conditions,
+          "#{params[:query]}%","#{params[:query]}%","#{params[:query]}%",
+          "#{params[:query]}", "#{params[:query]}" ],
+        :order => "employee_department_id asc,first_name asc") unless params[:query] == ''
+    else
+      @employee = Employee.find(:all,
+        :conditions => ["employee_number = ? "+ other_conditions, "#{params[:query]}%"],
+        :order => "employee_department_id asc,first_name asc") unless params[:query] == ''
+    end
     render :layout => false
   end
 
   def profile
+
     @current_user = current_user
     @employee = Employee.find(params[:id])
     @new_reminder_count = Reminder.find_all_by_recipient(@current_user.id, :conditions=>"is_read = false")
-    @gender = "Muž"
-    @gender = "Žena" if @employee.gender == false
-    @status = "Aktivní"
-    @status = "Neaktivní" if @employee.status == false
-    @reporting_manager = Employee.find(@employee.reporting_manager_id).first_name unless @employee.reporting_manager_id.nil?
+    @gender = "Male"
+    @gender = "Female" if @employee.gender == false
+    @status = "Active"
+    @status = "Inactive" if @employee.status == false
+    @reporting_manager = Employee.find(@employee.reporting_manager_id).full_name unless @employee.reporting_manager_id.nil?
     exp_years = @employee.experience_year
     exp_months = @employee.experience_month
     date = Date.today
@@ -574,10 +584,10 @@ class EmployeeController < ApplicationController
 
   def profile_general
     @employee = Employee.find(params[:id])
-    @gender = "Muž"
-    @gender = "Žena" if @employee.gender == false
-    @status = "Aktivní"
-    @status = "Neaktivní" if @employee.status == false
+    @gender = "Male"
+    @gender = "Female" if @employee.gender == false
+    @status = "Active"
+    @status = "Inactive" if @employee.status == false
     @reporting_manager = Employee.find(@employee.reporting_manager_id).first_name unless @employee.reporting_manager_id.nil?
     exp_years = @employee.experience_year
     exp_months = @employee.experience_month
@@ -635,10 +645,10 @@ class EmployeeController < ApplicationController
 
   def profile_pdf
     @employee = Employee.find(params[:id])
-    @gender = "Muž"
-    @gender = "Žena" if @employee.gender == false
-    @status = "Aktivní"
-    @status = "Neaktivní" if @employee.status == false
+    @gender = "Male"
+    @gender = "Female" if @employee.gender == false
+    @status = "Active"
+    @status = "Inactive" if @employee.status == false
     @reporting_manager = Employee.find(@employee.reporting_manager_id).first_name unless @employee.reporting_manager_id.nil?
     exp_years = @employee.experience_year
     exp_months = @employee.experience_month
@@ -736,10 +746,10 @@ class EmployeeController < ApplicationController
     @new_payslip_category = IndividualPayslipCategory.find_all_by_employee_id_and_salary_date(@employee.id,nil)
     @individual = IndividualPayslipCategory.find_all_by_employee_id_and_salary_date(@employee.id,Date.today)
     @user = current_user
-    privilege = Privilege.find(14)
+    privilege = Privilege.find_by_name("FinanceControl")
     finance_manager = privilege.users
-    subject = " Payslip generated"
-    body = "Payslip has been generated for "+@employee.first_name+" "+@employee.last_name+". Kindly approve this request"
+    subject = t('payslip_generated')
+    body = "#{t('payslip_generated_for')}  "+@employee.first_name+" "+@employee.last_name+". #{t('kindly_approve')}"
     finance_manager.each do |f|
       Reminder.create(:sender=>@user.id, :recipient=>f.id, :subject=> subject,
         :body => body, :is_read=>false, :is_deleted_by_sender=>false,:is_deleted_by_recipient=>false)
@@ -747,37 +757,41 @@ class EmployeeController < ApplicationController
 
     if request.post?
       salary_date = Date.parse(params[:salary_date])
-      start_date = salary_date - ((salary_date.day - 1).days)
-      end_date = start_date + 1.month
-      payslip_exists = MonthlyPayslip.find_all_by_employee_id(@employee.id,
-        :conditions => ["salary_date >= ? and salary_date < ?", start_date, end_date])
-      if payslip_exists == []
-        params[:manage_payroll].each_pair do |k, v|
-          row_id = EmployeeSalaryStructure.find_by_employee_id_and_payroll_category_id(@employee, k)
-          category_name = PayrollCategory.find(k).name
-          unless row_id.nil?
-            MonthlyPayslip.create(:salary_date=>start_date,:employee_id => params[:id],
-              :payroll_category_id => k,:amount => v['amount'])
-          else
-            MonthlyPayslip.create(:salary_date=>start_date,:employee_id => params[:id],
-              :payroll_category_id => k,:amount => v['amount'])
+      unless salary_date.to_date < @employee.joining_date.to_date
+        start_date = salary_date - ((salary_date.day - 1).days)
+        end_date = start_date + 1.month
+        payslip_exists = MonthlyPayslip.find_all_by_employee_id(@employee.id,
+          :conditions => ["salary_date >= ? and salary_date < ?", start_date, end_date])
+        if payslip_exists == []
+          params[:manage_payroll].each_pair do |k, v|
+            row_id = EmployeeSalaryStructure.find_by_employee_id_and_payroll_category_id(@employee, k)
+            category_name = PayrollCategory.find(k).name
+            unless row_id.nil?
+              MonthlyPayslip.create(:salary_date=>start_date,:employee_id => params[:id],
+                :payroll_category_id => k,:amount => v['amount'])
+            else
+              MonthlyPayslip.create(:salary_date=>start_date,:employee_id => params[:id],
+                :payroll_category_id => k,:amount => v['amount'])
+            end
           end
-        end
-        individual_payslip_category = IndividualPayslipCategory.find_all_by_employee_id_and_salary_date(@employee.id,nil)
-        individual_payslip_category.each do |c|
-          IndividualPayslipCategory.update(c.id, :salary_date=>start_date)
-        end
-        flash[:notice] = "#{@employee.first_name} mzda generována pro #{params[:salary_date]}"
-        redirect_to :controller => "employee", :action => "profile", :id=> @employee.id
-      else #else for if payslip_exists == []
-        individual_payslips_generated = IndividualPayslipCategory.find_all_by_employee_id_and_salary_date(@employee.id,nil)
-        unless individual_payslips_generated.nil?
-          individual_payslips_generated.each do|i|
-            i.delete
+          individual_payslip_category = IndividualPayslipCategory.find_all_by_employee_id_and_salary_date(@employee.id,nil)
+          individual_payslip_category.each do |c|
+            IndividualPayslipCategory.update(c.id, :salary_date=>start_date)
           end
+          flash[:notice] = "#{@employee.first_name} #{t('flash27')} #{params[:salary_date]}"
+          redirect_to :controller => "employee", :action => "select_department_employee"
+        else #else for if payslip_exists == []
+          individual_payslips_generated = IndividualPayslipCategory.find_all_by_employee_id_and_salary_date(@employee.id,nil)
+          unless individual_payslips_generated.nil?
+            individual_payslips_generated.each do|i|
+              i.delete
+            end
+          end
+          flash[:notice] = "#{@employee.first_name} #{t('flash28')} #{params[:salary_date]}"
+          redirect_to :controller => "employee", :action => "select_department_employee"
         end
-        flash[:notice] = "<b>ERROR:</b>#{@employee.first_name} mzda již generována pro #{params[:salary_date]}"
-        redirect_to :controller => "employee", :action => "profile", :id=> @employee.id
+      else
+        flash[:warn_notice] = "#{t('flash45')} #{params[:salary_date]}"
       end
     end
     
@@ -853,7 +867,7 @@ class EmployeeController < ApplicationController
     @monthly_payslip.each do |m|
       m.destroy
     end
-    flash[:notice]= "Payslip deleted for #{params[:id2]}"
+    flash[:notice]= "#{t('flash30')} #{params[:id2]}"
     redirect_to :controller=>"employee", :action=>"profile", :id=>params[:id]
   end
 
@@ -944,7 +958,7 @@ class EmployeeController < ApplicationController
     if TimetableEntry.find_all_by_subject_id_and_employee_id(@subject.id,params[:id]).blank?
       EmployeesSubject.find_by_employee_id_and_subject_id(params[:id], params[:id1]).destroy
     else
-      flash.now[:warn_notice]="<p>Zaměstnanec je již zařazen k samému předmětu v rozvrhu.</p> <p>Prosím přiřaďte jiného zaměstnance pro umožnění změny tohoto zařazení.</p> "
+      flash.now[:warn_notice]="<p>#{t('employee.flash41')}</p> <p>#{t('employee.flash42')}</p> "
     end
     @assigned_employee = EmployeesSubject.find_all_by_subject_id(@subject.id)
     render :partial =>"select_department"
@@ -952,7 +966,7 @@ class EmployeeController < ApplicationController
 
   def timetable
     @employee = Employee.find(params[:id])
-    @weekday = ["Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["#{t('sun')}", "#{t('mon')}", "#{t('tue')}", "#{t('wed')}", "#{t('thu')}", "#{t('fri')}", "#{t('sat')}"]
     @employee_subjects = @employee.subjects
     @employee_timetable_subjects = @employee_subjects.map {|sub| sub.elective_group_id.nil? ? sub : sub.elective_group.subjects.first}
     @subject_timetable_entries = @employee_timetable_subjects.map{|esub| esub.timetable_entries}
@@ -970,11 +984,11 @@ class EmployeeController < ApplicationController
 
   def timetable_pdf
     @employee = Employee.find(params[:id])
-    @weekday = ["Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["#{t('sun')}", "#{t('mon')}", "#{t('tue')}", "#{t('wed')}", "#{t('thu')}", "#{t('fri')}", "#{t('sat')}"]
     @employee_subjects = @employee.subjects
     @employee_timetable_subjects = @employee_subjects.map {|sub| sub.elective_group_id .nil? ? sub:sub.elective_group.subjects.first}
     @subject_timetable_entries = @employee_timetable_subjects.map{|esub| esub.timetable_entries}
-    @employee_subjects_ids = @employee_subjects.map {|sub| sub.subject_id}
+    @employee_subjects_ids = @employee_subjects.map {|sub| sub.id}
     @weekday_timetable = Hash.new
     @subject_timetable_entries.each do  |subtt|
       subtt.each do |tte|
@@ -982,11 +996,7 @@ class EmployeeController < ApplicationController
         @weekday_timetable[tte.weekday.weekday] << tte
       end
     end
-    render :pdf=>'timetable_pdf',
-      :margin => {  :top=> 10,
-      :bottom => 10,
-      :left=> 30,
-      :right => 30}
+    render :pdf=>'timetable_pdf'
 
   end
   #HR Management special methods...
@@ -1057,15 +1067,15 @@ class EmployeeController < ApplicationController
       individual_payslip_category.each do |c|
         IndividualPayslipCategory.update(c.id, :salary_date=>start_date)
       end
-      privilege = Privilege.find(14)
+      privilege = Privilege.find_by_name("FinanceControl")
       finance_manager = privilege.users
-      subject = "Rejected Payslip re-generated"
-      body = "Payslip has been re-generated for "+@employee.first_name+" "+@employee.last_name + " (Employee number :#{@employee.employee_number})" + " for the month #{salary_date.to_date.strftime("%B %Y")}. Kindly approve this request"
+      subject = "#{t('rejected_payslip_regenerated')}"
+      body = "#{t('payslip_has_been_generated_for')}"+@employee.first_name+" "+@employee.last_name + " (#{t('employee_number')} :#{@employee.employee_number})" + " #{t('for_the_month')} #{salary_date.to_date.strftime("%B %Y")}. #{t('kindly_approve')}"
       finance_manager.each do |f|
         Reminder.create(:sender=>@user.id, :recipient=>f.id, :subject=> subject,
           :body => body, :is_read=>false, :is_deleted_by_sender=>false,:is_deleted_by_recipient=>false)
       end
-      flash[:notice] = "#{@employee.first_name} mzda generována pro #{params[:salary_date]}"
+      flash[:notice] = "#{@employee.first_name} #{t('flash27')} #{params[:salary_date]}"
       redirect_to :controller => "employee", :action => "profile", :id=> @employee.id
       
     end
@@ -1151,8 +1161,8 @@ class EmployeeController < ApplicationController
     @user = current_user
     finance_manager = find_finance_managers
     finance = Configuration.find_by_config_value("Finance")
-    subject = " Payslip generated"
-    body = "Payslip has been generated for the particular month. Kindly approve this request"
+    subject = "#{t('payslip_generated')}"
+    body = "#{t('message_body')}"
     salary_date = Date.parse(params[:salary_date])
     start_date = salary_date - ((salary_date.day - 1).days)
     end_date = start_date + 1.month
@@ -1194,7 +1204,7 @@ class EmployeeController < ApplicationController
         end
       end
     end
-    render :text => "<p>Salary slip generated for the month: #{salary_date.strftime("%B")}.<br/><b>NOTE:</b> Employees whose salary was generated manually, their salary slip was not generated by this process.</p>"
+    render :text => "<p>#{t('salary_slip_for_month')}: #{salary_date.strftime("%B")}.<br/><b>#{t('note')}:</b> #{t('employees_salary_generated_manually')}</p>"
   end
 
   def payslip_revert_date_select
@@ -1222,9 +1232,9 @@ class EmployeeController < ApplicationController
           end
         end
       end
-      render :text=> "<p>Salary slip reverted for the month: #{salary_date.strftime("%B")}.</p>"
+      render :text=> "<p>#{t('salary_slip_reverted')}: #{salary_date.strftime("%B")}.</p>"
     else
-      render :text=>"<p>Please select a month...</p>"
+      render :text=>"<p>#{t('please_select_month')}</p>"
     end
   end
 
@@ -1253,7 +1263,7 @@ class EmployeeController < ApplicationController
       else
         ApplyLeave.update(@leave_apply, :is_half_day=> false)
       end
-      flash[:notice]="Aplikace dovolené vytvořena"
+      flash[:notice]=t('flash31')
       redirect_to :controller => "employee", :action=> "leave_management", :id=>@employee.id
     end
   end
@@ -1301,7 +1311,7 @@ class EmployeeController < ApplicationController
         if post_data[:salary_date].present? and post_data[:department_id].present?
           @payslips = MonthlyPayslip.find_and_filter_by_department(post_data[:salary_date],post_data[:department_id])
         else
-          flash[:notice] = "Vyberte měsíc mzdy"
+          flash[:notice] = "#{t('select_salary_date')}"
           redirect_to :action=>"department_payslip"
         end
       end
@@ -1340,7 +1350,7 @@ class EmployeeController < ApplicationController
     @department = EmployeeDepartment.find(@employee.employee_department_id).name
     @currency_type = Configuration.find_by_config_key("CurrencyType").config_value
     @category = EmployeeCategory.find(@employee.employee_category_id).name
-    @grade = EmployeeGrade.find(@employee.employee_grade_id).name
+    @grade = EmployeeGrade.find(@employee.employee_grade_id).name unless @employee.employee_grade_id.nil?
     @position = EmployeePosition.find(@employee.employee_position_id).name
     @salary_date = Date.parse(params[:id2])
     @monthly_payslips = MonthlyPayslip.find_all_by_salary_date(@salary_date,
@@ -1384,11 +1394,8 @@ class EmployeeController < ApplicationController
     @net_deductionable_amount = @individual_category_deductionable + @deductionable_amount
 
     @net_amount = @net_non_deductionable_amount - @net_deductionable_amount
-    render :pdf => 'individual_payslip_pdf',
-      :margin => {    :top=> 10,
-      :bottom => 10,
-      :left=> 30,
-      :right => 30}
+    render :pdf => 'individual_payslip_pdf'
+    
 
     #    respond_to do |format|
     #      format.pdf { render :layout => false }
@@ -1399,7 +1406,7 @@ class EmployeeController < ApplicationController
     @department = EmployeeDepartment.find(@employee.employee_department_id).name
     @currency_type = Configuration.find_by_config_key("CurrencyType").config_value
     @category = EmployeeCategory.find(@employee.employee_category_id).name
-    @grade = EmployeeGrade.find(@employee.employee_grade_id).name
+    @grade = EmployeeGrade.find(@employee.employee_grade_id).name unless @employee.employee_grade_id.nil?
     @position = EmployeePosition.find(@employee.employee_position_id).name
     @salary_date = Date.parse(params[:id2])
     @monthly_payslips = MonthlyPayslip.find_all_by_salary_date(@salary_date,
@@ -1444,11 +1451,7 @@ class EmployeeController < ApplicationController
 
     @net_amount = @net_non_deductionable_amount - @net_deductionable_amount
     
-    render :pdf => 'individual_payslip_pdf',
-      :margin => {    :top=> 10,
-      :bottom => 10,
-      :left=> 30,
-      :right => 30}
+    render :pdf => 'individual_payslip_pdf'
     #    respond_to do |format|
     #      format.pdf { render :layout => false }
     #    end
@@ -1475,11 +1478,11 @@ class EmployeeController < ApplicationController
 
   def list_doj_year
     doj_option = params[:doj_option]
-    if doj_option == "rovno"
+    if doj_option == "equal to"
       render :update do |page|
         page.replace_html 'doj_year', :partial=>"equal_to_select"
       end
-    elsif doj_option == "méně než"
+    elsif doj_option == "less than"
       render :update do |page|
         page.replace_html 'doj_year', :partial=>"less_than_select"
       end
@@ -1519,11 +1522,11 @@ class EmployeeController < ApplicationController
 
   def list_dob_year
     dob_option = params[:dob_option]
-    if dob_option == "rovno"
+    if dob_option == "equal to"
       render :update do |page|
         page.replace_html 'dob_year', :partial=>"equal_to_select_dob"
       end
-    elsif dob_option == "méně než"
+    elsif dob_option == "less than"
       render :update do |page|
         page.replace_html 'dob_year', :partial=>"less_than_select_dob"
       end
@@ -1565,7 +1568,7 @@ class EmployeeController < ApplicationController
     @employee = Employee.find(params[:id])
     associate_employee = Employee.find(:all, :conditions=>["reporting_manager_id=#{@employee.id}"])
     unless associate_employee.blank?
-      flash[:notice] = "Není možno vymazat. Tento zaměstnanec je manažer"
+      flash[:notice] = t('flash35')
       redirect_to :action=>'remove_subordinate_employee', :id=>@employee.id
     end
   end
@@ -1587,8 +1590,13 @@ class EmployeeController < ApplicationController
 
   def change_to_former
     @employee = Employee.find(params[:id])
+    @dependency = @employee.former_dependency
+    @has_dependency = false
+    @dependency.each do |k,v|
+      @has_dependency = true unless  v.blank?
+    end
     if request.post?
-      flash[:notice]="Zaměstnanec úspěšně vymazán!"
+      flash[:notice]= "#{t('flash32')}  #{@employee.employee_number}"
       EmployeesSubject.destroy_all(:employee_id=>@employee.id)
       @employee.archive_employee(params[:remove][:status_description])
       redirect_to :action => "hr"
@@ -1597,11 +1605,15 @@ class EmployeeController < ApplicationController
 
   def delete
     employee = Employee.find(params[:id])
-    user = User.destroy_all(:username => employee.employee_number) #unless user.nil?
-    employee_subject=EmployeesSubject.destroy_all(:employee_id=>employee.id)
-    Employee.destroy(params[:id])
-    flash[:notice] = "Všechny záznamy byly vymazány u zaměstnance s ID. #{employee.employee_number}."
-    redirect_to :controller => 'user', :action => 'dashboard'
+    unless employee.has_dependency
+      employee_subject=EmployeesSubject.destroy_all(:employee_id=>employee.id)
+      employee.destroy
+      flash[:notice] = "#{t('flash46')}#{employee.employee_number}."
+      redirect_to :controller => 'user', :action => 'dashboard'
+    else
+      flash[:notice] = "#{t('flash44')}"
+      redirect_to  :action => 'remove' ,:id=>employee.id
+    end
   end
 
   def advanced_search_pdf
@@ -1621,7 +1633,7 @@ class EmployeeController < ApplicationController
         employee = ArchivedEmployee.find(s)
         @employees1.push employee
       end
-    else
+    elsif @employee_ids.present?
       @employee_ids.each do |s|
         employee = Employee.find(s)
         @employees1.push employee
@@ -1633,11 +1645,7 @@ class EmployeeController < ApplicationController
         end
       end
     end
-    render :pdf => 'advanced_search_pdf',
-      :margin => {    :top=> 10,
-      :bottom => 10,
-      :left=> 30,
-      :right => 30}
+    render :pdf => 'employee_advanced_search_pdf'
   end
 
 
@@ -1659,7 +1667,7 @@ class EmployeeController < ApplicationController
     dates.each do |d|
       d.approve(current_user.id)
     end
-    flash[:notice] = 'Payslip has been approved'
+    flash[:notice] = t('flash34')
     redirect_to :action => "hr"
 
   end

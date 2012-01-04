@@ -17,7 +17,7 @@
     font-family:arial;
     font-size:14px;
     font-weight:bold;
-    margin-left:270px;
+    margin-left:211px;
     margin-top:30px;
     padding:7px 10px;
     border:none;
@@ -67,7 +67,7 @@
     margin:10px 0 0 40px;
 }
 .new-leaves-count{
-    background-color : #10b046;
+    background-color : #9d0e00;
     color : #fff;
     float : left;
     font-size : 0.9em;
@@ -76,7 +76,7 @@
     margin : 0 0 0 10px;
     padding : 0;
     text-align : center;
-    width : 125px;
+    width : 162px;
 }
 
 .container{
@@ -478,4 +478,6 @@
     text-decoration:none;
     color:black;
 }
-
+#inner-tab-menu ul li {
+    width: 150px;
+}

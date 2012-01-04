@@ -1,8 +1,0 @@
-<%= flash[:notice] %>
-
-<%= link_to_remote "Vybrat Skupinu", :url=>{:controller=>"event", :action=>"select_course", :id=>params[:id]} %> |
-<%= link_to_remote "Vybrat oddělení zaměstnanců", :url=>{:controller=>"event", :action=>"select_employee_department", :id=>params[:id]} %>
-
-<div id="select-options"></div>
-
-<%= link_to "Done", :controller=>"event", :action=>"index" %>

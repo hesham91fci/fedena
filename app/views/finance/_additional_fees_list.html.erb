@@ -17,13 +17,14 @@
 #specific language governing permissions and limitations
 #under the License. -%>
 
+<% unless flash[:notice].nil? %><p class="flash-msg"><%= flash[:notice] %></p><% end %>
 <% unless @additional_categories.empty? %>
     <table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
       <tr class="tr-head">
-        <td>Sl no.</td>
-        <td>Fees Name</td>
-        <td>Batch Name</td>
-        <td>Created Date</td>
+        <td><%= t('sl_no') %></td>
+        <td><%= t('fees_name') %></td>
+        <td><%= t('batch') %> <%= t('name') %></td>
+        <td><%= t('created_date') %></td>
       </tr>
       <tr class="tr-blank"></tr>
 
@@ -32,21 +33,21 @@
           <td class="col-1"><%= i+1 %></td>
           <td class="col-2"><%= link_to_remote fees.name,:url => {:action => 'additional_particulars',:id => fees.id }%>
             <%  unless fees.check_fee_collection_for_additional_fees == false %>
-              <span class="small"> <%= link_to_remote 'Delete',:confirm=>"Delete this category ?", :url => { :action => 'additional_fees_delete',:id => fees.id} %></span>
+              <span class="small"> <%= link_to_remote t('delete_text'),:confirm=>"#{t('delete_confirm_msg')}", :url => { :action => 'additional_fees_delete',:id => fees.id} %></span>
             <% else %>
-              <span class="small-strike">delete</span>
+              <span class="small-strike"><%= t('delete_text') %></span>
             <% end %>
-            <span class="small"> <%= link_to_remote 'edit', :url => { :action => 'additional_fees_edit',:id => fees.id} %></span>
+            <span class="small"> <%= link_to_remote t('edit_text'), :url => { :action => 'additional_fees_edit',:id => fees.id} %></span>
           </td>
           <td class="col-3"><%= shorten_string(fees.batch.full_name,20) unless fees.batch.nil?%> </td>
-          <td class="col-3"><%= fees.created_at.strftime("%m-%d-%Y") %></td>
+          <td class="col-3"><%= I18n.l(fees.created_at,:format=>"%m-%d-%Y") %></td>
         </tr>
       <% end %>
     </table>
   <% else %>
     <table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
       <tr class="tr-head">
-        <td>No Categories to display!</td>
+        <td><%= t('no_categories_to_display') %></td>
       </tr>
     </table>
 

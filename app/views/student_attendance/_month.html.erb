@@ -18,12 +18,12 @@
 #under the License. -%>
 
 <div class="label-field-pair"><label>
-  Vybrat měsíc a rok :
+  <%= t('select_month_and_year') %> :
 </label>
 <div class="text-input-bg2">
 <%= select :advance_search, :month,
-  [['Leden','01'], ['Únor','02'], ['Březen','03'], ['Duben','04'], ['Květen','05'], ['Červen','06'], ['Červenec','07'], ['Srpen','08'], ['Září','09'], ['Říjen','10'], ['Listopad','11'], ['Prosinec','12']],
-  {:prompt => 'Měsíc'} %>
+  [["#{t('jan')}",'01'], ["#{t('feb')}",'02'], ["#{t('mar')}",'03'], ["#{t('apr')}",'04'], ["#{t('may')}",'05'], ["#{t('jun')}",'06'], ["#{t('jul')}",'07'], ["#{t('aug')}",'08'], ["#{t('sep')}",'09'], ["#{t('oct')}",'10'], ["#{t('nov')}",'11'], ["#{t('dec')}",'12']],
+  {:prompt => "#{t('month')}"} %>
 </div>
 <div id="year"><%= render :partial => 'year' %></div>
 </div>

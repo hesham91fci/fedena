@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/show_finance.png" alt="" />
-  <h1>Fees</h1>
-  <h3>Manages Fees</h3>
+<%= image_tag("/images/show_finance.png") %>
+  <h1><%= t('fees_text') %></h1>
+  <h3><%= t('manage_fees') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -29,29 +29,40 @@
 
   <% unless flash[:notice].nil? %><p class="flash-msg"><%= flash[:notice] %></p><% end %>
   <div class="box">
-  <div class="link-box">
-    <div class="link-heading"><%= link_to "Fees Create", :action => "fees_create" %></div>
-    <div class="link-descr">Creates Master Fees and Additional Fees</div>
-  </div>
+    <div class="link-box">
+      <div class="link-heading"><%= link_to "#{t('create_fees')}  ", :action => "fees_create" %></div>
+      <div class="link-descr"><%= t('creates_master_fees_and_additional_fees') %></div>
+    </div>
 
-  <div class="link-box">
-    <div class="link-heading"><%= link_to "Fee collection", :action => "fee_collection" %></div>
-    <div class="link-descr">Creates new fee collecting dates </div>
-  </div>
+    <div class="link-box">
+      <div class="link-heading"><%= link_to "#{t('fees_collection')}", :action => "fee_collection" %></div>
+      <div class="link-descr"><%= t('creates_new_fee_collecting_dates') %> </div>
+    </div>
 
-  <div class="link-box">
-    <div class="link-heading"><%= link_to "Fees", :controller => "finance" , :action => "fees_submission_index" %> </div>
-    <div class="link-descr">Fee Submission </div>
-  </div>
+    <div class="link-box">
+      <div class="link-heading"><%= link_to t('fees_text'), :controller => "finance" , :action => "fees_submission_index" %> </div>
+      <div class="link-descr"><%= t('fees_submission') %></div>
+    </div>
 
-  <div class="link-box">
-    <div class="link-heading"><%= link_to "Fees Structure", :action => "fees_student_structure_search" %> </div>
-    <div class="link-descr">Displays fees Structure for student</div>
-  </div>
+    <div class="link-box">
+      <div class="link-heading"><%= link_to "#{t('fees_structure')}", :action => "fees_student_structure_search" %> </div>
+      <div class="link-descr"><%= t('displays_fees_structure_for_student') %></div>
+    </div>
 
-  <div class="link-box">
-    <div class="link-heading"><%= link_to "Fees Defaulters", :action => "fees_defaulters" %></div>
-    <div class="link-descr">Students with fees dues </div>
+    <div class="link-box">
+      <div class="link-heading"><%= link_to "#{t('fees_defaulters_text')}", :action => "fees_defaulters" %></div>
+      <div class="link-descr"><%= t('students_with_fees_dues') %> </div>
+    </div>
+
+    <!-- Instant Fees -->
+
+    <% FedenaPlugin::ADDITIONAL_LINKS[:instant_fees_index_link].each do |mod| %>
+      <%  if permitted_to? "#{mod[:destination][:action]}".to_sym,"#{mod[:destination][:controller]}".to_sym %>
+        <div class="link-box">
+          <div class="link-heading"><%= link_to "#{t("#{mod[:title]}")}",mod[:destination] %></div>
+          <div class="link-descr"><%= "#{t("#{mod[:description]}")}" %></div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
 </div>

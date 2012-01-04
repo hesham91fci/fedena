@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-   <img src="/images/show_finance.png" alt="" />
-  <h1>Transactions</h1>
-  <h3>Monthly Transactions</h3>
+<%= image_tag("/images/show_finance.png") %>
+  <h1><%= t('transactions') %></h1>
+  <h3><%= t('monthly_transactions') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -32,38 +32,38 @@
     <% form_for :report, :url => {:action => 'report_compare'} do |form| %>
       <div class="label-field-pair">
         <label>
-          Select start date:
+          <%= t('select_start_date') %>:
         </label>
         <div class="text-input-bg">
-          <%= calendar_date_select_tag 'start_date', Date.today %>
+          <%= calendar_date_select_tag 'start_date', I18n.l(Date.today,:format=>"%e-%m-%Y") %>
         </div>
       </div>
       <div class="label-field-pair">
         <label>
-          Select end date:
+          <%= t('select_end_date') %>:
         </label>
         <div class="text-input-bg">
-          <%= calendar_date_select_tag 'end_date', Date.today %>
+          <%= calendar_date_select_tag 'end_date',I18n.l(Date.today,:format=>"%e-%m-%Y") %>
         </div>
       </div>
-    <h4>Compare With </h4>
+    <h4><%= t('compare_with') %> </h4>
       <div class="label-field-pair">
         <label>
-          Select start date:
+          <%= t('select_start_date') %>:
         </label>
         <div class="text-input-bg">
-          <%= calendar_date_select_tag 'start_date2', Date.today %>
+          <%= calendar_date_select_tag 'start_date2', I18n.l(Date.today,:format=>"%e-%m-%Y") %>
         </div>
       </div>
       <div class="label-field-pair">
         <label>
-          Select end date:
+          <%= t('select_end_date') %>:
         </label>
         <div class="text-input-bg">
-          <%= calendar_date_select_tag 'end_date2', Date.today %>
+          <%= calendar_date_select_tag 'end_date2', I18n.l(Date.today,:format=>"%e-%m-%Y") %>
         </div>
       </div>
-          <%=  submit_tag "► Get Report",:class=>'submit_button' %>
+          <%=  submit_tag "► #{t('get_report')}",:class=>'submit_button' %>
     <%end%>
   </div>
 </div>

@@ -1,16 +1,16 @@
 
 
-#page-yield {
-    width:800px;
+.page {
+    width:900px;
     margin: 0 auto;
-    float: left;
-    overflow: hidden;
+    clear: both;
+    page-break-after: always;
 }
 
 
 
 .hor_line{
-    width:800px;
+    width:900px;
     background: #333333;
     height: 1px;
 }
@@ -24,6 +24,12 @@ h2.heading{
     color: #555555;
     margin-top: 18px;
     font-weight: normal;
+}
+
+#main_info h4 span{
+    color:#a4272d;
+    font-weight: bold;
+    margin-left:10px;
 }
 
 #main_info h2{
@@ -114,14 +120,5 @@ table#pdf-table{
 #page-yield h2{
     text-align: center;
 }
-
-
-.page-break td{
-    height: 230px;
-    border: 1px solid #fff;
-    border-bottom: 1px solid #ADACAB;
-}
-
-
 
 

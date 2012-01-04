@@ -29,17 +29,17 @@
     <%= f.hidden_field :batch_id, :value => batch_id %>
 
     <div class="label-field-pair">
-      <%= f.label :name %>
-      <div class="input-field"><%= f.text_field :name %></div>
+      <%= f.label :"#{t('name')}"%>
+      <div class="input-field"><%= f.text_field :name  %></div>
     </div>
 
     <div class="label-field-pair">
-      <%= f.label :min_score, 'Min skóre pro tento stupeň' %>
+      <%= f.label :min_score, t('min_score') %>
       <div class="input-field"><%= f.text_field :min_score %></div>
     </div>
 
-  <%= f.submit '► Uložit', :class => 'submit_button' %>
-    
+  <%= f.submit "► #{t('save')}", :class => 'submit_button' %>
+
 
 
 

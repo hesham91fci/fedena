@@ -18,7 +18,8 @@
 
 class AttendancesController < ApplicationController
   filter_access_to :all
-  before_filter :only_assigned_employee_allowed
+  before_filter :only_assigned_employee_allowed, :except => 'index'
+  before_filter :only_privileged_employee_allowed, :only => 'index'
   def index
     @batches = Batch.active
     @config = Configuration.find_by_config_key('StudentAttendanceType')
@@ -27,7 +28,7 @@ class AttendancesController < ApplicationController
   def list_subject
     @batch = Batch.find(params[:batch_id])
     @subjects = @batch.subjects
-    if @current_user.employee? and @allow_access ==true and !@current_user.privileges.map{|m| m.id}.include?(16)
+    if @current_user.employee? and @allow_access ==true and !@current_user.privileges.map{|m| m.name}.include?("StudentAttendanceRegister")
       @subjects= Subject.find(:all,:joins=>"INNER JOIN employees_subjects ON employees_subjects.subject_id = subjects.id AND employee_id = #{@current_user.employee_record.id} AND batch_id = #{@batch.id} ")
     end
     render(:update) do |page|
@@ -51,7 +52,12 @@ class AttendancesController < ApplicationController
     else
       @sub =Subject.find params[:subject_id]
       @batch = @sub.batch_id
-      @students = Student.find_all_by_batch_id(@batch)
+      unless @sub.elective_group_id.nil?
+        elective_student_ids = StudentsSubject.find_all_by_subject_id(@sub.id).map { |x| x.student_id }
+        @students = Student.find_all_by_batch_id(@batch, :conditions=>"FIND_IN_SET(id,\"#{elective_student_ids.split.join(',')}\")")
+      else
+        @students = Student.find_all_by_batch_id(@batch)
+      end
       @dates = PeriodEntry.find_all_by_batch_id_and_subject_id(@batch,@sub.id,  :conditions =>{:month_date => start_date..end_date},:order=>'month_date ASC')
     end
     respond_to do |format|
@@ -78,7 +84,7 @@ class AttendancesController < ApplicationController
         sms_setting = SmsSetting.new()
         if sms_setting.application_sms_active and @student.is_sms_enabled and sms_setting.attendance_sms_active
           recipients = []
-          message = "#{@student.first_name} #{@student.last_name} is absent on #{@period_entry.month_date}"
+          message = "#{@student.first_name} #{@student.last_name} #{t('flash_msg7')} #{@period_entry.month_date}"
           if sms_setting.student_sms_active
             recipients.push @student.phone2 unless @student.phone2.nil?
           end
@@ -167,4 +173,17 @@ def destroy
     format.js { render :action => 'update' }
   end
 end
+
+  def only_privileged_employee_allowed
+    @privilege = @current_user.privileges.map{|p| p.name}
+    if @current_user.employee?
+      @employee_subjects= @current_user.employee_record.subjects
+      if @employee_subjects.empty? and !@privilege.include?("StudentAttendanceRegister")
+          flash[:notice] = "#{t('flash_msg4')}"
+          redirect_to :controller => 'user', :action => 'dashboard'
+      else
+        @allow_access = true
+      end
+    end
+  end
 end

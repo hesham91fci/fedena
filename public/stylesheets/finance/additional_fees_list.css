@@ -1,7 +1,7 @@
 .small{
     font-size: 11px;
     float:right;
-    width:35px;
+    width:57px;
 }
 .small-strike {
     text-decoration:  line-through;
@@ -11,7 +11,7 @@
 }
 .submit_button {
     margin-top:15px;
-    margin-left:180px;
+    margin-left:210px;
     padding: 7px 10px;
     color: #fff;
     background: #27292B;
@@ -62,7 +62,7 @@
 }
 
 .val {
-    color: #16a747;
+    color: #bb0000;
     font-weight: bold;
     font-size: 13px;
 }
@@ -80,7 +80,7 @@
 }
 
 .linker a:hover{
-    color:#16a747;
+    color:#bb0000;
     text-decoration: none;
 }
 
@@ -119,4 +119,13 @@
 .opt{
     margin-left:200px;
     width:199px;
+}
+table#listing td.col-1 {
+    width: 1%;
+}
+table#listing td.col-3 {
+    width: 7;
+}
+table#listing td.col-2 {
+    width: 28%;
 }

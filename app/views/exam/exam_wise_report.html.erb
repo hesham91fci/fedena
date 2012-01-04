@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/examination/show_exam.png" alt="Exam" />
-  <h1>Hodnocení</h1>
-  <h3>Reporty Hodnocení</h3>
+<%= image_tag("/images/examination/show_exam.png") %>
+  <h1><%= t('exams_text') %></h1>
+  <h3><%= t('exam_wise_report') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -37,7 +37,7 @@
 <div class="text-input-bg">
 <%= select :exam_report, :batch_id,
         @batches.map {|b| [b.full_name, b.id]},
-        {:prompt => 'Vybrat třídu'},
+        {:prompt => "#{t('select_a_batch')}"},
         {:onChange => "#{remote_function(:url => {:action => "list_exam_types"},
         :with => "'batch_id='+value",
         :before => "Element.show('loader')",
@@ -46,7 +46,7 @@
 </div>
 
   <div  class="text-input-bg" id="exam-group-select">
-    <%= select :exam_report, :exam_group_id, @exam_groups.map{|exam| [exam.name,exam.id]},:prompt=>'Vybrat skupinu hodnocení' %>
+    <%= select :exam_report, :exam_group_id, @exam_groups.map{|exam| [exam.name,exam.id]},:prompt=> "#{t('select_exam_group')}" %>
   </div>
 <%= image_tag("loader.gif",
       :align => "absmiddle",
@@ -54,7 +54,7 @@
       :id => "loader",
       :style =>"display: none;" ) %>
 
-    <%= submit_tag "", :value => "► Zobrazit", :class => "submit_button" %>
+    <%= submit_tag "", :value => "► #{t('view')}", :class => "submit_button" %>
   <% # x.submit 'View' %>
 
 <% end %>

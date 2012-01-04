@@ -20,30 +20,32 @@
 <% form_for [@batch, @exam_group] do |f| %>
 
   <%= f.error_messages %>
+<div class="exam-basic-details">
   <div class="label-field-pair">
-    <%= f.label :name %>
+    <%= f.label "#{t('name')}" %>
      <div class="label-field-pair"> <div class="text-input-bg">
   <%= f.text_field :name, :value=>@name %>
     </div></div>
   </div>
 
   <div class="label-field-pair">
-   <%= f.label :exam_type %>
+   <%= f.label "#{t('exam_type')}" %>
     <%= f.hidden_field :exam_type,:value=>@type %>
     <div class="text-input-bg">
-    <%= f.text_field :exam_type, :value=>@type,:disabled=>true %>
-    </div>  <%= link_to "Změnit Typ", new_batch_exam_group_path(@batch,:ename=>@name),:class=>"type_link" %>
+    <%= text_field_tag "" , t(@type.underscore),:disabled=>true %>
+    </div>  <%= link_to "#{t('change_type')}", new_batch_exam_group_path(@batch,:ename=>@name),:class=>"type_link" %>
   </div>
+</div>
   <h4>
-    Vlož detaily hodnocení zde::
+    <%= t('enter_exam_related_details') %>:
   </h4>
 
   <table width="100%" id="listing">
     <tr class="tr-head">
-      <td>Název předmětue</td>
-      <td>Začátek</td>
-      <td>Konec</td>
-      <td>Nevytvářet</td>
+      <td><%= t('subject_name') %></td>
+      <td><%= t('start_time') %></td>
+      <td><%= t('end_time') %></td>
+      <td><%= t('do_not_create') %></td>
     </tr>
 
     <% f.fields_for :exams do |exam_form| %>
@@ -56,6 +58,6 @@
     <% end %>
   </table>
 
-  <%= submit_tag "", :value => "► Uložit Změny", :class => "submit_button2" %>
+  <%= submit_tag "", :value => "► #{t('save_changes')}", :class => "submit_button2" %>
 
 <% end %>

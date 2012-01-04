@@ -61,7 +61,7 @@
 }
 #guardians-links ul li a:hover {
     text-decoration : underline;
-    color:#10b046;
+    color:#b00;
 }
 #parent-list {
     height : auto;
@@ -163,10 +163,10 @@
     font-weight:bold;
     margin:0px auto;
     margin-top:30px;
-    padding:7px 12px;
+    padding:7px 10px;
     border:none;
     text-align:center;
-    width:70px;
+    width:auto;
     cursor:pointer;
 }
 .parent-edit-button:hover{
@@ -182,4 +182,24 @@
     margin-bottom: 10px;
     display:block;
     text-decoration: underline;
+}
+.profile{
+   -moz-transform: rotate(37deg);  /* FF3.5+ */
+    -o-transform: rotate(37deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(37deg);  /* Saf3.1+, Chrome */
+    -ms-transform: rotate(37deg);  /* IE9 */
+    transform: rotate(37deg);
+    background: transparent/9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 $ IE9*/
+    zoom: 1;
+    color: #FFFFFF;
+    font-size: 21px;
+    position: absolute;
+    font-weight: 200;
+    /*padding-left: 95px;
+    padding-top: 11px;*/
+    width: 128px;
+    padding-top: 27px;
+    text-align: center;
+    height: 250px
 }

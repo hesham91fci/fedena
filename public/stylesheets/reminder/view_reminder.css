@@ -18,7 +18,7 @@
 #reminder-subject{
     margin:0 0 20px 0;
     font-weight:bold;
-    color:#10b046;
+    color:#9e0f15;
     font-size:16px;
 }
 
@@ -32,7 +32,7 @@
 }
 
 #inner-tab-menu ul li {
-    background-color : #10b046;
+    background-color : #9d0e00;
     color : #fff;
     float : left;
     font-size : 0.9em;
@@ -85,7 +85,7 @@
     margin:30px 0 0 360px;
     padding:7px 12px;
     text-align:center;
-    width:70px;
+    width:auto;
     text-decoration:none;
 }
 #reminder-reply{
@@ -93,11 +93,17 @@
 }
 .label-field-pair textarea:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 .label-field-pair label{
     width:200px;
 }
 .label-field-pair input, .label-field-pair textarea{
     width:350px;
+}
+#inner-tab-menu ul li {
+   width: 165px;
+}
+#inner-tab-menu ul li {
+    width: 196px;
 }

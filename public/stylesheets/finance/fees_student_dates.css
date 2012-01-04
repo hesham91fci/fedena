@@ -84,7 +84,8 @@
     border:none;
     font-family: arial;
     cursor:pointer;
-    margin: 4px 0 0;
+    margin: 18px 0 0;
+    margin-right:10px;
 }
 .submit_button:hover{
     background:  #373B3F;
@@ -109,29 +110,13 @@
     background:  #373B3F;
 }
 
-.submit_button2 {
-    padding: 6px 8px;
-    color: #fff;
-    background: #27292B;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    font-weight: bold;
-    font-size: 14px;
-    border:none;
-    font-family: arial;
-    cursor:pointer;
-}
-.submit_button2:hover{
-    background:  #373B3F;
-}
-
 .label-field-pair1 label {
     color : #444;
     display : block;
     font-size: 14px;
     margin : 0 0 10px 0;
     float:left;
-    width:410px;
+    width:476px;
     padding-top: 10px;
     font-weight: 600;
 
@@ -139,12 +124,32 @@
 .label-field-pair1 input {
     background : #eee;
     border : 1px solid #c6c6c6;
-    margin : 0px 0 0 10px;
-    width : 100px;
+    margin : 0px 0 0 1px;
+    width : 117px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     padding: 5px;
+    float: left;
 }
+
+.label-field-pair1 .submit_button2 {
+    background: none repeat scroll 0 0 #27292B;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15px;
+    padding: 6px 8px;
+    width: 87px;
+}
+
+.label-field-pair1 .submit_button2:hover {
+    background: none repeat scroll 0 0 #373B3F;
+}
+
 .text-input-bg  {
     float:left;
     margin:0 0 0 40px;
@@ -156,12 +161,14 @@
 
 
 .fine_info{
-    float:right;
-    height:28px;
-    width:670px;
-    margin-bottom:10px;
+    float: right;
+    height: 50px;
+    overflow: hidden;
+    width: auto;
 }
-
+.label-field-pair1 {
+    overflow: hidden;
+}
 .text-input-bg1 {
     background:none repeat scroll 0 0 transparent;
     float:left;
@@ -172,7 +179,7 @@
 
 .label-field-pair1 input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 
 
@@ -181,7 +188,7 @@
     display : block;
     font-size: 14px;
     float:left;
-    width:700px;
+    width:340px;
     padding-top: 10px;
     font-weight: 600;
 
@@ -209,7 +216,7 @@ label-field-pair2 {
 }
 .label-field-pair2 input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 .pay_fees{
     text-align: right;
@@ -239,11 +246,31 @@ table#listing td a:hover{
 
 
 td span{
-   color: #990A10;
+    color: #990A10;
 }
 
 table#listing td.col-8 {
-    padding: 5px 5px 5px 10px;
-    width: 10%;
+    padding: 5px 15px 5px 10px;
     text-align: right;
+    width: 10%;
+}
+
+.pay_fees_buttons{
+    clear: both;
+
+}
+
+.pay_fees_buttons a{
+    float: right !important;
+    margin: 18px 10px 0 !important;
+}
+.pay_fees_buttons input{
+    float: right;
+}
+
+.pay_fees .label-field-pair2{
+    float: right;
+}
+table#listing td.col-6 {
+    width: 6%;
 }

@@ -32,7 +32,7 @@
 
 #create_user {width:20px;display:inline;}
 #address_text_area {width:232px;height:162px;background:#fff url(../../images/admission/address_area_bg.jpg) no-repeat;margin-bottom:40px;}
-#master_student_address, #parent_detail_office_address {padding-left:10px;padding-top:5px;width:222px;height:162px;border:none;background:transparent;color:#10b046;font-weight:bold;}
+#master_student_address, #parent_detail_office_address {padding-left:10px;padding-top:5px;width:222px;height:162px;border:none;background:transparent;color:#b00;font-weight:bold;}
 #create_user_option {display:inline;margin:0px;padding:0px;}
 
 
@@ -45,7 +45,7 @@
     font-size:14px;
     font-weight:bold;
     margin:30px 0 0 270px;
-    width:100px;
+    width:auto;
     padding:7px 10px;
     border:none;
     cursor:pointer;
@@ -65,7 +65,7 @@
     width:205px;
 }
 .sub-heading{
-    background:#10b046;
+    background:#9E0F15;
     height: 1px;
     border: none;
     margin-bottom: 15px;

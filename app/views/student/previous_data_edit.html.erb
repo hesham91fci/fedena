@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/admission/admission_page_logo.jpg" />
-  <h1>Evidence</h1>
-  <h3>Upravit Předchozí Údaje</h3>
+<%= image_tag("/images/admission/admission_page_logo.jpg") %>
+  <h1><%= t('admission') %></h1>
+  <h3><%= t('edit_previous_details') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -28,7 +28,7 @@
 
 <div id="inner-tab-menu">
   <ul>
-    <li><%= link_to 'Profil', :action=>:profile, :id=>@student.id %> </li>
+    <li><%= link_to "#{t('profile_text')}", :action=>:profile, :id=>@student.id %> </li>
   </ul>
 </div>
 
@@ -40,35 +40,35 @@
   <%= error_messages_for 'previous_data' %>
 
   <% form_for :previous_data do |a| %>
-  <%#= error_messages_for 'employee_bank_details' %>
+  <%= error_messages_for 'previous_data' %>
 
-    <span class="span-sub-heading">Předchozí údaje</span>
+   <span class="span-sub-heading"><%= t('previous_educational_details') %></span>
     <hr class="sub-heading"></hr>
     <div id="form-contents">
       <%= a.hidden_field :student_id, :value => @student.id %>
       <div class="label-field-pair">
-        <label>Název klubu</label>
+        <label><%= t('institution_name') %></label>
         <div class="text-input-bg"><%= a.text_field :institution %></div>
         <div class="extender"></div>
       </div>
       <div class="label-field-pair">
-        <label>Skupina</label>
+        <label><%= t('course_text') %></label>
         <div class="text-input-bg"><%= a.text_field :course %></div>
         <div class="extender"></div>
       </div>
       <div class="label-field-pair">
-        <label>Roky působení</label>
+        <label><%= t('year') %></label>
         <div class="text-input-bg"><%= a.text_field :year %></div>
         <div class="extender"></div>
       </div>
       <div class="label-field-pair">
-        <label>Důvod přestupu</label>
+        <label><%= t('total_mark') %></label>
         <div class="text-input-bg"><%= a.text_field :total_mark %></div>
         <div class="extender"></div>
       </div>
       <div class="save-proceed-button">
 
-        <%= submit_tag "► Aktualizovat" %>
+        <%= submit_tag "►#{t('update')}" %>
 
       </div>
     </div>
@@ -78,17 +78,17 @@
       <%  unless @previous_subject.nil? %>
         <% @previous_subject.each  do |p| %>
 
-          <li><div class="name"><%= p.subject %></div>
-            <div class="val"><span>:</span><%= p.mark %></div>
-            <div class="delete"><%= link_to_remote image_tag("/images/buttons/delete-new.png", :border => 0),
+          <li><div><span class="name"><%= p.subject %></span>
+            <span class="val"><span>:</span><%= p.mark %></span>
+            <span class="delete"><%= link_to_remote image_tag("/images/buttons/delete-new.png", :border => 0),
                 :url => {:action => "delete_previous_subject", :id => p.id},
 
-                :update => "added_subjects"%></div></li>
+                :update => "added_subjects"%></span></div></li>
 
         <% end %>
       <% end %>
     </ul>
-    <%= link_to_remote "Přidat činnost", :url=>{:controller=>"student",:action=>"previous_subject", :id=>@student.id}%>
+    <%= link_to_remote "#{t('add_subject')}", :url=>{:controller=>"student",:action=>"previous_subject", :id=>@student.id}%>
     <div id="subject">
 
     </div>

@@ -17,11 +17,11 @@
 #specific language governing permissions and limitations
 #under the License. -%>
 
-<%=  @file_size %>
+
 <div id="content-header">
-  <img src="/images/show_settings.png" />
-  <h1>Nastavení</h1>
-  <h3>Obecná Nastavení</h3>
+  <%= image_tag("/images/show_settings.png") %>
+  <h1><%= t('configuration_text') %></h1>
+  <h3><%= t('general_settings') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -36,32 +36,32 @@
   <% form_for(:configuration,:html=> {:multipart=>true}) do |c| %>
     <div class="box">
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Jméno instituce</label>
+        <label for="configuration_currency_type"><%= t('school_college_name') %></label>
         <div class="text-input-bg">
           <%= text_field :configuration, :institution_name, :value => @config[:institution_name] %>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Adresa instituce</label>
+        <label for="configuration_currency_type"><%= t('school_college_address') %></label>
         <div class="text-input-bg">
           <%= text_field :configuration, :institution_address, :value => @config[:institution_address] %>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Tel. instituce</label>
+        <label for="configuration_currency_type"><%= t('school_college_phone') %></label>
         <div class="text-input-bg">
           <%= text_field :configuration, :institution_phone_no, :value => @config[:institution_phone_no] %>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="configuration_student_attendance_type">Typ docházky</label>
+        <label for="configuration_student_attendance_type"><%= t('student_attendance_type') %></label>
         <div class="text-input-bg">
-          <%= select :configuration, :student_attendance_type, Configuration::STUDENT_ATTENDANCE_TYPE_OPTIONS,
+          <%= select :configuration, :student_attendance_type, [["#{t('daily_text')}", "Daily"], ["#{t('subject_wise_text')}", "SubjectWise"]],
             :selected => @config[:student_attendance_type] %>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Začátek finančního roku</label>
+        <label for="configuration_currency_type"><%= t('finance_year_start_date') %></label>
         <div class="text-input-bg">
           <%= calendar_date_select_tag 'configuration[financial_year_start_date]', @config[:financial_year_start_date],
             :year_range => 15.years.ago..5.years.from_now %>
@@ -69,7 +69,7 @@
       </div>
 
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Konec finančního roku</label>
+        <label for="configuration_currency_type"><%= t('finance_year_end_date') %></label>
         <div class="text-input-bg">
           <%= calendar_date_select_tag 'configuration[financial_year_end_date]', @config[:financial_year_end_date],
             :year_range => 15.years.ago..5.years.from_now %>
@@ -77,40 +77,53 @@
       </div>
 
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Typ měny</label>
+        <label for="configuration_student_attendance_type"><%= "#{t('language') } " %></label>
+        <div class="text-input-bg">
+          <%= select :configuration, :locale, available_language_options,
+            :selected => @config[:locale] %>
+        </div>
+      </div>
+
+      <div class="label-field-pair">
+        <label for="configuration_currency_type"><%= t('currency_type') %></label>
         <div class="text-input-bg">
           <%= text_field :configuration, :currency_type, :value => @config[:currency_type] %>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Nahrát logo</label>
+        <label for="configuration_currency_type"><%= t('upload_logo') %></label>
         <div class="text-input-bg">
-          <%= file_field 'upload', 'datafile' %>
+          <%= file_field 'upload', 'datafile', :size=>12 %>
         </div>
       </div>
       <div class="label-field-pair">
-        <label for="configuration_currency_type">Stav sítě</label>
+        <label for="configuration_currency_type"><%= t('network_state') %></label>
         <div class="text-input-bg">
-          <%= select :configuration, :network_state, ['Online','Offline'],:selected =>@config[:network_state] %>
+          <%= select :configuration, :network_state, [["#{t('online')}","Online"],["#{t('offline')}","Offline"]],:selected =>@config[:network_state] %>
         </div>
       </div>
+
+      <% FedenaPlugin::REGISTERED_HOOKS[:general_settings_form].each do |mod| %>
+        <%= render :partial=>mod.camelize.constantize.send("general_settings_form") %>
+      <% end %>
+
       <div class="extender"></div>
       <br/>
       <% if @config[:admission_number_auto_increment] == '1' %>
-        <%= check_box :configuration, :admission_number_auto_increment, :checked => true %> Povolit automatické zvýšení ID přijetí hráče
+        <%= check_box :configuration, :admission_number_auto_increment, :checked => true %><%= t('student_admission_auto') %>
       <% else %>
-        <%= check_box :configuration, :admission_number_auto_increment, :checked => false %> Povolit automatické zvýšení ID přijetí hráče
+        <%= check_box :configuration, :admission_number_auto_increment, :checked => false %><%= t('student_admission_auto') %>
       <% end %>
       <br/>
       <% if Configuration.available_modules.include?('HR') %>
         <% if @config[:employee_number_auto_increment] == '1' %>
-          <%= check_box :configuration, :employee_number_auto_increment, :checked => true %> Povolit automatické zvýšení ID přijetí zaměstnance
+          <%= check_box :configuration, :employee_number_auto_increment, :checked => true %> <%= t('employee_admission_auto') %>
         <% else %>
-          <%= check_box :configuration, :employee_number_auto_increment, :checked => false %> Povolit automatické zvýšení ID přijetí zaměstnance
+          <%= check_box :configuration, :employee_number_auto_increment, :checked => false %><%= t('employee_admission_auto') %>
         <% end %>
       <% end %>
       <div id="submit-button">
-        <%= submit_tag "► Potvrdit" %>
+        <%= submit_tag "► #{t('update')}" %>
       </div>
 
     <% end %>

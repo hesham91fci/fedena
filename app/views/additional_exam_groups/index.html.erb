@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/examination/show_exam.png" alt="Exam" />
-  <h1>Další Hodnocení</h1>
-  <h3>Skupiny dalšího Hodnocení</h3>
+  <%= image_tag("/images/examination/show_exam.png") %>
+  <h1><%= t('additional_exams_text') %></h1>
+  <h3><%= t('additional_exam_groups_text') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -28,7 +28,7 @@
 <div id="inner-tab-menu">
   <ul>
     <% if permitted_to? :new, :additional_exam_groups %>
-    <li><%= link_to "Nový", new_batch_additional_exam_group_path(@batch) %></li>
+      <li><%= link_to "#{t('new_text')}", new_batch_additional_exam_group_path(@batch) %></li>
     <% end %>
   </ul>
 </div>
@@ -40,62 +40,67 @@
 
   <div class="box">
     <div class="bread_crumb">
-      <%= 'Skupiny' %> &raquo;
+      <%= t('courses_text') %> &raquo;
       <%= @course.full_name %> &raquo;
-      <%="Třída #{@batch.name}"%> &raquo;
-     Další Hodnocení
+      <%="#{t('batch')} #{@batch.name}"%> &raquo;
+      <%= t('additional_exams_text') %>
     </div>
 
 
     <table id="listing" width="100%">
       <tr class="tr-head">
-        <td>Název hodnocení</td>
-        <td>Akce</td>
+        <td><%= t('exam_name') %></td>
+        <% if permitted_to? :publish, :additional_exam %>
+      <td><%= t('actions') %></td>    
+      <% end %>
       </tr>
-       <% @config = Configuration.available_modules %>
+      <% @config = Configuration.available_modules %>
       <% @additional_exam_groups.each do |exam_group| %>
         <tr class="tr-<%= cycle('odd', 'even') %>">
           <td class="col-2">
             <%= link_to exam_group.name, [@batch, exam_group] %>
-          <span><small>
-                <%= link_to('Smazat', [@batch, exam_group], :method => 'delete', :confirm => 'Jste si jistí?') if exam_group.removable? %>
-                <s><%= 'Delete' unless exam_group.removable? %></s>
+            <span><small>
+                <%= link_to("#{t('delete_text')}", [@batch, exam_group], :method => 'delete', :confirm => "#{t('delete_confirm_msg')}") if exam_group.removable? %>
+                <s><%= "#{t('delete_text')}" unless exam_group.removable? %></s>
               </small></span>
           </td>
+          <% if permitted_to? :publish, :additional_exam %>
           <td class="col-2"><small>
               <% unless exam_group.is_published %>
-                <%= link_to_remote("Zobrazit termín hodnocení",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"schedule"},
+                <%= link_to_remote("#{t('publish_exam_schedule')}",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"schedule"},
                   :before => "Element.show('loader')",
                   :success => "Element.hide('loader')")  %>
-                  <% else  %>
-                    <%  unless  exam_group.result_published  %>
-                 Termín zobrazen.  <% if @config.include?('SMS') %>
-                    <%= link_to_remote "Resend",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"schedule"},
+              <% else  %>
+                <%  unless  exam_group.result_published  %>
+                  <%= t('schedule_published') %>
+                  <% if @config.include?('SMS') %>
+                    <%= link_to_remote "#{t('resend')}",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"schedule"},
                       :before => "Element.show('loader')",
-                      :success => "Element.hide('loader')"  %> SMS notification.<br />
-                      <% end %>
-                                <%= link_to_remote("Zobrazit Výsledky Hodnocení",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"result"},
-                                          :before => "Element.show('loader')",
-                                          :success => "Element.hide('loader')")  %>
-                                <% else %>
-                               Result published. <% if @config.include?('SMS') %>
-                               <%= link_to_remote "Resend  SMS notification",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"result"},
+                      :success => "Element.hide('loader')"  %>  <%= t('sms_notification') %>.<br />
+                  <% end %>
+                  <%= link_to_remote("#{t('publish_exam_result')}",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"result"},
+                    :before => "Element.show('loader')",
+                    :success => "Element.hide('loader')")  %>
+                <% else %>
+                  <%= t('result_published') %>. <% if @config.include?('SMS') %>
+                    <%= link_to_remote "#{t('resend_sms_notification')}",:url=>{:controller=>'additional_exam',:action=>'publish',:id=>exam_group.id,:status=>"result"},
                       :before => "Element.show('loader')",
                       :success => "Element.hide('loader')"  %>
-                       <% end  %>
-                         <% end  %>
+                  <% end  %>
+                <% end  %>
               <% end  %>
+              <% end %>
 
-                <span id="publish-notice-<%=exam_group.id%>"></span>
-                <%= image_tag("loader.gif",
-                  :align => "absmiddle",
-                  :border => 0,
-                  :id => "loader",
-                  :style =>"display: none;" ) %>
-              </small> </td>
-          </tr>
-        <% end %>
-      </table>
-      <div class="extender"></div>
-    </div>
+              <span id="publish-notice-<%=exam_group.id%>"></span>
+              <%= image_tag("loader.gif",
+                :align => "absmiddle",
+                :border => 0,
+                :id => "loader",
+                :style =>"display: none;" ) %>
+            </small> </td>
+        </tr>
+      <% end %>
+    </table>
+    <div class="extender"></div>
   </div>
+</div>

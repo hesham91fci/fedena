@@ -25,7 +25,7 @@ class PayrollController < ApplicationController
     @deductionable_categories = PayrollCategory.find_all_by_is_deduction(true, :order=> "name ASC")
     @category = PayrollCategory.new(params[:category])
     if request.post? and @category.save
-      flash[:notice]="Kategorie mezd uložena"
+      flash[:notice]="#{t('flash1')}"
       redirect_to :action => "add_category"
     end
     
@@ -35,7 +35,7 @@ class PayrollController < ApplicationController
     @categories = PayrollCategory.find(:all, :order=> "name ASC")
     @category = PayrollCategory.find(params[:id])
     if request.post? and @category.update_attributes(params[:category])
-      flash[:notice] = "Kategorie mezd aktualizována"
+      flash[:notice] = "#{t('flash2')}"
       redirect_to :action => "add_category"
     end
   end
@@ -55,14 +55,18 @@ class PayrollController < ApplicationController
   end
 
   def delete_category
+    if params[:id]
     employees = EmployeeSalaryStructure.find(:all ,:conditions=>"payroll_category_id = #{params[:id]}")
     if employees.empty?
       PayrollCategory.find(params[:id]).destroy
       @departments = PayrollCategory.find :all
-      flash[:notice]="Úspěšně vymazáno!"
+      flash[:notice]="#{t('flash3')}"
       redirect_to :action => "add_category"
     else
-      flash[:notice]="Není možno vymazat!"
+      flash[:notice]="#{t('flash4')}"
+      redirect_to :action => "add_category"
+    end
+    else
       redirect_to :action => "add_category"
     end
   end
@@ -79,7 +83,7 @@ class PayrollController < ApplicationController
           params[:manage_payroll].each_pair do |k, v|
             EmployeeSalaryStructure.create(:employee_id => params[:id], :payroll_category_id => k, :amount => v['amount'])
           end
-          flash[:notice] = "Data uložena pro #{@employee.first_name}"
+          flash[:notice] = "#{t('data_saved_for')} #{@employee.first_name}"
           redirect_to :controller => "employee", :action => "profile", :id=> @employee.id
         end
       else
@@ -121,7 +125,7 @@ class PayrollController < ApplicationController
         end
         
       end
-      flash[:notice] = "Data uložena pro #{@employee.first_name}"
+      flash[:notice] = "#{t('data_saved_for')}#{@employee.first_name}"
       redirect_to :controller => "employee", :action => "profile", :id=> @employee.id
     end
   end

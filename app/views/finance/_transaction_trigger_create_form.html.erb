@@ -17,33 +17,34 @@
 #specific language governing permissions and limitations
 #under the License. -%>
 
-<label class="head_label">Create Automatic Transaction<span></span></label>
+<label class="head_label"><%= t('create_automatic_transaction') %><span></span></label>
 
 <% form_remote_for :transaction_trigger,
     :url => {:action => 'transaction_trigger_create'} do |form| %>
+<div id="form-errors"></div>
 
-   <div id="form-errors"></div>
+
    <div class="label-field-pair">
-    <div class="label-container"><%= form.label :category_id %></div>
+    <div class="label-container"><label><%= t('category') %></label></div>
     <div class="input-container"><%= form.select :finance_category_id, @categories.map { |c| [c.name, c.id] } %></div>
    </div>
 
 <div class="label-field-pair">
-    <div class="label-container"><%= form.label :percentage %></div>
+    <div class="label-container"><label><%= t('percentage') %></label></div>
     <div class="input-container"><%= form.text_field :percentage %></div>
    </div>
 
 <div class="label-field-pair">
-     <div class="label-container"><%= form.label :title %></div>
+  <div class="label-container"><label><%= t('title') %></label></div>
     <div class="input-container"><%= form.text_field :title %></div>
    </div>
 
 <div class="label-field-pair">
-    <div class="label-container"> <%= form.label :description %></div>
+    <div class="label-container"> <label><%= t('description') %></label></div>
     <div class="input-container"> <%= form.text_field :description %></div>
    </div>
 
  <div id="modelbox-submit">
-          <%=  submit_tag "► Save",:class=>'submit_button' %>
+          <%=  submit_tag "► #{t('save')}",:class=>'submit_button' %>
   </div>
 <% end %>

@@ -28,13 +28,13 @@
 #student_main_info h4 {
     margin:0;
     padding:0;
-    color:#10b046;
+    color:#b00;
     margin-top:10px;
 }
 #student_main_info h6 {
     margin:0;
     padding:0;
-    color:#10b046;
+    color:#b00;
     margin-top:5px;
 }
 #student_main_info h5 {
@@ -47,7 +47,7 @@
 }
 #new_profile_info_top {
     margin:30px auto;
-    width:697px;
+    width:745px;
    
 }
 /*
@@ -60,7 +60,7 @@
     padding-top:15px;
     padding-bottom:5px;
     height:25px;
-    width:150px;
+    width:200px;
     text-align:right;
     padding-right:20px;
     float:left;
@@ -74,13 +74,13 @@
     color:#000;
 }
 .profile_info_text_top a:hover{
-    color:#16a747;
+    color:#BB0000;
 }
 .profile_info_label_top2 {
     padding-top:15px;
     padding-bottom:5px;
     height:25px;
-    width:150px;
+    width:200px;
     text-align:right;
     padding-right:20px;
     float:left;
@@ -167,7 +167,7 @@ a.user_button{
     margin-top:30px;
     padding:7px 12px;
     border:none;
-    margin-left:20px;
+    margin-left:-15px;
     text-align:center;
     cursor:pointer;
     text-decoration: none;
@@ -205,7 +205,7 @@ a.user_button:hover{
     padding-top:15px;
     padding-bottom:5px;
     height:25px;
-    width:500px;
+    width:200px;
     text-align:right;
     padding-right:20px;
     float:left;
@@ -220,7 +220,7 @@ a.user_button:hover{
     padding-top:15px;
     padding-bottom:5px;
     height:25px;
-    width:500px;
+    width:200px;
     text-align:right;
     padding-right:20px;
     float:left;
@@ -235,7 +235,7 @@ a.user_button:hover{
     padding-bottom:5px;
     padding-left:20px;
     height:25px;
-    width:150px;
+    width:500px;
     float:left;
     font-weight:bold;
     color:#000;
@@ -247,7 +247,7 @@ a.user_button:hover{
     padding-bottom:5px;
     padding-left:20px;
     height:25px;
-    width:150px;
+    width:500px;
     float:left;
     font-weight:bold;
     color:#000;

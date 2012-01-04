@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/examination/show_exam.png" alt="Exam" />
-  <h1>Další Hodnocení</h1>
-  <h3>Nové Hodnocení</h3>
+  <%= image_tag("/images/examination/show_exam.png") %>
+  <h1><%= t('additional_exams_text') %></h1>
+  <h3><%= t('new_exam') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -33,11 +33,11 @@
   <% end %>
 
   <div class="bread_crumb">
-    <%= 'Skupiny' %> &raquo;
+    <%= t('courses_text') %> &raquo;
     <%= @course.full_name %> &raquo;
-    <%="Třída #{@batch.name}" %> &raquo;
-    <%= link_to "Další Hodnocení", batch_additional_exam_groups_path(@batch) %> &raquo;
-    Nové Další Hodnocení
+    <%="#{t('batch')} #{@batch.name}" %> &raquo;
+    <%= link_to "#{t('additional_exams_text')}", batch_additional_exam_groups_path(@batch) %> &raquo;
+    <%= t('new_additional_exam') %>
   </div>
 
 
@@ -49,7 +49,7 @@
       <%= error_messages_for :additional_exam_group %>
       <% form_remote_for :exam_option, :url => {:controller=>'additional_exam',:action => 'update_exam_form',:batch=>@batch} do |form| %>
         <div class="label-field-pair">
-          <label for="exam_name">Name</label>
+          <label for="exam_name"><%= t('name') %></label>
           <% if params[:ename].nil?  %>
             <% @ename = "" %>
           <% else %>
@@ -58,23 +58,23 @@
           <div class="text-input-bg"><%= form.text_field :name, :value=>@ename%></div>
         </div>
         <div class="label-field-pair">
-          <label for="exam_type">Typ Hodnocení</label>
-          <div class="text-input-bg"><%= select :exam_option,:exam_type,['Marks','Grades','MarksAndGrades'] %></div>
+          <label for="exam_type"><%= t('exam_type') %></label>
+          <div class="text-input-bg"><%= select :exam_option,:exam_type,[[t('marks'),'Marks'],[t('grades'),'Grades'],[t('marks_and_grades'),'MarksAndGrades']] %></div>
         </div>
-      <div id="list">
-  <div class="sel-list">
-Vybrat: <%= link_to_function 'Vše', "$$('input.right').each(function(checkbox) { checkbox.checked = true; });" %>,
-<%= link_to_function 'Žádné', "$$('input.right').each(function(checkbox) { checkbox.checked = false; });" %>
-</div>
-        <% @students.each do |student| %>
+        <div id="list">
+          <div class="sel-list">
+            <%= t('select') %>: <%= link_to_function t('all'), "$$('input.right').each(function(checkbox) { checkbox.checked = true; });" %>,
+            <%= link_to_function "#{t('none')}", "$$('input.right').each(function(checkbox) { checkbox.checked = false; });" %>
+          </div>
+          <% @students.each do |student| %>
 
-          <div class="name_list<%=cycle('odd', 'even')%>"><li>
-              <label><%= check_box_tag "students_list[]", student.id, false,:class=>'right' %>
-                <div class="att_list_names"><%= student.full_name %></div> </label>
-            </li>  </div>
-        <% end %>
-      </div>
-        <%= submit_tag "", :value => "► Uložit", :class => "submit_button" %>
+            <div class="name_list<%=cycle('odd', 'even')%>"><li>
+                <label><%= check_box_tag "students_list[]", student.id, false,:class=>'right' %>
+                  <div class="att_list_names"><%= student.full_name %></div> </label>
+              </li>  </div>
+          <% end %>
+        </div>
+        <%= submit_tag "", :value => "► #{t('save')}", :class => "submit_button" %>
         <%  #  form.submit("Save") %>
       <%end%>
     </div>

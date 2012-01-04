@@ -28,13 +28,13 @@
 #student_main_info h4 {
     margin:0;
     padding:0;
-    color:#10b046;
+    color:#b00;
     margin-top:10px;
 }
 #student_main_info h6 {
     margin:0;
     padding:0;
-    color:#10b046;
+    color:#b00;
     margin-top:5px;
 }
 #student_main_info h5 {
@@ -74,7 +74,7 @@
     color:#000;
 }
 .profile_info_text_top a:hover{
-    color:#16a747;
+    color:#BB0000;
 }
 .profile_info_label_top2 {
     padding-top:15px;
@@ -147,8 +147,8 @@
 .profile_top_banner{
     position:absolute;
     float:right;
-    padding-left:525px;
-    margin-top:-12px;
+    padding-left:528px;
+    margin-top:-10px;
     
 }
 #student_profile_heading{
@@ -165,10 +165,10 @@
     font-weight:bold;
     margin:0px auto;
     margin-top:30px;
-    padding:7px 12px;
+    padding:7px 10px;
     border:none;
     text-align:center;
-    width:70px;
+    width:auto;
     cursor:pointer;
 }
 .user_button a{
@@ -177,4 +177,62 @@
 }
 .user_button:hover{
    background:  #373B3F;
+}
+
+.odd{
+    height:auto;
+    background: #eff3fe;
+
+    margin-right:5px;
+}
+.odd td{
+
+    font-weight:bold;
+    padding:10px 10px 10px 10px;
+   border-top:1px solid #bdcfff;
+    border-bottom:1px solid #bdcfff;
+}
+.right{
+    width: 450px;
+    color:#000000;
+    text-align: left;
+}
+.left{
+    width: 250px;
+    color:#548ab2;
+    text-align: right;
+}
+.even{
+
+    height:auto;
+
+    background: #dae6ff;
+    margin-right:5px;
+}
+.even td{
+
+    font-weight:bold;
+    border-top:1px solid #bdcfff;
+    border-bottom:1px solid #bdcfff;
+    padding:10px 10px 10px 10px;
+}
+.profile{
+   -moz-transform: rotate(37deg);  /* FF3.5+ */
+    -o-transform: rotate(37deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(37deg);  /* Saf3.1+, Chrome */
+    -ms-transform: rotate(37deg);  /* IE9 */
+    transform: rotate(37deg);
+    background: transparent/9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 $ IE9*/
+    zoom: 1;
+    color: #FFFFFF;
+    font-size: 21px;
+    position: absolute;
+    font-weight: 200;
+    /*padding-left: 95px;
+    padding-top: 11px;*/
+    width: 128px;
+    padding-top: 27px;
+    text-align: center;
+    height: 250px
 }

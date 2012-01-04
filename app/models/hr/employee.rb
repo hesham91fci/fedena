@@ -22,7 +22,7 @@ class Employee < ActiveRecord::Base
   belongs_to  :employee_grade
   belongs_to  :employee_department
   belongs_to  :nationality, :class_name => 'Country'
-  belongs_to  :user, :dependent=>:destroy
+  belongs_to  :user, :dependent=>:destroy 
   
   has_many :employees_subjects
   has_many :subjects ,:through => :employees_subjects
@@ -32,9 +32,11 @@ class Employee < ActiveRecord::Base
   has_many    :apply_leaves
   has_many    :monthly_payslips
   has_many    :employee_salary_structures
+  has_many    :finance_transactions, :as => :payee
+  has_many    :employee_attendances
 
   validates_format_of     :email, :with => /^[A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i,   :allow_blank=>true,
-    :message => "must be a valid email address"
+    :message => "#{t('must_be_a_valid_email_address')}"
 
   validates_presence_of :employee_category_id, :employee_number, :first_name, :employee_position_id,
     :employee_department_id,  :date_of_birth
@@ -43,7 +45,7 @@ class Employee < ActiveRecord::Base
   validates_associated :user
   before_validation :create_user_and_validate
 
-  has_attached_file :photo,
+  has_attached_file :photo, :whiny=>false,
     :styles => {
     :thumb=> "100x100#",
     :small  => "150x150>"},
@@ -64,22 +66,23 @@ class Employee < ActiveRecord::Base
     else
       changes_to_be_checked = ['employee_number','first_name','last_name','email']
       check_changes = self.changed & changes_to_be_checked
-      self.user.role = "Employee"
+#      self.user.role ||= "Employee"
       unless check_changes.blank?
-        self.user.username = self.employee_number if check_changes.include?('employee_number')
-        self.user.first_name = self.first_name if check_changes.include?('first_name')
-        self.user.last_name = self.last_name if check_changes.include?('last_name')
-        self.user.email ||= self.email.to_s if check_changes.include?('email')
-        check_user_errors(self.user)
+        emp_user = self.user
+        emp_user.username = self.employee_number if check_changes.include?('employee_number')
+        emp_user.first_name = self.first_name if check_changes.include?('first_name')
+        emp_user.last_name = self.last_name if check_changes.include?('last_name')
+        emp_user.email = self.email.to_s if check_changes.include?('email')
+        emp_user.save if check_user_errors(self.user)
       end
     end
   end
 
   def check_user_errors(user)
-    unless user.valid?
+   unless user.valid?
       user.errors.each{|attr,msg| errors.add(attr.to_sym,"#{msg}")}
     end
-    return false unless user.errors.blank?
+    user.errors.blank?
   end
 
   def image_file=(input_data)
@@ -217,8 +220,8 @@ class Employee < ActiveRecord::Base
       employee_additional_details.each do |g|
         g.archive_employee_additional_detail(archived_employee.id)
       end
-      self.user.delete
-      self.delete
+      self.user.destroy
+      self.destroy
     end
   end
  
@@ -270,4 +273,31 @@ class Employee < ActiveRecord::Base
       return employee
     end
   end
+
+  def has_dependency
+    flag = false
+    flag = true if self.monthly_payslips.present?
+    flag = true if self.employee_salary_structures.present?
+    flag = true if self.employees_subjects.present?
+    flag = true if self.apply_leaves.present?
+    flag = true if self.finance_transactions.present?
+    flag = true if self.timetable_entries.present?
+    flag = true if self.employee_attendances.present?
+    plugin_dependencies = FedenaPlugin.check_dependency(self,"permanant")
+    plugin_dependencies.each do |k,v|
+      if v.kind_of?(Array)
+        flag=true unless  v.blank?
+      else
+         v.each do |h,a|
+           flag=true unless  a.blank?
+         end
+      end
+    end
+    return flag
+  end
+
+  def former_dependency
+   plugin_dependencies = FedenaPlugin.check_dependency(self,"former")
+  end
+  
 end

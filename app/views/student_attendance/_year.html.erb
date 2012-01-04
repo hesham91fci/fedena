@@ -19,6 +19,6 @@
 
 <div class="text-input-bg3">
 <%= select  :advance_search, :year,
-  [@year, @year+1],
-  {:prompt => 'Rok'} %>
+  [@year-1,@year, @year+1],
+  {:prompt => "#{t('year')}"} %>
 </div>

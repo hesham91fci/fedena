@@ -19,9 +19,9 @@
 
 
 <div id="content-header">
-<img src="/images/show_finance.png" alt="Finance" />
-  <h1>Finance Academic Year Report</h1>
-  <h3>Employee Salary</h3>
+<%= image_tag("/images/show_finance.png") %>
+  <h1><%= t('finance_academic_year_report') %></h1>
+  <h3><%= t('employee_salary') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -32,8 +32,8 @@
 
   <div id="fees-table">
     <div class="fees-th">
-      <div class="fees-table-description">Employee</div>
-      <div class="fees-table-salary">Salary</div>
+      <div class="fees-table-description"><%= t('employee_text') %></div>
+      <div class="fees-table-salary"><%= t('salary') %></div>
     </div>
     <% amount=0 %>
     <% @employees.each do |e| %>
@@ -48,7 +48,7 @@
     <% end %>
     <br/>
     <div class="fees-th">
-      <div class="fees-table-description">Total Salary</div>
+      <div class="fees-table-description"><%= t('total_salary') %></div>
       <div class="fees-table-salary"><%=total  %></div>
     </div>
     

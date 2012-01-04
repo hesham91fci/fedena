@@ -63,7 +63,7 @@
 }
 #guardians-links ul li a:hover {
     text-decoration : underline;
-    color:#10b046;
+    color:#b00;
 }
 #parent-list {
     height : auto;
@@ -92,7 +92,7 @@
     padding-top:15px;
     padding-bottom:5px;
     height:25px;
-    width:150px;
+    width:184px;
     text-align:right;
     padding-right:20px;
     float:left;
@@ -106,7 +106,7 @@
     padding-top:15px;
     padding-bottom:5px;
     height:25px;
-    width:150px;
+    width:184px;
     text-align:right;
     padding-right:20px;
     float:left;
@@ -121,7 +121,7 @@
     padding-bottom:5px;
     padding-left:20px;
     height:25px;
-    width:500px;
+    width:466px;
     float:left;
     font-weight:bold;
     color:#000;
@@ -133,7 +133,7 @@
     padding-bottom:5px;
     padding-left:20px;
     height:25px;
-    width:500px;
+    width:466px;
     float:left;
     font-weight:bold;
     color:#000;
@@ -168,7 +168,7 @@
     padding:7px 12px;
     border:none;
     text-align:center;
-    width:70px;
+    width:auto;
     cursor:pointer;
     float:left;
 }
@@ -191,7 +191,7 @@
     margin:20px auto;
 }
 #inner-tab-menu ul li {
-    background-color:#10b046;
+    background-color:#9D0E00;
     color:#FFFFFF;
     float:left;
     font-size:0.9em;
@@ -200,5 +200,25 @@
     margin:0 0 0 10px;
     padding:0 5px;
     text-align:center;
-    width:100px;
+    width:143px;
+}
+.profile{
+   -moz-transform: rotate(37deg);  /* FF3.5+ */
+    -o-transform: rotate(37deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(37deg);  /* Saf3.1+, Chrome */
+    -ms-transform: rotate(37deg);  /* IE9 */
+    transform: rotate(37deg);
+    background: transparent/9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 $ IE9*/
+    zoom: 1;
+    color: #FFFFFF;
+    font-size: 21px;
+    position: absolute;
+    font-weight: 200;
+    /*padding-left: 95px;
+    padding-top: 11px;*/
+    width: 128px;
+    padding-top: 27px;
+    text-align: center;
+    height: 250px
 }

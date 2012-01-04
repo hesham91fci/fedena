@@ -2,6 +2,7 @@ authorization do
 
   #custom - privileges
   role :examination_control do
+    includes :archived_exam_reports
     has_permission_on [:exam],
       :to => [
       :index,
@@ -112,6 +113,7 @@ authorization do
   end
 
   role :enter_results  do
+    includes :archived_exam_reports
     has_permission_on [:exam],
       :to => [
       :index,
@@ -146,9 +148,7 @@ authorization do
       :to => [
       :index,
       :show,
-      :save_scores,
-      :edit,
-      :update
+      :save_scores
     ]
     has_permission_on [:additional_exam],
       :to =>[
@@ -169,13 +169,12 @@ authorization do
       :to => [
       :index,
       :show,
-      :save_additional_scores,
-      :edit,
-      :update
+      :save_additional_scores
     ]
   end
 
   role :view_results  do
+    includes :archived_exam_reports
     has_permission_on [:exam], :to => [:index,
       :exam_wise_report,
       :list_exam_types,
@@ -193,20 +192,6 @@ authorization do
       :generated_report4,
       :generated_report4_pdf
     ]
-    has_permission_on [:examination_result],
-      :to => [
-      :load_results,
-      :load_one_sub_result,
-      :load_all_sub_result,
-      :update_examtypes,
-      :update_subjects,
-      :update_one_subject,
-      :update_exams,
-      :update_one_sub_exams,
-      :one_sub_pdf,
-      :all_sub_pdf,
-      :view_all_subs,
-      :view_one_sub ]
   end
 
   role :admission do
@@ -410,7 +395,7 @@ authorization do
   role :add_new_batch do
     has_permission_on [:configuration], :to => [:index]
     has_permission_on [:courses], :to => [:index,:manage_course, :manage_batches,:find_course, :new, :create,:destroy,:edit,:update, :show, :update_batch]
-    has_permission_on [:batches], :to => [:index, :new, :create,:destroy,:edit,:update, :show, :init_data]
+    has_permission_on [:batches], :to => [:index, :new, :create,:destroy,:edit,:update, :show, :init_data,:assign_tutor,:update_employees,:assign_employee]
     has_permission_on [:subjects], :to => [:index, :new, :create,:destroy,:edit,:update, :show]
     has_permission_on [:student], :to => [:electives, :assign_students, :unassign_students, :assign_all_students, :unassign_all_students, :profile, :guardians, :show_previous_details]
     has_permission_on [:batch_transfers],
@@ -459,7 +444,7 @@ authorization do
 
   role :general_settings do
     has_permission_on [:configuration], :to => [:index,:settings,:permissions]
-    has_permission_on [:student], :to => [:add_additional_details, :delete_additional_details, :edit_additional_details, :categories ]
+    has_permission_on [:student], :to => [:add_additional_details, :delete_additional_details, :edit_additional_details, :categories,:category_delete,:category_edit,:category_update ]
   end
 
   role :finance_control do
@@ -658,7 +643,11 @@ authorization do
       #graph-------------
       :graph_for_update_monthly_report,
 
-      :view_employee_payslip
+      :view_employee_payslip,
+      :income_list_pdf,
+      :expense_list_pdf,
+      :asset_pdf,
+      :liability_pdf
     ]
     has_permission_on [:xml],
       :to => [
@@ -759,40 +748,6 @@ authorization do
       :activate_category,
       :delete_category,
       :inactivate_category ]
-    has_permission_on [:employee_attendance],
-      :to => [
-      :add_leave_types,
-      :register,
-      :report,
-      :leave_management,
-      :edit_leave_types,
-      :delete_leave_types,
-      :update_attendance_form,
-      :update_attendance_report,
-      :individual_leave_application,
-      :all_employee_new_leave_application,
-      :all_employee_leave_application,
-      :update_employees_select,
-      :leave_list,
-      :leave_app,
-      :emp_attendance,
-      :employee_attendance_pdf,
-      :manual_reset,
-      :employee_leave_reset_all,
-      :update_employee_leave_reset_all,
-      :leave_reset_settings,
-      :employee_leave_reset_by_department,
-      :list_department_leave_reset,
-      :update_department_leave_reset,
-      :employee_leave_reset_by_employee,
-      :employee_search_ajax,
-      :employee_view_all,
-      :employees_list,
-      :employee_leave_details,
-      :employee_wise_leave_reset,
-      :leave_history,
-      :update_leave_history
-      ]
   end
 
   role :employee_attendance do
@@ -803,7 +758,8 @@ authorization do
       :search,
       :search_ajax,
       :employee_leave_count_edit,
-      :employee_leave_count_update
+      :employee_leave_count_update,
+      :view_attendance
     ]
     has_permission_on [:employee_attendances],
       :to => [
@@ -902,7 +858,8 @@ authorization do
       :profile,
       :view_all,
       :employees_list,
-      :advanced_search
+      :advanced_search,
+      :hr
     ]
   end
 
@@ -912,6 +869,7 @@ authorization do
 
   # admin privileges
   role :admin do
+    includes :archived_exam_reports
     has_permission_on [:user],  :to => [:edit_privilege]
     has_permission_on [:weekday], :to => [:index, :week, :create]
     has_permission_on [:event],
@@ -1159,31 +1117,6 @@ authorization do
       :query_data
     ]
 
-    has_permission_on [:examination_result],
-      :to => [
-      :add,
-      :add_results,
-      :save,
-      :update_subjects,
-      :update_one_subject,
-      :update_exams,
-      :update_one_sub_exams,
-      :load_results,
-      :load_one_sub_result,
-      :load_all_sub_result,
-      :update_examtypes,
-      :one_sub_pdf,
-      :all_sub_pdf,
-      :view_all_subs,
-      :view_one_sub,
-      :academic_report_course,
-      :all_academic_report,
-      :list_students_by_course,
-      :exam_wise_report,
-      :load_examtypes,
-      :load_course_all_student,
-      :exam_report
-    ]
     has_permission_on [:finance],
       :to => [
       :index,
@@ -1379,7 +1312,11 @@ authorization do
       #graph-------------
       :graph_for_update_monthly_report,
 
-      :view_employee_payslip
+      :view_employee_payslip,
+      :income_list_pdf,
+      :expense_list_pdf,
+      :asset_pdf,
+      :liability_pdf
 
     ]
         
@@ -1678,12 +1615,6 @@ authorization do
   role :student do
     has_permission_on [:course], :to => [:view]
     has_permission_on [:exam], :to => [:generated_report, :generated_report4_pdf, :graph_for_generated_report, :academic_report, :previous_years_marks_overview,:previous_years_marks_overview_pdf, :graph_for_previous_years_marks_overview, :generated_report3, :graph_for_generated_report3 ,:generated_report4]
-    has_permission_on [:examination_result],
-      :to => [
-      :load_results,
-      :load_one_sub_result,
-      :one_sub_pdf,
-      :view_one_sub ]
     has_permission_on [:student],
       :to => [
       :exam_report,
@@ -1706,7 +1637,7 @@ authorization do
       :show_previous_details,
       :fees,
       :fee_details
-       ]
+    ]
     has_permission_on [:news],
       :to => [
       :index,
@@ -1800,7 +1731,16 @@ authorization do
       :delete_reminder_by_sender,
       :delete_reminder_by_recipient,
       :view_reminder,
-      :mark_unread ]
+      :mark_unread ]  
+  end
+
+  role :subject_attendance do
+    has_permission_on [:attendances], :to => [:index, :list_subject, :show, :new, :create, :edit,:update, :destroy]
+    has_permission_on [:attendance_reports], :to => [:index, :subject, :mode, :show, :year, :report, :filter, :student_details,:report_pdf,:filter_report_pdf]
+    
+  end
+
+  role :subject_exam do
     has_permission_on [:exam],
       :to => [
       :index,
@@ -1831,13 +1771,40 @@ authorization do
     ]
     has_permission_on [:exams],
       :to => [
-      :new,
-      :create,
       :show,
-      :save_scores,
-      :edit,
-      :update,
-      :destroy
+      :save_scores
+    ]
+    has_permission_on [:additional_exam],
+      :to =>[
+      :create_additional_exam,
+      :update_batch
+    ]
+    has_permission_on [:additional_exam_groups],
+      :to =>[
+      :index,
+      :show,
+      :set_additional_exam_minimum_marks,
+      :set_additional_exam_maximum_marks,
+      :set_additional_exam_weightage,
+      :set_additional_exam_group_name
+    ]
+    has_permission_on [:additional_exams],
+      :to => [
+      :index,
+      :show,
+      :save_additional_scores
+    ]
+  end
+
+  role :archived_exam_reports do
+    has_permission_on [:exam_reports],
+      :to => [
+      :archived_exam_wise_report,
+      :consolidated_exam_report,
+      :consolidated_exam_report_pdf,
+      :archived_batches_exam_report,
+      :archived_batches_exam_report_pdf,
+      :graph_for_archived_batches_exam_report
     ]
   end
 end

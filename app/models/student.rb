@@ -27,10 +27,12 @@ class Student < ActiveRecord::Base
   has_one    :student_previous_data
   has_many   :student_previous_subject_mark
   has_many   :guardians, :foreign_key => 'ward_id', :dependent => :destroy
-  has_many   :finance_transactions
+  has_many   :finance_transactions, :as => :payee
   has_many   :attendances
   has_many   :finance_fees
   has_many   :fee_category ,:class_name => "FinanceFeeCategory"
+  has_many   :students_subjects
+  has_many   :subjects ,:through => :students_subjects
 
   has_and_belongs_to_many :graduated_batches, :class_name => 'Batch', :join_table => 'batch_students'
 
@@ -40,14 +42,14 @@ class Student < ActiveRecord::Base
   validates_uniqueness_of :admission_no
   validates_presence_of :gender
   validates_format_of     :email, :with => /^[A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i,   :allow_blank=>true,
-    :message => "must be a valid email address"
+    :message => "#{t('must_be_a_valid_email_address')}"
   validates_format_of     :admission_no, :with => /^[A-Z0-9_-]*$/i,
-    :message => "must contain only letters, numbers, hyphen, and  underscores"
+    :message => "#{t('must_contain_only_letters')}"
 
   validates_associated :user
   before_validation :create_user_and_validate
 
-  has_attached_file :photo,
+  has_attached_file :photo, :whiny=>false,
     :styles => {
     :thumb=> "100x100#",
     :small  => "150x150>"},
@@ -62,11 +64,11 @@ class Student < ActiveRecord::Base
     :message=>'must be less than 500 KB.',:if=> Proc.new { |p| p.photo_file_name_changed? }
 
   def validate
-    errors.add(:date_of_birth, "can't be a future date.") if self.date_of_birth >= Date.today \
+    errors.add(:date_of_birth, "#{t('cant_be_a_future_date')}.") if self.date_of_birth >= Date.today \
       unless self.date_of_birth.nil?
-    errors.add(:gender, 'attribute is invalid.') unless ['m', 'f'].include? self.gender.downcase \
+    errors.add(:gender, "#{t('model_errors.student.error2')}.") unless ['m', 'f'].include? self.gender.downcase \
       unless self.gender.nil?
-    errors.add(:admission_no, 'can\'t be zero') if self.admission_no=='0'
+    errors.add(:admission_no, "#{t('model_errors.student.error3')}.") if self.admission_no=='0'
     
   end
 
@@ -114,8 +116,8 @@ class Student < ActiveRecord::Base
   end
 
   def gender_as_text
-    return 'Muž' if gender.downcase == 'm'
-    return 'Žena' if gender.downcase == 'f'
+    return 'Male' if gender.downcase == 'm'
+    return 'Female' if gender.downcase == 'f'
     nil
   end
 
@@ -167,14 +169,24 @@ class Student < ActiveRecord::Base
   end
 
   def check_fees_paid(date)
-    category = FinanceFeeCategory.find(date.fee_category_id)
-    particulars = category.fees(self)
+    particulars = date.fees_particulars(self)
     total_fees=0
     financefee = date.fee_transactions(self.id)
+    batch_discounts = BatchFeeCollectionDiscount.find_all_by_finance_fee_collection_id(date.id)
+    student_discounts = StudentFeeCollectionDiscount.find_all_by_finance_fee_collection_id_and_receiver_id(date.id,self.id)
+    category_discounts = StudentCategoryFeeCollectionDiscount.find_all_by_finance_fee_collection_id_and_receiver_id(date.id,self.student_category_id)
+    total_discount = 0
+    total_discount += batch_discounts.map{|s| s.discount}.sum unless batch_discounts.nil?
+    total_discount += student_discounts.map{|s| s.discount}.sum unless student_discounts.nil?
+    total_discount += category_discounts.map{|s| s.discount}.sum unless category_discounts.nil?
+    if total_discount > 100
+      total_discount = 100
+    end
     particulars.map { |s|  total_fees += s.amount.to_f}
+    total_fees -= total_fees*(total_discount/100)
     paid_fees_transactions = FinanceTransaction.find(:all,:select=>'amount,fine_amount',:conditions=>"FIND_IN_SET(id,\"#{financefee.transaction_id}\")") unless financefee.nil?
     paid_fees = 0
-    paid_fees_transactions.map { |m| paid_fees += m.amount.to_f - m.fine_amount.to_f } unless paid_fees_transactions.nil?
+    paid_fees_transactions.map { |m| paid_fees += (m.amount.to_f - m.fine_amount.to_f) } unless paid_fees_transactions.nil?
     amount_pending = total_fees.to_f - paid_fees.to_f
     if amount_pending == 0
       return true
@@ -188,6 +200,10 @@ class Student < ActiveRecord::Base
     #    else
     #      return false
     #    end
+  end
+
+  def check_fee_pay(date)
+    date.finance_fees.first(:conditions=>"student_id = #{self.id}").is_paid
   end
 
   def self.next_admission_no
@@ -221,8 +237,8 @@ class Student < ActiveRecord::Base
     archived_student.photo = self.photo
     if archived_student.save
       guardian = self.guardians
-      self.user.delete unless self.user.blank?
-      self.delete
+      self.user.destroy unless self.user.blank?
+      self.destroy
       guardian.each do |g|
         g.archive_guardian(archived_student.id)
       end
@@ -234,7 +250,7 @@ class Student < ActiveRecord::Base
         exam_score_attributes.delete "student_id"
         exam_score_attributes["student_id"]= archived_student.id
         ArchivedExamScore.create(exam_score_attributes)
-        s.delete
+        s.destroy
       end
       #
     end
@@ -247,12 +263,20 @@ class Student < ActiveRecord::Base
     flag = true unless self.graduated_batches.blank?
     flag = true unless self.attendances.blank?
     flag = true unless self.finance_fees.blank?
-    if flag
-      return true
-    else
-      return false
+    plugin_dependencies = FedenaPlugin.check_dependency(self,"permanant")
+    plugin_dependencies.each do |k,v|
+      if v.kind_of?(Array)
+        flag=true unless  v.blank?
+      else
+         v.each do |h,a|
+           flag=true unless  a.blank?
+         end
+      end
     end
+    return flag
   end
 
-
+  def former_dependency
+   plugin_dependencies = FedenaPlugin.check_dependency(self,"former")
+  end
 end

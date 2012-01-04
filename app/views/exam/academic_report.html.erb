@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/examination/show_exam.png" alt="Exam" />
-  <h1>Exams</h1>
-  <h3>Acadamic report</h3>
+  <%= image_tag("/images/examination/show_exam.png") %>
+  <h1><%= t('exams_text') %></h1>
+  <h3><%= t('academic_reports') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -33,11 +33,11 @@
 
   <table id="listing" wisth="100%">
     <tr class="tr-head">
-      <td>Subject</td>
+      <td><%= t('subject') %></td>
       <% @exam_groups.each do |exam_group| %>
         <td><%= exam_group.name %></td>
       <% end %>
-      <td>Total</td>
+      <td><%= t('total') %></td>
     </tr>
     <% @subjects.each do |subject| %>
       <tr class="tr-<%= cycle('odd','even') %>">
@@ -49,15 +49,15 @@
           <% if exam_group.exam_type == "MarksAndGrades" %>
             <td class="col-3"><% unless @exam.nil?  %>
                 <%  unless exam_score.nil? %>
-                  <%= exam_score.marks%> | <%= @exam.maximum_marks  %> | <%= exam_score.grading_level.name %>
+                  <%= exam_score.marks%>/<%= @exam.maximum_marks  %>[<%= exam_score.grading_level.name %>]
                 <% end %>
               <%  end %></td>
           <% elsif exam_group.exam_type == "Marks" %>
             <td class="col-3"> <% unless @exam.nil? %>
-               <% unless exam_score.nil? %>
-          <%= exam_score.marks %> | <%= @exam.maximum_marks  %>
-        <% end %>
-        <% end %></td>
+                <% unless exam_score.nil? %>
+                  <%= exam_score.marks %>/<%= @exam.maximum_marks  %>
+                <% end %>
+              <% end %></td>
           <% else %>
             <td class="col-3"><%= exam_score.grading_level.name unless exam_score.nil? %></td>
             <% @g = 0 %>
@@ -72,7 +72,7 @@
       </tr>
     <% end %>
     <tr class="tr-head">
-      <td>Total</td>
+      <td><%= t('total') %></td>
       <% @max_total = 0 %>
       <% @marks_total = 0 %>
 
@@ -93,7 +93,7 @@
     </tr>
   </table>
   <% if @mmg == @g %>
-    <h4> Total Marks = <%="%.2f" %@marks_total %> | Aggregate % = <%="%.2f" %((@marks_total*100)/(@max_total  == 0 ? 1 : @max_total)) %> </h4>
+    <h4> <%= t('total_marks') %> = <%="%.2f" %@marks_total %> | <%= t('aggregate') %> % = <%="%.2f" %((@marks_total*100)/(@max_total  == 0 ? 1 : @max_total)) %> </h4>
   <% end %>
 
   <div class="extender"></div>

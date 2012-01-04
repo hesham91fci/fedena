@@ -10,7 +10,7 @@ body {
 }
 #header_bg {
     height : 60px;
-    background : #10b046 url(../../images/application/app_layout_header_bg.jpg) repeat;
+    background : #b00 url(../../images/application/app_layout_header_bg.jpg) repeat;
 }
 #header {
     width : 980px; height : 60px;
@@ -38,7 +38,7 @@ body {
 }
 #main-menu a {
     background : #fff;
-    color : #10b046;
+    color : #b00;
     display : block;
     font-size : 0.8em;
     float : left;
@@ -81,7 +81,7 @@ p.flash-msg {
 
 #footer {
     height:33px;
-    background:#10b046 url(../../images/application/app_layout_footer_bg.jpg) repeat;
+    background:#b00 url(../../images/application/app_layout_footer_bg.jpg) repeat;
 }
 #footer #footer_links {
     height:33px;width:614px;
@@ -121,7 +121,7 @@ p.flash-msg {
 #content-header h3 {
     margin:0px;
     padding:0 0 0 100px;
-    color:#10b046;
+    color:#b00;
     font-size: 17px;
 }
 #app-back-button {
@@ -155,7 +155,7 @@ p.flash-msg {
 }
 #news_feed small {
     padding-top:0px;
-    color:#10b046;
+    color:#b00;
 }
 #news_feed_top_img {
     margin:0 auto;
@@ -236,7 +236,7 @@ body > #content_wrapper {
     font: normal 0.9em Arial;
     line-height: 18px;
     z-index: 100; /* zIndex should be greater than that of shadow's below */
-    background: #10b046 url(../../images/application/app_layout_header_bg.jpg) repeat;
+    background: #b00 url(../../images/application/app_layout_header_bg.jpg) repeat;
     width: 125px; /* default width for menu */
 }
 
@@ -348,12 +348,12 @@ body > #content_wrapper {
 /* Validation error messages */
 
 .fieldWithErrors input{
-    border : 1px solid #10b046;
+    border : 1px solid #b00;
     
 }
 .errorExplanation {
     background-color : #ffb1b1;
-    border : 1px solid #10b046;
+    border : 1px solid #b00;
     height : auto; width : 510px;
     margin : 20px 0 40px 50px;
     padding : 10px 0 20px 20px;
@@ -381,7 +381,7 @@ body > #content_wrapper {
     padding : 0;
 }
 #inner-tab-menu ul li {
-    background-color : #10b046;
+    background-color : #9d0e00;
     color : #fff;
     float : left;
     font-size : 0.9em;
@@ -402,5 +402,5 @@ body > #content_wrapper {
 }
 .label-field-pair input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }

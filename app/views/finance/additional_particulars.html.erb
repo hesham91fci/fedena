@@ -18,34 +18,34 @@
 #under the License. -%>
 
 <div id="content-header">
-    <img src="/images/show_finance.png" alt="" />
-  <h1>Fees</h1>
-  <h3>Additional Fees</h3>
+<%= image_tag("/images/show_finance.png") %>
+    <h1><%= t('fees_text') %></h1>
+    <h3><%= t('additional_fees') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
 </div>
 <div id="page-yield">
   <div id="particulars" >
-<div class="name">Category Name</div><div class="val"><span>:</span><%= @additional_category.name %></div>
- <div class="name">Description</div><div class="val"><span>:</span><%= @additional_category.description %></div>
+    <div class="name"><%= t('category_name') %></div><div class="val"><span>:</span><%= @additional_category.name %></div>
+    <div class="name"><%= t('description') %></div><div class="val"><span>:</span><%= @additional_category.description %></div>
 
   <% unless @additional_category.batch.nil? %>
-  <div class="name">Course</div><div class="val"><span>:</span><%= @additional_category.batch.full_name %></div>
+    <div class="name"><%= t('course_text') %></div><div class="val"><span>:</span><%= @additional_category.batch.full_name %></div>
     <% else %>
-  <div class="name">Course</div><div class="val"><span>:</span>NIL</div>
+  <div class="name"><%= t('course_text') %></div><div class="val"><span>:</span>NIL</div>
   <% end %>
 <br/>
 
 <% unless @particulars.empty? %>
   <table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
     <tr class="tr-head">
-      <td>Sl no.</td>
-      <td>Particulars</td>
-      <td>Student Category</td>
-      <td>Admission No</td>
-      <td>Amount (<%= currency %>)</td>
-      <td>Created Date</td>
+      <td><%= t('sl_no') %></td>
+      <td><%= t('particulars') %></td>
+      <td><%= t('student_category') %></td>
+      <td><%= t('admission_number') %></td>
+      <td><%= t('amount') %> (<%= currency %>)</td>
+      <td><%= t('created_date') %></td>
       <td></td>
     </tr>
     <tr class="tr-blank"></tr>
@@ -58,20 +58,20 @@
         <td class="col-3">
           <%unless fees.admission_no.nil?%>
             <%  student =  Student.find_by_admission_no(fees.admission_no)%>
-            <%= student.nil? ? "N.A." : student.full_name %>
+            <%= student.nil? ? "#{t('n_a')}" : student.full_name %>
           <% else %>
             -
           <% end %>
         </td>
         <td class="col-1" align="right"><%= fees.amount%></td>
-        <td class="col-3"><%= fees.created_at.strftime("%m-%d-%Y") %></td>
+        <td class="col-3"><%= I18n.l(fees.created_at,:format=>"%m-%d-%Y") %></td>
         <td class="col-1">
           <%  unless @additional_category.check_fee_collection_for_additional_fees == false %>
-            <span class="small"> <%= link_to_remote 'Delete', :confirm=>"Delete this particular ?",:url => { :action => 'add_particulars_delete',:id => fees.id} %></span>
+            <span class="small"> <%= link_to_remote "#{t('delete_text')}", :confirm=>"#{t('delete_this_particular')}",:url => { :action => 'add_particulars_delete',:id => fees.id} %></span>
           <% else %>
-            <span class="small-strike">delete</span>
+            <span class="small-strike"><%= t('delete_text') %></span>
           <% end %>
-          <span class="small"> <%= link_to_remote 'Edit', :url => { :action => 'add_particulars_edit',:id => fees.id} %></span>
+          <span class="small"> <%= link_to_remote "#{t('edit_text')}", :url => { :action => 'add_particulars_edit',:id => fees.id} %></span>
         </td>
       </tr>
     <% end %>
@@ -82,12 +82,12 @@
 <% else %>
   <table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
     <tr class="tr-head">
-      <td>No Categories to display!</td>
+      <td><%= t('no_categories_to_display') %>!</td>
     </tr>
   </table>
 
 <% end%>
-<%= link_to 'Back',{:action => 'additional_fees_list'},:class=>'user_button' %>
+<%= link_to "#{t('back')}",{:action => 'additional_fees_list'},:class=>'user_button' %>
  </div>
 </div>
  <div id="modal-box" style="display:none;"></div>

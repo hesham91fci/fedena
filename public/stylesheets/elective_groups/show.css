@@ -5,7 +5,7 @@
 
 .submit_button {
     margin-top:20px;
-    margin-left:180px;
+    margin-left:210px;
     padding: 7px 10px;
     color: #fff;
     background: #27292B;
@@ -34,9 +34,9 @@
     font-size:14px;
     font-weight:bold;
     margin:0 auto;
-    padding:8px 12px;
+    padding:7px 10px;
     text-align:center;
-    width:55px;
+    width:auto;
     margin-top:21px;
 }
 .user_button a{
@@ -85,7 +85,7 @@
     float : left;
 }
 #category-list li div.category-name {
-    width:285px;
+    width:191px;
     font-weight: bold;
     font-size:13px;
 }
@@ -104,7 +104,7 @@
 }
 #category-list li div.category-assign{
     font-size : 0.9em;
-    width : 110px;
+    width : 183px;
 }
 #category-list li div a {
     color : #000;
@@ -126,7 +126,7 @@
 }
 
 .add_sub a:hover{
-    color:#16a747;
+    color:#bb0000;
     text-decoration: none;
 }
 

@@ -16,7 +16,7 @@
 #user_edit_form h4 {
     margin:0;
     padding:0px 0 0 40px;
-    color:#10b046;
+    color:#b00;
 }
 #edit_user_form {
     width:600px;
@@ -54,7 +54,7 @@
     border:none;
     text-align:center;
     text-decoration: none;
-    width:100px;
+    width:auto;
     cursor:pointer;
 }
 .user_submit_button:hover{

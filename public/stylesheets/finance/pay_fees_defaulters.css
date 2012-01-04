@@ -80,7 +80,7 @@
     border:none;
     font-family: arial;
     cursor:pointer;
-    margin-top:4px;
+    margin-top:25px;
 }
 .submit_button:hover{
     background:  #373B3F;
@@ -109,7 +109,7 @@
 
 #fee-defaulters{
     float: right;
-    width:600px;
+    width:741px;
 }
 
 .label-field-pair {
@@ -153,7 +153,7 @@
 
 
 h5{
-    width:380px;
+    width:480px;
     float: left;
 }
 
@@ -161,14 +161,14 @@ h5{
 .name{
     color: #999999;
     float: left;
-    width: 160px;
+    width: 212px;
     font-weight: bold;
     font-size: 13px;
 }
 
 .val {
     width: 400px;
-    color: #16a747;
+    color: #bb0000;
     font-weight: bold;
     font-size: 13px;
 }
@@ -216,12 +216,12 @@ label-field-pair2 {
 }
 .label-field-pair2 input:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 }
 .pay_fees{
     text-align: right;
     margin-top:10px;
-    margin-right: 29px;
+    /* margin-right: 29px; */
 }
 
 td span{
@@ -261,4 +261,32 @@ table#listing td a:hover {
     color: #fff;
     text-decoration: none;
     background:  #373B3F;
+}
+
+.pay_fees_buttons{
+    clear: both;
+
+}
+
+.pay_fees_buttons a{
+    float: right !important;
+    margin: 25px 10px 0 !important;
+}
+.pay_fees_buttons input{
+    float: right;
+}
+
+.pay_fees .label-field-pair2{
+    float: right;
+    margin-top: 15px;
+}
+
+table#listing td.col-6 {
+    width: 15%;
+}
+
+table#listing td.col-2 {
+    padding: 5px 5px 5px 10px;
+    text-align: left;
+    width: 70%;
 }

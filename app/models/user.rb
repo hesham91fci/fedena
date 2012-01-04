@@ -19,14 +19,14 @@
 class User < ActiveRecord::Base
   attr_accessor :password, :role, :old_password, :new_password, :confirm_password
 
-  validates_uniqueness_of :username, :email
+  validates_uniqueness_of :username #, :email
   validates_length_of     :username, :within => 1..20
   validates_length_of     :password, :within => 4..40, :allow_nil => true
   validates_format_of     :username, :with => /^[A-Z0-9_-]*$/i,
-    :message => "must contain only letters, numbers, and underscores"
+    :message => "#{t('must_contain_only_letters')}"
   validates_format_of     :email, :with => /^[A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i,
-    :message => "must be a valid email address"
-  validates_presence_of   :role
+    :message => "#{t('must_be_a_valid_email_address')}"
+  validates_presence_of   :role , :on=>:create
   validates_presence_of   :email, :on=>:create
   validates_presence_of   :password, :on => :create
   
@@ -38,12 +38,12 @@ class User < ActiveRecord::Base
   def before_save
     self.salt = random_string(8) if self.salt == nil
     self.hashed_password = Digest::SHA1.hexdigest(self.salt + self.password) unless self.password.nil?
-
-    self.admin, self.student, self.employee = false, false, false
-
-    self.admin    = true if self.role == 'Admin'
-    self.student  = true if self.role == 'Student'
-    self.employee = true if self.role == 'Employee'
+    if self.new_record?
+      self.admin, self.student, self.employee = false, false, false
+      self.admin    = true if self.role == 'Admin'
+      self.student  = true if self.role == 'Student'
+      self.employee = true if self.role == 'Employee'
+    end
   end
 
   def full_name
@@ -84,16 +84,28 @@ class User < ActiveRecord::Base
   def role_symbols
     prv = []
     @privilge_symbols ||= privileges.map { |privilege| prv << privilege.name.underscore.to_sym }
-   
+
     if admin?
       return [:admin] + prv
     elsif student?
       return [:student] + prv
     elsif employee?
+      employee = employee_record
+      unless employee.nil?
+        if employee.subjects.present?
+          prv << :subject_attendance if Configuration.get_config_value('StudentAttendanceType') == 'SubjectWise'
+          prv << :subject_exam
+        end
+      end
       return [:employee] + prv
     else
       return prv
     end
+  end
+
+  def clear_menu_cache
+    Rails.cache.delete("user_main_menu#{self.id}")
+    Rails.cache.delete("user_autocomplete_menu#{self.id}")
   end
   
 end

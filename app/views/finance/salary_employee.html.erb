@@ -19,9 +19,9 @@
 
 
 <div id="content-header">
-  <img src="/images/show_finance.png" alt="Finance" />
-  <h1><%= @department.name %> Department Salary Report</h1>
-  <h3>Finance Tranasactions</h3>
+<%= image_tag("/images/show_finance.png") %>
+  <h1><%= @department.name %><%= t('department_salary_report') %></h1>
+  <h3><%= t('finance_transactions') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -31,15 +31,15 @@
   <% total=0 %>
   <table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
     <tr class="tr-head">
-      <td>Sl no.</td>
-      <td>Employee Name</td>
-      <td>Salary ( <%= currency %> )</td>
-      <td>Salary Date</td>
+      <td><%= t('sl_no') %></td>
+      <td><%= t('employee_name') %></td>
+      <td><%= t('salary') %>( <%= currency %> )</td>
+      <td><%= t('salary_date') %></td>
     </tr>
     <tr class="tr-blank"></tr>
     <% amount=0 %>
     <% monthly_payslips = @payslips[:monthly_payslips].group_by(&:salary_date) %>
-    <% individual_categories = @payslips[:individual_categories].group_by(&:employee_id) %>
+    <% individual_categories = @payslips[:individual_categories].group_by(&:employee_id) unless @payslips[:individual_categories].blank? %>
     <% i = 0 %>
     <% monthly_payslips.each do |(salary_date,payslip)| %>
       <% emp_payslip = payslip.group_by(&:employee_id) %>
@@ -50,7 +50,7 @@
         <% employee_id = payslip.first.active_or_archived_employee.class.to_s=="ArchivedEmployee" ?  payslip.first.active_or_archived_employee.former_id :  payslip.first.active_or_archived_employee.id %>
         <tr class="tr-<%= cycle("even","odd") %>">
           <td class ="col-1"><%=i+1%></td>
-          <td class="col-2"><%= link_to payslip.first.active_or_archived_employee.full_name + " - " , :action => 'employee_payslip_monthly_report',:id2 => salary_date.to_date,:id =>employee_id %> <%=salary_date.strftime("%B,%Y")%> </td>
+          <td class="col-2"><%= link_to payslip.first.active_or_archived_employee.full_name + " - " , :action => 'employee_payslip_monthly_report',:id2 => salary_date.to_date,:id =>employee_id %> <%= I18n.l(salary_date,:format=>"%B,%Y")%> </td>
           <%  amount = Employee.calculate_salary(payslip,individual_payslip_category)[:net_amount]%>
           <td class="col-3" align="right"> <%=  amount  %> </td>
           <td class="col-3"> <%=salary_date %> </td>
@@ -65,7 +65,7 @@
     <tr class="tr-blank"></tr>
     <tr class="tr-head">
       <td></td>
-      <td align="right">Total Salary</td>
+      <td align="right"><%= t('total_salary') %></td>
       <td align="right"><%=total  %></td>
       <td></td>
     </tr>

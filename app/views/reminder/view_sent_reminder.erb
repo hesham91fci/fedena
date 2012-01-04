@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/reminder/reminder_small.png" />
-  <h1>Messages</h1>
-  <h3>Sent</h3>
+  <%= image_tag("/images/reminder/reminder_small.png") %>
+  <h1><%= t('messages') %></h1>
+  <h3><%= t('sent') %></h3>
   <div id="app-back-button">
   <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -28,23 +28,23 @@
 <% unless @sent_reminder.is_deleted_by_sender == true %>
 <div id="inner-tab-menu">
   <ul>
-    <li><%= link_to "Delete", {:controller=>"reminder", :action=>"delete_reminder_by_sender", :id2=>@sent_reminder.id}, :confirm=>"Are you sure?" %></li>
+    <li><%= link_to "#{t('delete_text')}", {:controller=>"reminder", :action=>"delete_reminder_by_sender", :id2=>@sent_reminder.id}, :confirm=>"#{t('delete_confirm_msg')}" %></li>
   </ul>
 </div>
 <% end %>
 
 
 <div id="page-yield">
-<% recipient_user = User.find(@sent_reminder.recipient)  %>
+<% recipient_user = @sent_reminder.to_user  %>
 <div id="reminder-body">
-<div id="reminder-from">To: <%= recipient_user.full_name %></div>
+<div id="reminder-from"><%= t('to') %>: <%= recipient_user.nil? ? "#{t('user_unavailable')}" : recipient_user.full_name %></div>
 
-<div id="reminder-date">Sent on: <%= @sent_reminder.created_at.strftime("%A, %d %B, %Y") %></div>
+<div id="reminder-date"><%= t('sent_on') %>: <%= I18n.l(@sent_reminder.created_at,:format=>"%A, %d %B, %Y") %></div>
 
-<div id="reminder-subject">Subject: <%= @sent_reminder.subject %></div>
+<div id="reminder-subject"><%= t('subject') %>: <%= @sent_reminder.subject %></div>
 
 
 
-<div id="reminder-message"><strong>Message:</strong> <br /><br /><%= @sent_reminder.body %></div>
+<div id="reminder-message"><strong><%= t('message') %>:</strong> <br /><br /><%= @sent_reminder.body %></div>
 </div>
 </div>

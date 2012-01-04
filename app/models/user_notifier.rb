@@ -17,17 +17,17 @@
 #limitations under the License.
 
 class UserNotifier < ActionMailer::Base
-  def forgot_password(user)
+  def forgot_password(user,current_url)
     setup_email(user)
     @subject    += 'Reset Password'
-    @body[:url]  = "http://demo.projectfedena.org/user/reset_password/#{user.reset_password_code}"
+    @body[:url]  =  current_url+"/user/reset_password/#{user.reset_password_code}"
   end
 
   protected
     def setup_email(user)
       @recipients  = "#{user.email}"
       @from        = "admin@fedena.com"
-      @subject     = "[fedena.com] "
+      @subject     = " "
       @sent_on     = Time.now
       @body[:user] = user
     end

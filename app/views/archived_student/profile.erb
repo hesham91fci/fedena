@@ -18,28 +18,28 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/student_details/student_details_logo.jpg" />
-  <h1>Student info</h1>
-  <h3>Student profile</h3>
+  <%= image_tag("/images/student_details/student_details_logo.jpg") %>
+  <h1><%= t('student_info') %></h1>
+  <h3><%= t('student_profile') %></h3>
   <div id="app-back-button">
-   <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
+    <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
 </div>
 
 <div id="inner-tab-menu">
   <ul>
 
-    <li><%= link_to 'Reports', :controller => 'archived_student',
+    <li><%= link_to "#{t('reports_text')}", :controller => 'archived_student',
         :action => 'reports', :id => @archived_student %></li>
 
 
-    <li><%= link_to "Guardians", :controller => "archived_student",
+    <li><%= link_to "#{t('guardians_text')}", :controller => "archived_student",
         :action => "guardians", :id => @archived_student.id %></li>
 
 
-    <%#*<li><%= link_to "Delete", :controller => 'archived_student',%>
-        <%#*:action => 'delete', :id => @archived_student.id %><%#</li>%>
-    <li><%= link_to "Generate TC",
+<%#*<li><%= link_to "Delete", :controller => 'archived_student',%>
+<%#*:action => 'delete', :id => @archived_student.id %><%#</li>%>
+    <li><%= link_to "#{t('generate_tc')}",
         {:controller => "student", :action => "generate_tc_pdf", :id => @archived_student.admission_no},:target => '_blank' %></li>
 
   </ul>
@@ -53,7 +53,7 @@
 
     <div id="profile_picture_display">
       <% if @archived_student.photo.file? %>
-      <%= image_tag @archived_student.photo.url %>
+        <%= image_tag @archived_student.photo.url %>
       <% else %>
         <%= image_tag "master_student/profile/default_student.png" %>
       <% end %>
@@ -61,8 +61,8 @@
 
     <div id ="student_main_info">
       <h3> <%= @archived_student.full_name %>  </h3>
-      <h4> Course & Batch : <%= @archived_student.batch.course_name %> </h4>
-      <h4> Adm no. : <%= @archived_student.admission_no %> </h4>
+      <h4> <%= t('course_and_batch') %> : <%= @archived_student.batch.course_name %> </h4>
+      <h4> <%= t('adm_no') %>: <%= @archived_student.admission_no %> </h4>
     </div>
 
     <div class="extender"> </div>
@@ -70,74 +70,39 @@
   </div>
 
   <div id="new_profile_info_top">
-    <div class="profile_top_banner"><%= image_tag "master_student/profile/topbanner.png" %></div>
-    <div class="profile_info_label_top"> Admission Date </div>
-    <div class="profile_info_text_top">
-      <%= @archived_student.admission_date.strftime("%d %b, %Y") unless @archived_student.admission_date.nil? %>
-    </div>
-
-    <div class="profile_info_label_top2">Date of birth</div>
-    <div class="profile_info_text_top2"><%= @archived_student.date_of_birth.strftime("%d %b, %Y") unless @archived_student.date_of_birth.nil? %></div>
-
-    <div class="profile_info_label_top">Blood group</div>
-    <div class="profile_info_text_top"><%= @archived_student.blood_group %></div>
-
-    <div class="new_profile_info_area1">
-      <div class="profile_info_label_top2">Gender</div>
-      <div class="profile_info_text_top2"> <%= @archived_student.gender_as_text %> </div>
-
-      <div class="profile_info_label_top">Nationality</div>
-      <div class="profile_info_text_top"> <%= @archived_student.nationality.name unless @archived_student.nationality_id.nil? %> </div>
-    </div>
-
-    <div class="new_profile_info_area1">
-      <div class="profile_info_label_top2">Language</div>
-      <div class="profile_info_text_top2"> <%= @archived_student.language %> </div>
-
-
-      <div class="profile_info_label_top">Category</div>
-      <div class="profile_info_text_top"> <%= @archived_student.student_category.name unless @archived_student.student_category.nil? %> </div>
-    </div>
-
-    <div class="new_profile_info_area1">
-      <div class="profile_info_label_top2">Religion</div>
-      <div class="profile_info_text_top2"> <%= @archived_student.religion %> </div>
-
-      <div class="profile_info_label_top">Address</div>
-      <div class="profile_info_text_top"><%= @address %></div>
-
-    </div>
-
-    <div class="new_profile_info_area1">
-      <div class="profile_info_label_top2">City</div>
-      <div class="profile_info_text_top2"> <%= @archived_student.city %> </div>
-
-      <div class="profile_info_label_top">State</div>
-      <div class="profile_info_text_top"> <%= @archived_student.state %> </div>
-    </div>
-
-    <div class="new_profile_info_area1">
-      <div class="profile_info_label_top2">Country</div>
-      <div class="profile_info_text_top2"> <%= @archived_student.country.name unless @archived_student.country_id.nil? %> </div>
-
-      <div class="profile_info_label_top">Phone 1</div>
-      <div class="profile_info_text_top"> <%= @archived_student.phone1 %> </div>
-    </div>
-
-    <div class="new_profile_info_area1">
-      <div class="profile_info_label_top2">Phone 2</div>
-      <div class="profile_info_text_top2"> <%= @archived_student.phone2 %> </div>
-
-      <div class="profile_info_label_top">Email  </div>
-      <div class="profile_info_text_top"><%= @archived_student.email %></div>
-    </div>
-
-    <div class="new_profile_info_area1">
-      <div class="profile_info_label_top2">Reason for leaving</div>
-      <div class="profile_info_text_top2"> <%= @archived_student.status_description %> </div>
-    </div>
+    <div class="profile_top_banner">
+      <span class="profile"><%= t('details') %></span>
+      <%= rtl? ? image_tag("master_student/profile/topbanner_rtl.png") : image_tag("master_student/profile/topbanner.png") %></div>
+    <table width="700">
+      <tr class="odd left"><td><%= t('admission_date') %></td><td class="right"><%= I18n.l(@archived_student.admission_date,:format=>"%d %b, %Y") unless @archived_student.admission_date.nil? %></td></tr>
+      <tr class="even left"><td><%= t('date_of_birth') %></td><td class="right"><%= I18n.l(@archived_student.date_of_birth,:format=>"%d %b, %Y") unless @archived_student.date_of_birth.nil? %></td></tr>
+      <tr class="odd left"><td><%= t('blood_group') %></td><td class="right"><%= @archived_student.blood_group %></td></tr>
+      <tr class="even left"><td><%= t('gender') %></td><td class="right"><%= t("#{@archived_student.gender_as_text.downcase}") %></td></tr>
+      <tr class="odd left"><td><%= t('nationality') %></td><td class="right"><%= @archived_student.nationality.name unless @archived_student.nationality_id.nil? %></td></tr>
+      <tr class="even left"><td><%= t('language') %></td><td class="right"><%= @archived_student.language %></td></tr>
+      <tr class="odd left"><td><%= t('category') %></td><td class="right"><%= @archived_student.student_category.name unless @archived_student.student_category.nil? %></td></tr>
+      <tr class="even left"><td><%= t('religion') %></td><td class="right"><%= @archived_student.religion %></td></tr>
+      <tr class="odd left"><td><%= t('address') %></td><td class="right"><%= @archived_student.address_line1%>, <%=  @archived_student.address_line2 %></td></tr>
+      <tr class="even left"><td><%= t('city') %></td><td class="right"><%= @archived_student.city %></td></tr>
+      <tr class="odd left"><td><%= t('state') %></td><td class="right"><%= @archived_student.state %></td></tr>
+      <tr class="even left"><td><%= t('country') %></td><td class="right"><%= @archived_student.country.name unless @archived_student.country_id.nil? %></td></tr>
+      <tr class="odd left"><td><%= t('phone') %></td><td class="right"><%= @archived_student.phone1 %></td></tr>
+      <tr class="even left"><td><%= t('mobile') %></td><td class="right"><%= @archived_student.phone2 %></td></tr>
+      <tr class="odd left"><td><%= t('email') %></td><td class="right"><%= @archived_student.email %></td></tr>
+      <% unless  @additional_fields.empty? %>
+        <% @additional_fields.each do |field| %>
+          <% p =cycle('2',' ') %>
+          <tr class="odd left">
+            <td><%= field.name %></td>
+            <td class="right">
+              <% detail = @archived_student.additional_detail(field.id) %>
+              <%= detail.additional_info unless detail.nil? %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+      <tr class="even left"><td><%= t('reason_for_leaving') %></td><td class="right"><%= @archived_student.status_description %></td></tr>
+    </table>
     <div class="extender"></div>
   </div>
-
-
 </div>

@@ -21,11 +21,11 @@
     margin:0px auto;
     float:left;
     margin-top:10px;
-    margin-left: 160px;
-    padding:7px 12px;
+    margin-left: 210px;
+    padding:7px 10px;
     border:none;
     text-align:center;
-    width:90px;
+    width:auto;
     cursor:pointer;
 }
 

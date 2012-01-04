@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/show_finance.png" alt="" />
-  <h1>Fees</h1>
-  <h3>Collection Details</h3>
+<%= image_tag("/images/show_finance.png") %>
+  <h1><%= t('fees_text') %></h1>
+  <h3><%= t('collection_details') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -28,13 +28,54 @@
 <div id="page-yield">
 
   <div class="info">
-    <div class="name">Fee Collection Name</div><div class="val"><span>:</span><%= @fee_collection.name %></div>
-    <div class="name">Fee Category Name</div><div class="val"><span>:</span><%= @fee_collection.fee_category.name %></div>
-    <div class="name">Start date</div><div class="val"><span>:</span><%= @fee_collection.start_date %></div>
-    <div class="name">End date</div><div class="val"><span>:</span><%= @fee_collection.end_date %></div>
-    <div class="name">Due date</div><div class="val"><span>:</span><%= @fee_collection.due_date %></div>
+    <div class="name"><%= t('fee_collection_name') %></div><div class="val"><span>:</span><%= @fee_collection.name %></div>
+    <div class="name"><%= t('fee_category_name') %></div><div class="val"><span>:</span><%= @fee_collection.fee_category.name %></div>
+    <div class="name"><%= t('start_date') %></div><div class="val"><span>:</span><%= @fee_collection.start_date %></div>
+    <div class="name"><%= t('end_date') %></div><div class="val"><span>:</span><%= @fee_collection.end_date %></div>
+    <div class="name"><%= t('due_date') %></div><div class="val"><span>:</span><%= @fee_collection.due_date %></div>
     <div class="extender"></div>
   </div>
+
+
+  <% unless @particulars.empty? %>
+
+    <div class="particulars">
+      <table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
+        <tr class="tr-head">
+          <td><%= t('sl_no') %></td>
+          <td><%= t('particulars') %></td>
+          <td><%= t('student_category') %></td>
+          <td><%= t('student_name') %></td>
+          <td><%= t('amount') %>( <%=currency  %> )</td>
+          <td><%= t('created_date') %></td>
+        </tr>
+        <tr class="tr-blank"></tr>
+
+        <% @particulars.each_with_index do |fees,i| %>
+          <tr class="tr-<%= cycle("odd","even") %>">
+            <td class="col-5"><%= i+1 %></td>
+            <td class="col-4"><%= fees.name %></td>
+            <td class="col-3">
+              <%unless fees.student_category_id.nil?%>
+                <%= StudentCategory.find(fees.student_category_id).name%>
+              <% else %> - <% end %>
+            </td>
+            <td class="col-3">
+              <%unless fees.admission_no.nil?%>
+                <%  student =  Student.find_by_admission_no(fees.admission_no)%>
+                <%= student.nil? ? "#{t('n_a')}" : "#{student.first_name} (#{student.admission_no})" %>
+              <% else %> - <% end %>
+            </td>
+            <td class="col-3"><%= fees.amount%></td>
+            <td class="col-3"><%= fees.created_at.strftime("%m-%d-%Y") %></td>
+
+          </tr>
+        <% end %>
+
+
+      </table>
+    </div>
+  <% end %>
 
 
   <% unless @discounts.blank? %>
@@ -43,10 +84,10 @@
 
       <table id="listing">
         <tr class="tr-head">
-          <td>Name</td>
-          <td>Student Category</td>
-          <td>Student Name</td>
-          <td>Discount (%)</td>
+          <td><%= t('name') %></td>
+          <td><%= t('student_category') %></td>
+          <td><%= t('student_name') %></td>
+          <td><%= t('discount') %>(%)</td>
         </tr>
 
         <% @discounts.each do |f| %>
@@ -68,47 +109,6 @@
         <% end %>
       </table>
     </div>
-  <% end %>
-
-
-  <% unless @particulars.empty? %>
-
-  <div class="particulars">
-    <table id="listing" align="center" width="100%" cellpadding="1" cellspacing="1">
-      <tr class="tr-head">
-        <td>Sl no.</td>
-        <td>Particulars</td>
-        <td>Student Category</td>
-        <td>Admission No</td>
-        <td>Amount ( <%=currency  %> )</td>
-        <td>Created Date</td>
-      </tr>
-      <tr class="tr-blank"></tr>
-
-      <% @particulars.each_with_index do |fees,i| %>
-        <tr class="tr-<%= cycle("odd","even") %>">
-          <td class="col-1"><%= i+1 %></td>
-          <td class="col-4"><%= fees.name %></td>
-          <td class="col-3">
-            <%unless fees.student_category_id.nil?%>
-              <%= StudentCategory.find(fees.student_category_id).name%>
-            <% else %> - <% end %>
-          </td>
-          <td class="col-3">
-            <%unless fees.admission_no.nil?%>
-              <%  student =  Student.find_by_admission_no(fees.admission_no)%>
-              <%= student.nil? ? "N.A." : student.full_name %>
-            <% else %> - <% end %>
-          </td>
-          <td class="col-3"><%= fees.amount%></td>
-          <td class="col-3"><%= fees.created_at.strftime("%m-%d-%Y") %></td>
-
-        </tr>
-      <% end %>
-
-
-    </table>
-  </div>
   <% end %>
 
 </div>

@@ -10,7 +10,7 @@
 .timetable_td {
     float:left;
     width:80px;height:50px;
-    border:1px dotted #10b046;
+    border:1px dotted #b00;
     background-color:#f5e9c8;
     font-size:small;
 }
@@ -59,7 +59,7 @@
     cursor : move;
     margin : 0 0 10px 10px;
     float : left;
-    border : 1px solid #10b046;
+    border : 1px solid #b00;
     width:78px; height:38px;
     font-size : small;
     padding-top : 10px;
@@ -75,7 +75,7 @@
     padding : 10px;
 }
 #errors a {
-    color : #10b046;
+    color : #b00;
     display : inline;
 }
 #loader {
@@ -97,7 +97,7 @@
     font-family:arial;
     font-size:14px;
     font-weight:bold;
-    margin-left:55px;
+    margin-left:5px;
     padding:7px 10px;
 }
 .generate{
@@ -198,7 +198,7 @@ h4{
 
 .subject span{
     display:none;
-    color: #16a747;
+    color: #bb0000;
     margin-left: 50px;
     min-width: 100px;
 }

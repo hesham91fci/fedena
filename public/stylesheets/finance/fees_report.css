@@ -82,5 +82,8 @@
 .fees-table-description a:hover{
     width: 254px;
     text-decoration: none;
-    color: #16a747;
+    color: #BB0000;
+}
+#fees_report_title{
+    margin-left:200px;
 }

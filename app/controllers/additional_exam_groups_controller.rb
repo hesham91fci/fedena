@@ -17,9 +17,11 @@
 #limitations under the License.
 
 class AdditionalExamGroupsController < ApplicationController
+  before_filter :login_required
   before_filter :initial_queries
   filter_access_to :all
   in_place_edit_for :additional_exam_group, :name
+  
 
 
   in_place_edit_for :additional_exam, :maximum_marks
@@ -54,7 +56,7 @@ class AdditionalExamGroupsController < ApplicationController
     @additional_exam_group.batch_id = @batch.id
     if @additional_exam_group.save
 
-      flash[:notice] = "Skupina Dalšího Hodnocení byla úspěšně uložena."
+      flash[:notice] = "#{t('flash1')}"
       redirect_to batch_additional_exam_groups_path(@batch)
     else
       render 'new'
@@ -64,7 +66,7 @@ class AdditionalExamGroupsController < ApplicationController
   def update
     @additional_exam_group = AdditionalExamGroup.find params[:id]
     if @additional_exam_group.update_attributes(params[:additional_exam_group])
-      flash[:notice] = 'Skupina Dalšího Hodnocení byla úspěšně aktualizována.'
+      flash[:notice] = "#{t('flash_msg1')}"
       redirect_to [@batch, @additional_exam_group]
     else
       render 'edit'

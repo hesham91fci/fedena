@@ -17,7 +17,7 @@
 #specific language governing permissions and limitations
 #under the License. -%>
 
-<label class="head_label">Docházka pro <span><%= @employee.first_name %></span></label>
+<label class="head_label"><%= t('attendance_for') %> <span><%= @employee.first_name %></span></label>
 <div id="ajax-edit">
 
    <div id="form-errors"></div>
@@ -27,18 +27,18 @@
     <%= f.hidden_field :attendance_date, :value => @date %>
   <br/>
     <div class="label-field-pair">
-      <label for="leave_type"> Druh dovolené</label>
-      <div class="text-input-bg"><%= select :employee_attendance,:employee_leave_type_id, @leave_types.map {|c| [c.name, c.id]},:prompt => "Vybrat druh dovolené" %></div>
+      <label for="leave_type"><%= t('leave_type') %></label>
+      <div class="text-input-bg"><%= select :employee_attendance,:employee_leave_type_id, @leave_types.map {|c| [c.name, c.id]},:prompt => "#{t('select_a_leave_type')}" %></div>
     </div>
     <div class="label-field-pair">
-      <label for="leave_type"> Důvod absence</label>
+      <label for="leave_type"> <%= t('reason_for_absence') %></label>
       <div class="text-input-bg"><%= f.text_field :reason %></div>
     </div>
     <div class="label-checkbox-pair">
-      <label><%= f.check_box :is_half_day, :checked => false %>je polovina dne?</label>
+      <label><%= f.check_box :is_half_day, :checked => false %><%= t('half_day') %></label>
     </div>
     <div class="extender"></div>
-    <%= f.submit 'Potvrdit', :class => 'submit-button', :confirm => 'Jste si jistí?' %>
+    <%= f.submit "#{t('submit')}", :class => 'submit-button', :confirm => "#{t('delete_confirm_msg')}" %>
   <% end %>
   <div id="form-errors"></div>
 </div>

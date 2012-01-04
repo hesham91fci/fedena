@@ -18,9 +18,9 @@
 #under the License. -%>
 
 <div id="content-header">
-  <img src="/images/attendence/attendence.png" />
-  <h1>Report docházky</h1>
-  <h3>Filtrovaný Report</h3>
+  <%= image_tag("/images/attendence/attendence.png") %>
+  <h1><%= t('attendance_report') %></h1>
+  <h3><%= t('filtered_report') %></h3>
   <div id="app-back-button">
     <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
   </div>
@@ -29,20 +29,20 @@
   <% working_days = @report.size %>
   <div class="label-field-pair">
     <label>
-      <%= "Celkový počet tréninků : " + working_days.to_s %><br/>
-      Filtr: <%=  @range %> <%= @value %>
+      <%= "#{t('total_no_of_wrkng_days')} : " + working_days.to_s %><br/>
+      <%= t('filtered') %>: <%=  @range %> <%= @value %>
     </label>
   </div>
   <table id="listing" align="center" width="80%">
     <tr class="tr-head">
       <td>
-        Jméno
+        <%= t('name') %>
       </td>
       <td>
-        Celkem
+        <%= t('total') %>
       </td>
       <td>
-        Procento(%)
+        <%= t('percentage') %>(%)
       </td>
     </tr>
     <tr class="blank"></tr>
@@ -62,7 +62,7 @@
       <% end %>
       <% total = (working_days - leaves).to_f %>
       <% percentage =  ((total/working_days)*100) unless working_days == 0 %>
-      <% if @range == 'Nižší' %>
+      <% if @range == 'Below' %>
         <% if percentage.round(2) < @value.to_f %>
           <tr class="tr-<%= cycle('odd', 'even') %>">
             <td class="col-2"><%= link_to student.full_name, {:controller => "attendance_reports", :action => "student_details", :id => student.id } %></td>
@@ -70,7 +70,7 @@
             <td class="col-3"><%= percentage.round(2) %></td>
           </tr>
         <% end %>
-      <% elsif @range == 'Vyšší' %>
+      <% elsif @range == 'Above' %>
         <% if percentage.round(2) > @value.to_f %>
           <tr class="tr-<%= cycle('odd', 'even') %>">
             <td class="col-2"><%= link_to student.full_name, {:controller => "attendance_reports", :action => "student_details", :id => student.id } %></td>
@@ -78,7 +78,7 @@
             <td class="col-3"><%= percentage.round(2) %></td>
           </tr>
         <% end %>
-      <% elsif @range == 'ROvno' %>
+      <% elsif @range == 'Equals' %>
         <% if percentage.round(2) == @value.to_f %>
           <tr class="tr-<%= cycle('odd', 'even') %>">
             <td class="col-2"><%= link_to student.full_name, {:controller => "attendance_reports", :action => "student_details", :id => student.id } %></td>
@@ -110,7 +110,7 @@
     <% end %>
     <%= f.hidden_field :range, :value=>params[:filter][:range] %>
     <%= f.hidden_field :value, :value=>params[:filter][:value] %>
-    <%= submit_tag '► PDF Report',:class=>'submit_button'  %>
+    <%= submit_tag "► #{t('pdf_report')}",:class=>'submit_button'  %>
   <% end %>
 
   <div class="extender"></div>

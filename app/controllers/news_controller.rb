@@ -28,7 +28,7 @@ class NewsController < ApplicationController
       if sms_setting.application_sms_active
         students = Student.find(:all,:select=>'phone2',:conditions=>'is_sms_enabled = true')
       end
-      flash[:notice] = '|Novinka přidána!'
+      flash[:notice] = "#{t('flash1')}"
       redirect_to :controller => 'news', :action => 'view', :id => @news.id
     end
   end
@@ -45,7 +45,7 @@ class NewsController < ApplicationController
 
   def delete
     @news = News.find(params[:id]).destroy
-    flash[:notice] = 'Novinka úspěšně vymazána!'
+    flash[:notice] = "#{t('flash2')}"
     redirect_to :controller => 'news', :action => 'index'
   end
 
@@ -57,7 +57,7 @@ class NewsController < ApplicationController
   def edit
     @news = News.find(params[:id])
     if request.post? and @news.update_attributes(params[:news])
-      flash[:notice] = 'Novinka aktualizována!'
+      flash[:notice] = "#{t('flash3')}"
       redirect_to :controller => 'news', :action => 'view', :id => @news.id
     end
   end

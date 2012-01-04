@@ -22,6 +22,7 @@
 
 #inner-tab-menu ul li {
     padding: 0 6px;
+    width: 219px;
 
 }
 
@@ -55,7 +56,7 @@ width:50px;
 
 table#listing .tr-odd .inplaceeditor-form .editor_field:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 
 }
 .in_place_editor_field{
@@ -75,7 +76,7 @@ width:200px;
 
 .update_msg input.editor_field:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 
 }
 
@@ -122,6 +123,6 @@ width:50px;
 }
 table#listing .tr-even .inplaceeditor-form .editor_field:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 
 }

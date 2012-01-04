@@ -29,7 +29,7 @@ class FinanceFeeCategory < ActiveRecord::Base
   @@per_page = 10
 
   validates_presence_of :name
-  validates_presence_of :batch_id,:message=>" not specified"
+  validates_presence_of :batch_id,:message=>"#{t('not_specified')}"
   validates_uniqueness_of :name, :scope=>[:batch_id, :is_deleted],:if=> 'is_deleted == false'
 
   def fees(student)
@@ -92,6 +92,10 @@ class FinanceFeeCategory < ActiveRecord::Base
       end
     end
     return total_fees
+  end
+
+  def self.common_active
+    self.find(:all , :conditions => ["finance_fee_categories.is_master = '#{1}' and finance_fee_categories.is_deleted = '#{false}'"], :joins=>"INNER JOIN batches on finance_fee_categories.batch_id = batches.id AND batches.is_active = 1 AND batches.is_deleted = 0 ",:group => :name)
   end
 
 

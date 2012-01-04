@@ -30,7 +30,10 @@ class StudentAttendanceController < ApplicationController
     @student = Student.find(params[:id])
     @batch = Batch.find(@student.batch_id)
     @subjects = Subject.find_all_by_batch_id(@batch.id,:conditions=>'is_deleted = false')
-    
+    @electives = @subjects.map{|x|x unless x.elective_group_id.nil?}.compact
+    @electives.reject! { |z| z.students.include?(@student)  }
+    @subjects -= @electives
+
     if request.post?
       @detail_report = []
       if params[:advance_search][:mode]== 'Overall'
@@ -46,7 +49,7 @@ class StudentAttendanceController < ApplicationController
         else
           @report = PeriodEntry.find_all_by_batch_id(@batch.id,  :conditions =>{:month_date => @start_date..@end_date})
         end
-      else
+      elsif params[:advance_search][:mode]== 'Monthly'
         @month = params[:advance_search][:month]
         @year = params[:advance_search][:year]
         @start_date = "01-#{@month}-#{@year}".to_date
@@ -66,10 +69,16 @@ class StudentAttendanceController < ApplicationController
         else
           @report = PeriodEntry.find_all_by_batch_id(@batch.id,  :conditions =>{:month_date => @start_date..@end_date})
         end
+      else
+        render :update do |page|
+          page.replace_html 'error-container', :text => "<div id='errorExplanation' class='errorExplanation'><p>#{t('please_select_mode')}.</p></div>"
+        end
+        return
       end
       
       render :update do |page|
         page.replace_html 'report', :partial => 'report'
+        page.replace_html 'error-container', :text => ''
       end
     end
     
@@ -80,10 +89,12 @@ class StudentAttendanceController < ApplicationController
       @year = Date.today.year
       render :update do |page|
         page.replace_html 'month', :partial => 'month'
+        page.replace_html 'error-container', :text => ''
       end
     else
       render :update do |page|
         page.replace_html 'month', :text =>''
+        page.replace_html 'error-container', :text => ''
       end
     end
   end

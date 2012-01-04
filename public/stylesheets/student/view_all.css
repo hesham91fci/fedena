@@ -18,7 +18,7 @@
     text-decoration : none;
 }
 #student_name a:hover {
-    color : #10b046;
+    color : #9E0F15;
     text-decoration:underline;
 }
 
@@ -42,7 +42,7 @@
     font-weight:600;
     margin:0 0 10px;
     padding-top:10px;
-    width:120px;
+    width:200px;
 }
 #loader{
     padding-top:10px;
@@ -50,6 +50,8 @@
 
 
 table{
+    width:970px;
+    margin:0 auto;
     background: #c3d9ff;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
@@ -106,4 +108,8 @@ td.col-3{
 td.col-4{
     width:30%;
     padding: 5px;
+}
+#page-yield
+{
+    width:650px;
 }

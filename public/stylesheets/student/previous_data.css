@@ -9,7 +9,7 @@
 }
 
 #bank-details-label{
-    color:#16a747;
+    color:#BB0000;
     font-weight:bold;
     margin-bottom:20px;
     text-decoration:underline;
@@ -36,21 +36,37 @@
 }
 
 .save-proceed-button input{
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    background:#27292B none repeat scroll 0 0;
-    color:#FFFFFF;
-    font-family:arial;
-    font-size:14px;
-    font-weight:bold;
-    margin-left:170px;
-    margin-top:30px;
-    padding:7px 10px;
-    border:none;
-    cursor:pointer;
+    background: none repeat scroll 0 0 #27292B;
+    border: medium none;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 73px;
+    margin-top: 8px;
+    padding: 7px 10px;
+}
+.save-proceed-button1 input{
+    background: none repeat scroll 0 0 #27292B;
+    border: medium none;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: -10px;
+    margin-top: 8px;
+    padding: 7px 10px;
 }
 .sub-heading{
-    background:#10b046;
+    background:#9E0F15;
     height: 1px;
     border: none;
     margin: 0 10px 15px 10px;
@@ -66,20 +82,19 @@
     border: none;
 }
 .skip{
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    background:#27292B none repeat scroll 0 0;
-    color:#FFFFFF;
-    font-family:arial;
-    font-size:14px;
-    font-weight:bold;
-    margin-right:80px;
-    margin-top:30px;
-    padding:8px 10px;
-    border:none;
-    cursor:pointer;
+    background: none repeat scroll 0 0 #27292B;
+    border: medium none;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 8px 10px;
     text-decoration: none;
-    float:right;
 }
 .save-button{
     position:relative;
@@ -121,7 +136,7 @@ li div.prev_subject{
 
 }
 
-li{
+.ajax-subject li{
     width: 300px;
 }
 
@@ -135,7 +150,7 @@ li{
 }
 
 .val {
-    color: #16a747;
+    color: #bb0000;
     font-weight: bold;
     font-size: 13px;
     float: left;

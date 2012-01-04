@@ -23,7 +23,7 @@ width:400px;
     list-style-type : none;
     padding : 0.5em 0 0 10px;
     
-    width:345px;
+    width:400px;
 }
 .containereven a{
     color:black;
@@ -37,7 +37,7 @@ width:400px;
     list-style-type : none;
     padding : 0.5em 0 0 10px;
     
-    width:345px;
+    width:400px;
 }
 .containerodd a{
     color:black;
@@ -46,7 +46,7 @@ width:400px;
 .title{
     /*border-bottom:1px solid #bccffb;*/
     float:left;
-    width:270px;
+    width:246px;
     /*background-color:#e4ebfe;*/
     /*padding:10px 0 10px 0;*/
     font-weight:bold;
@@ -76,7 +76,7 @@ width:400px;
 }
 .submit_button {
     margin-top:15px;
-    margin-left:180px;
+    margin-left:210px;
     padding: 7px 10px;
     color: #fff;
     background: #27292B;
@@ -90,6 +90,10 @@ width:400px;
 }
 .submit_button:hover{
     background:  #373B3F;
+}
+.options{
+    width:auto;
+    float:right;
 }
 
 

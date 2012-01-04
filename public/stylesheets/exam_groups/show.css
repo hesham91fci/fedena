@@ -58,7 +58,7 @@ table#listing .tr-odd .inplaceeditor-form .editor_field {
 
 table#listing .tr-odd .inplaceeditor-form .editor_field:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 
 }
 .in_place_editor_field{
@@ -78,7 +78,7 @@ table#listing .tr-odd .inplaceeditor-form .editor_field:focus{
 
 .update_msg input.editor_field:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 
 }
 
@@ -125,6 +125,13 @@ table#listing .tr-even .inplaceeditor-form .editor_field {
 }
 table#listing .tr-even .inplaceeditor-form .editor_field:focus{
     background: #fff;
-    border: 1px solid #10b046;
+    border: 1px solid #9e0f15;
 
+}
+#inner-tab-menu ul li {
+    width: 206px;
+}
+.flash_color
+{
+    background-color: #FFF1AB;
 }

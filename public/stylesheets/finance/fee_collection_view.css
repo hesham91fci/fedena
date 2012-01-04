@@ -136,7 +136,7 @@
 
 .submit_button {
     margin-top:15px;
-    margin-left:180px;
+    margin-left:210px;
     padding: 7px 10px;
     color: #fff;
     background: #27292B;
@@ -150,4 +150,14 @@
 }
 .submit_button:hover{
     background:  #373B3F;
+}
+
+.text-input-bg span{
+    display: block;
+    padding: 9px 0 0 10px;
+}
+
+table#listing {
+    padding: 20px;
+    width: 100%;
 }

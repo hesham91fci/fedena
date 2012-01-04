@@ -49,7 +49,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new params[:course]
     if @course.save
-      flash[:notice] = 'Skupina úspěšně vytvořena.'
+      flash[:notice] = "#{t('flash1')}"
       redirect_to :action=>'manage_course'
     else
       render 'new'
@@ -61,7 +61,7 @@ class CoursesController < ApplicationController
 
   def update
     if @course.update_attributes(params[:course])
-      flash[:notice] = 'Podrobnosti skupiny úspěšně aktualizovány.'
+      flash[:notice] = "#{t('flash2')}"
       redirect_to :action=>'manage_course'
     else
       render 'edit'
@@ -71,10 +71,10 @@ class CoursesController < ApplicationController
   def destroy
     if @course.batches.active.empty?
       @course.inactivate
-       flash[:notice]="Skupina úspěšně vymazána."
+       flash[:notice]="#{t('flash3')}"
       redirect_to :action=>'manage_course'
     else
-      flash[:warn_notice]="<p>Není možno Vymazat. Prosím odstraňte existující třídy a studenty.</p>"
+      flash[:warn_notice]="<p>#{t('courses.flash4')}</p>"
       redirect_to :action=>'manage_course'
     end
   
@@ -105,7 +105,7 @@ class CoursesController < ApplicationController
   #      unless recipient_list.empty?
   #        recipients = recipient_list.join(', ')
   #        FedenaMailer::deliver_email(recipients, params[:email][:subject], params[:email][:message])
-  #        flash[:notice] = "Email odeslán #{recipients}"
+  #        flash[:notice] = "Mail sent to #{recipients}"
   #        redirect_to :controller => 'user', :action => 'dashboard'
   #      end
   #    end
@@ -116,7 +116,7 @@ class CoursesController < ApplicationController
   #    if request.post?
   #      sms = SmsManager.new params[:message], ['9656001824']
   #      sms.send_sms
-  #      flash[:notice] = 'Textové zprávy úspěšně odeslány!'
+  #      flash[:notice] = 'Text messages sent successfully!'
   #    end
   #  end
 

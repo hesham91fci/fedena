@@ -23,15 +23,49 @@ class Subject < ActiveRecord::Base
   has_many :timetable_entries,:foreign_key=>'subject_id'
   has_many :employees_subjects
   has_many :employees ,:through => :employees_subjects
+  has_many :students_subjects
+  has_many :students, :through => :students_subjects
   validates_presence_of :name, :max_weekly_classes, :code,:batch_id
   validates_numericality_of :max_weekly_classes
-  validates_uniqueness_of :code, :scope=>:batch_id
-
+  validates_uniqueness_of :code, :case_sensitive => false, :scope=>[:batch_id,:is_deleted] ,:if=> 'is_deleted == false'
   named_scope :for_batch, lambda { |b| { :conditions => { :batch_id => b.to_i, :is_deleted => false } } }
   named_scope :without_exams, :conditions => { :no_exams => false, :is_deleted => false }
 
   def inactivate
     update_attribute(:is_deleted, true)
+    self.employees_subjects.destroy_all
+  end
+
+  def lower_day_grade
+    subjects = Subject.find_all_by_elective_group_id(self.elective_group_id) unless self.elective_group_id.nil?
+    selected_employee = nil
+    subjects.each do |subject|
+      employees = subject.employees
+      employees.each do |employee|
+        if selected_employee.nil?
+          selected_employee = employee
+        else
+          selected_employee = employee if employee.max_hours_per_day.to_i < selected_employee.max_hours_per_day.to_i
+        end
+      end
+    end
+    return selected_employee
+  end
+
+  def lower_week_grade
+    subjects = Subject.find_all_by_elective_group_id(self.elective_group_id) unless self.elective_group_id.nil?
+    selected_employee = nil
+    subjects.each do |subject|
+      employees = subject.employees
+      employees.each do |employee|
+        if selected_employee.nil?
+          selected_employee = employee
+        else
+          selected_employee = employee if employee.max_hours_per_week.to_i  < selected_employee.max_hours_per_week.to_i
+        end
+      end
+    end
+    return selected_employee
   end
 
 end

@@ -18,7 +18,7 @@
 #reminder-subject{
     margin:0 0 20px 0;
     font-weight:bold;
-    color:#10b046;
+    color:#9e0f15;
     font-size:16px;
 }
 
@@ -32,4 +32,7 @@
 }
 #page-yield{
     margin: 0;
+}
+#inner-tab-menu ul li {
+    width: 173px;
 }
