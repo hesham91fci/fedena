@@ -2844,7 +2844,7 @@ Cache hit: user_main_menu1 ({})
 Cache hit: user_autocomplete_menu1 ({})
 Rendered layouts/_autosuggest_menu (0.0ms)
 Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:12 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:09 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -2903,7 +2903,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:31 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:12 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -2962,7 +2962,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:37 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:13 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -3021,7 +3021,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:37 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:25 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -3080,7 +3080,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:39 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:26 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -3139,7 +3139,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:40 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:26 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -3198,7 +3198,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:40 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:26 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -3257,7 +3257,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:41 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:08:27 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -3316,774 +3316,7 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
     c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
     c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:41 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:41 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:42 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:44 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:44 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:45 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:16:49 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:17:03 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:18:36 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:18:37 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:18:39 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:18:39 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:18:40 +0100 2012
-  Status: 500 Internal Server Error
-  Access denied for user 'root'@'localhost' (using password: YES)
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    c:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
-    c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:27:in `dispatch'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
-    c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19:in `load'
-    c:/Ruby/lib/ruby/gems/1.8/bin/mongrel_rails:19
-/!\ FAILSAFE /!\  Wed Jan 04 20:18:42 +0100 2012
+/!\ FAILSAFE /!\  Fri Jan 06 22:09:09 +0100 2012
   Status: 500 Internal Server Error
   Access denied for user 'root'@'localhost' (using password: YES)
     c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
@@ -4145,798 +3378,119 @@ Completed in 422ms (View: 266, DB: 0) | 200 OK [http://localhost/finance]
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing UserController#login (for 127.0.0.1 at 2012-01-04 20:20:45) [GET]
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:10:10) [GET]
   Parameters: {"action"=>"login", "controller"=>"user"}
-  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (7.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mConfiguration Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (8.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-Redirected to http://localhost:3000/user/dashboard
-Filter chain halted as [:check_if_loggedin] rendered_or_redirected.
-Completed in 453ms (DB: 26) | 302 Found [http://localhost/]
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#dashboard (for 127.0.0.1 at 2012-01-04 20:20:45) [GET]
-  Parameters: {"action"=>"dashboard", "controller"=>"user"}
-  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (7.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mConfiguration Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (7.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (1.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;35;1mConfiguration Load (1.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;36;1mEmployee Load (1.0ms)[0m   [0;1mSELECT * FROM `employees` WHERE (`employees`.user_id = 1) LIMIT 1[0m
-  [4;35;1mNews Load (0.0ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at DESC LIMIT 5[0m
-Rendering template within layouts/dashboard
-Rendering user/dashboard
-  [4;36;1mReminder Load (0.0ms)[0m   [0;1mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (22.0ms)
-Cache miss: user_main_menu1 ({})
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mprivileges_users Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `privileges_users`[0m
-  [4;35;1mPrivilege Load (10.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-Rendered layouts/_main_menu (370.0ms)
-Cache write (will save 380.00ms): user_main_menu1
-Cache miss: user_autocomplete_menu1 ({})
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-Cache write (will save 587.51ms): user_autocomplete_menu1
-Rendered layouts/_autosuggest_menu (612.5ms)
-  [4;36;1mNews Columns (7.5ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
-Completed in 1975ms (View: 1610, DB: 57) | 200 OK [http://localhost/user/dashboard]
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#dashboard (for 127.0.0.1 at 2012-01-04 20:20:51) [GET]
-  Parameters: {"action"=>"dashboard", "controller"=>"user"}
-  [4;36;1mUser Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (7.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mConfiguration Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
-  [4;36;1mConfiguration Load (10.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;35;1mConfiguration Load (2.5ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM `employees` WHERE (`employees`.user_id = 1) LIMIT 1[0m
-  [4;36;1mNews Load (0.0ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at DESC LIMIT 5[0m
-Rendering template within layouts/dashboard
-Rendering user/dashboard
-  [4;35;1mReminder Load (2.5ms)[0m   [0mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (87.5ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (5.0ms)
-  [4;36;1mNews Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
-Completed in 623ms (View: 150, DB: 43) | 200 OK [http://localhost/user/dashboard]
-  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#logout (for 127.0.0.1 at 2012-01-04 20:20:59) [GET]
-  Parameters: {"action"=>"logout", "controller"=>"user"}
-  [4;36;1mUser Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mConfiguration Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
-  [4;36;1mConfiguration Load (10.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-Cache delete: user_main_menu1
-Cache delete: user_autocomplete_menu1
-Redirected to http://localhost:3000/
-Completed in 440ms (DB: 41) | 302 Found [http://localhost/user/logout]
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#login (for 127.0.0.1 at 2012-01-04 20:20:59) [GET]
-  Parameters: {"action"=>"login", "controller"=>"user"}
-  [4;36;1mConfiguration Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
-Rendering template within layouts/login
-Rendering user/login
-Completed in 270ms (View: 50, DB: 0) | 200 OK [http://localhost/]
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#login (for 127.0.0.1 at 2012-01-04 20:21:01) [GET]
-  Parameters: {"action"=>"login", "controller"=>"user"}
-  [4;36;1mConfiguration Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (10.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
-Rendering template within layouts/login
-Rendering user/login
-Completed in 313ms (View: 23, DB: 15) | 200 OK [http://localhost/]
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#login (for 127.0.0.1 at 2012-01-04 20:24:07) [POST]
-  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"yPzBcaSndhSGHMlMPNj2sFNBbLf6quEvjJVNZibpEWM=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
-  [4;36;1mConfiguration Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
-  [4;35;1mUser Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (10.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'admin') LIMIT 1[0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'admin') LIMIT 1[0m
-Rendering template within layouts/login
-Rendering user/login
-Completed in 430ms (View: 20, DB: 20) | 200 OK [http://localhost/]
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#login (for 127.0.0.1 at 2012-01-04 20:24:14) [POST]
-  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"yPzBcaSndhSGHMlMPNj2sFNBbLf6quEvjJVNZibpEWM=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
-  [4;35;1mConfiguration Columns (50.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
-  [4;36;1mConfiguration Load (10.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
-  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'admin') LIMIT 1[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'admin') LIMIT 1[0m
-Redirected to http://localhost:3000/user/dashboard
-Completed in 340ms (DB: 70) | 302 Found [http://localhost/]
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing UserController#dashboard (for 127.0.0.1 at 2012-01-04 20:24:14) [GET]
-  Parameters: {"action"=>"dashboard", "controller"=>"user"}
-  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (7.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mConfiguration Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
-  [4;36;1mConfiguration Load (7.5ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;35;1mConfiguration Load (2.5ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM `employees` WHERE (`employees`.user_id = 1) LIMIT 1[0m
-  [4;36;1mNews Load (0.0ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at DESC LIMIT 5[0m
-Rendering template within layouts/dashboard
-Rendering user/dashboard
-  [4;35;1mReminder Load (0.0ms)[0m   [0mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (20.0ms)
-Cache miss: user_main_menu1 ({})
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mprivileges_users Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `privileges_users`[0m
-  [4;36;1mPrivilege Load (5.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-Rendered layouts/_main_menu (320.0ms)
-Cache write (will save 322.50ms): user_main_menu1
-Cache miss: user_autocomplete_menu1 ({})
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-Cache write (will save 375.01ms): user_autocomplete_menu1
-Rendered layouts/_autosuggest_menu (382.5ms)
-  [4;35;1mNews Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
-Completed in 1268ms (View: 783, DB: 42) | 200 OK [http://localhost/user/dashboard]
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing NewsController#index (for 127.0.0.1 at 2012-01-04 20:24:18) [GET]
-  Parameters: {"action"=>"index", "controller"=>"news"}
-  [4;35;1mUser Columns (7.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (10.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mConfiguration Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (10.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mprivileges_users Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `privileges_users`[0m
-  [4;36;1mPrivilege Load (5.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-Rendering template within layouts/application
-Rendering news/index
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mReminder Load (0.0ms)[0m   [0;1mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (20.0ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (5.0ms)
-Completed in 617ms (View: 128, DB: 43) | 200 OK [http://localhost/news]
-  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-
-
-Processing NewsController#all (for 127.0.0.1 at 2012-01-04 20:24:21) [GET]
-  Parameters: {"action"=>"all", "controller"=>"news"}
-  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
   [4;35;1mConfiguration Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
   [4;36;1mConfiguration Load (10.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mprivileges_users Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `privileges_users`[0m
-  [4;35;1mPrivilege Load (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mNews Load (0.0ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at DESC LIMIT 0, 12[0m
-Rendering template within layouts/application
-Rendering news/all
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mNews Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
-  [4;36;1mNewsComment Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `news_comments`[0m
-  [4;35;1mNewsComment Load (10.0ms)[0m   [0mSELECT * FROM `news_comments` WHERE (`news_comments`.`news_id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mReminder Load (0.0ms)[0m   [0mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (20.0ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (0.0ms)
-Completed in 740ms (View: 170, DB: 60) | 200 OK [http://localhost/news/all]
-  [4;36;1mSQL (10.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
+NoMethodError (undefined method `config_value' for nil:NilClass):
+  app/controllers/application_controller.rb:280:in `set_user_language'
 
-Processing NewsController#all (for 127.0.0.1 at 2012-01-04 20:24:25) [GET]
-  Parameters: {"action"=>"all", "controller"=>"news"}
-  [4;35;1mUser Columns (7.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (8.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mConfiguration Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (10.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mprivileges_users Columns (6.2ms)[0m   [0mSHOW FIELDS FROM `privileges_users`[0m
-  [4;36;1mPrivilege Load (6.2ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mNews Load (1.3ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at DESC LIMIT 0, 12[0m
-Rendering template within layouts/application
-Rendering news/all
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mNews Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
-  [4;35;1mNewsComment Columns (12.5ms)[0m   [0mSHOW FIELDS FROM `news_comments`[0m
-  [4;36;1mNewsComment Load (6.2ms)[0m   [0;1mSELECT * FROM `news_comments` WHERE (`news_comments`.`news_id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mReminder Load (1.3ms)[0m   [0;1mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (23.8ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (5.0ms)
-Completed in 655ms (View: 115, DB: 80) | 200 OK [http://localhost/news/all]
+Rendered rescues/_trace (150.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
   [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing NewsController#all (for 127.0.0.1 at 2012-01-04 20:24:27) [GET]
-  Parameters: {"action"=>"all", "controller"=>"news"}
-  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (8.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mConfiguration Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
-  [4;36;1mConfiguration Load (9.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;35;1mConfiguration Load (2.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;36;1mConfiguration Load (1.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mprivileges_users Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `privileges_users`[0m
-  [4;35;1mPrivilege Load (8.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;36;1mNews Load (0.0ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at DESC LIMIT 0, 12[0m
-Rendering template within layouts/application
-Rendering news/all
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mNews Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
-  [4;36;1mNewsComment Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `news_comments`[0m
-  [4;35;1mNewsComment Load (7.0ms)[0m   [0mSELECT * FROM `news_comments` WHERE (`news_comments`.`news_id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mReminder Load (1.0ms)[0m   [0mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (22.0ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (5.0ms)
-Completed in 620ms (View: 110, DB: 73) | 200 OK [http://localhost/news/all]
-  [4;36;1mSQL (2.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:15:12) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (37.5ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (7.5ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
 
+NoMethodError (undefined method `config_value' for nil:NilClass):
+  app/controllers/application_controller.rb:280:in `set_user_language'
 
-Processing NewsController#add (for 127.0.0.1 at 2012-01-04 20:24:36) [GET]
-  Parameters: {"action"=>"add", "controller"=>"news"}
-  [4;35;1mUser Columns (6.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (8.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mConfiguration Columns (6.3ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
-  [4;35;1mConfiguration Load (8.8ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mprivileges_users Columns (6.2ms)[0m   [0mSHOW FIELDS FROM `privileges_users`[0m
-  [4;36;1mPrivilege Load (0.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mNews Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-Rendering template within layouts/application
-Rendering news/add
-  [4;35;1mReminder Load (0.0ms)[0m   [0mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (20.0ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (5.0ms)
-Completed in 590ms (View: 85, DB: 49) | 200 OK [http://localhost/news/add]
+Rendered rescues/_trace (92.5ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing NewsController#view (for 127.0.0.1 at 2012-01-04 20:24:42) [GET]
-  Parameters: {"action"=>"view", "id"=>"1", "controller"=>"news"}
-  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mUser Load (7.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mConfiguration Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:18:01) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;35;1mConfiguration Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
+  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
+
+NoMethodError (undefined method `config_value' for nil:NilClass):
+  app/controllers/application_controller.rb:283:in `set_user_language'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:18:16) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
   [4;35;1mConfiguration Load (10.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;35;1mConfiguration Load (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mprivileges_users Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `privileges_users`[0m
-  [4;36;1mPrivilege Load (5.0ms)[0m   [0;1mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mNews Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
-  [4;35;1mNews Load (8.0ms)[0m   [0mSELECT * FROM `news` WHERE (`news`.`id` = 1) ORDER BY created_at DESC[0m
-Rendering template within layouts/application
-Rendering news/view
-  [4;36;1mNewsComment Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `news_comments`[0m
-  [4;35;1mSQL (10.0ms)[0m   [0mSELECT count(*) AS count_all FROM `news_comments` WHERE (`news_comments`.news_id = 1) [0m
-  [4;36;1mNewsComment Load (1.3ms)[0m   [0;1mSELECT * FROM `news_comments` WHERE (`news_comments`.news_id = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `privileges` INNER JOIN `privileges_users` ON `privileges`.id = `privileges_users`.privilege_id WHERE (`privileges_users`.user_id = 1 ) [0m
-Rendered news/_comment (27.5ms)
-  [4;36;1mReminder Load (0.0ms)[0m   [0;1mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (25.0ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (6.2ms)
-Completed in 995ms (View: 509, DB: 77) | 200 OK [http://localhost/news/view/1]
-  [4;35;1mSQL (2.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering user/login
+Completed in 422ms (View: 70, DB: 21) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
-Processing UserController#dashboard (for 127.0.0.1 at 2012-01-04 20:24:51) [GET]
-  Parameters: {"action"=>"dashboard", "controller"=>"user"}
-  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
-  [4;35;1mUser Load (7.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;35;1mConfiguration Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
-  [4;36;1mConfiguration Load (10.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
-  [4;35;1mConfiguration Load (2.5ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'StudentAttendanceType') LIMIT 1[0m
-  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
-  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'AvailableModules') [0m
-  [4;35;1mEmployee Load (2.5ms)[0m   [0mSELECT * FROM `employees` WHERE (`employees`.user_id = 1) LIMIT 1[0m
-  [4;36;1mNews Load (0.0ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at DESC LIMIT 5[0m
-Rendering template within layouts/dashboard
-Rendering user/dashboard
-  [4;35;1mReminder Load (0.0ms)[0m   [0mSELECT * FROM `reminders` WHERE (recipient = '1') [0m
-Rendered layouts/_reminder_count (22.5ms)
-Cache hit: user_main_menu1 ({})
-Cache hit: user_autocomplete_menu1 ({})
-Rendered layouts/_autosuggest_menu (7.5ms)
-  [4;36;1mNews Columns (7.5ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
-Completed in 573ms (View: 210, DB: 43) | 200 OK [http://localhost/user/dashboard]
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:18:55) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (7.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
+  [4;36;1mConfiguration Load (1.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering user/login
+Completed in 404ms (View: 29, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:20:38) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (7.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
+  [4;36;1mConfiguration Load (2.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering user/login
+Completed in 326ms (View: 31, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:21:26) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (7.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
+  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering user/login
+Completed in 272ms (View: 29, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:21:44) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (8.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
+  [4;36;1mConfiguration Load (1.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering user/login
+Completed in 377ms (View: 130, DB: 17) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:21:47) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (10.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
+  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering user/login
+Completed in 280ms (View: 30, DB: 20) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2012-01-06 22:22:24) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+  [4;36;1mConfiguration Columns (6.3ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (7.5ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'Locale') LIMIT 1[0m
+  [4;36;1mConfiguration Load (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`config_key` = 'LogoName') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering user/login
+Completed in 375ms (View: 23, DB: 14) | 200 OK [http://localhost/]

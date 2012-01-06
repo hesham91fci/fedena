@@ -4,6 +4,7 @@ available:
   en: "English"
   es: "Español"
   hi: "हिंदी"
+  cz: Czech
   
 fallbacks:
   en-GB:
